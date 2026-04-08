@@ -1,135 +1,144 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Home, Building, Landmark, Droplets, ShieldCheck, Wrench, ArrowRight, CheckCircle, FileText, MessageCircle } from "lucide-react";
+import { Brain, Heart, Search, Compass, GraduationCap, BookOpen, Users, Leaf, ArrowRight, CheckCircle, CalendarCheck, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import villaImg from "@/assets/project-villa.jpg";
-import officeImg from "@/assets/project-office.jpg";
-import roadImg from "@/assets/project-road.jpg";
 
 const services = [
   {
-    icon: Home,
-    title: "Maisons & Villas Modernes",
-    desc: "Construction de maisons individuelles et villas contemporaines, adaptées au climat et au terrain béninois.",
+    icon: Brain,
+    title: "Consultations psychologiques & psychiatriques",
+    desc: "Un espace d'écoute confidentiel pour explorer vos difficultés et trouver des solutions adaptées.",
     details: [
-      "Plans architecturaux sur mesure",
-      "Fondations solides adaptées au sol béninois",
-      "Finitions haut de gamme (carrelage, peinture, menuiserie)",
-      "Installation électrique et plomberie aux normes",
-      "Espaces extérieurs : terrasses, jardins, clôtures",
-      "Livraison clé en main avec garantie décennale",
+      "Écoute active et bienveillante",
+      "Thérapies individuelles, de couple et familiales",
+      "Suivi régulier et personnalisé",
+      "Gestion des émotions et du stress",
+      "Accompagnement vers le mieux-être",
+      "Consultations en présentiel et à distance",
     ],
-    image: villaImg,
-    imageAlt: "Villa moderne construite par HENA BTP à Cotonou Bénin",
   },
   {
-    icon: Building,
-    title: "Bâtiments Administratifs & Scolaires",
-    desc: "Réalisation de bâtiments publics, bureaux, écoles et centres hospitaliers aux normes internationales.",
+    icon: Heart,
+    title: "Prise en charge des souffrances psychologiques",
+    desc: "Accompagnement spécialisé pour l'anxiété, la dépression, les traumatismes et le stress chronique.",
     details: [
-      "Conception architecturale fonctionnelle",
-      "Structures en béton armé de haute résistance",
-      "Accessibilité PMR intégrée",
-      "Systèmes de ventilation et climatisation",
-      "Conformité aux normes de sécurité incendie",
-      "Aménagement intérieur sur mesure",
+      "Traitement de l'anxiété et des phobies",
+      "Accompagnement de la dépression",
+      "Prise en charge du stress post-traumatique",
+      "Gestion du burn-out professionnel",
+      "Soutien dans le deuil et les pertes",
+      "Thérapies brèves et approches intégratives",
     ],
-    image: officeImg,
-    imageAlt: "Bâtiment administratif construction HENA BTP Bénin",
   },
   {
-    icon: Landmark,
-    title: "Travaux Publics & Génie Civil",
-    desc: "Routes, ponts, ouvrages d'art et infrastructures de génie civil à Cotonou et dans tout le Bénin.",
+    icon: Search,
+    title: "Bilans psychologiques et tests",
+    desc: "Évaluations approfondies pour mieux comprendre le fonctionnement cognitif, émotionnel et comportemental.",
     details: [
-      "Construction et réhabilitation de routes",
-      "Ouvrages d'art : ponts, dalots, caniveaux",
-      "Terrassement et VRD (Voirie et Réseaux Divers)",
-      "Travaux d'enrochement et protection de berges",
-      "Études géotechniques préalables",
-      "Suivi topographique de précision",
+      "Bilans intellectuels (QI) enfants et adultes",
+      "Évaluations neuropsychologiques",
+      "Tests de personnalité",
+      "Bilans d'aptitudes et de compétences",
+      "Rapports détaillés et recommandations",
+      "Restitution et accompagnement post-bilan",
     ],
-    image: roadImg,
-    imageAlt: "Travaux publics route génie civil HENA BTP Bénin",
   },
   {
-    icon: Droplets,
-    title: "Aménagement & Assainissement",
-    desc: "Viabilisation de parcelles, réseaux d'assainissement et aménagements urbains pour un cadre de vie sain.",
+    icon: Compass,
+    title: "Orientation scolaire, affective et professionnelle",
+    desc: "Guidance éclairée pour des choix de vie et de carrière alignés avec vos aspirations profondes.",
     details: [
-      "Viabilisation complète de parcelles",
-      "Réseaux d'eau potable et eaux usées",
-      "Drainage et gestion des eaux pluviales",
-      "Fosses septiques et stations d'épuration",
-      "Aménagement paysager et espaces verts",
-      "Éclairage public et voiries internes",
+      "Bilan d'orientation scolaire",
+      "Conseil en choix de filière et d'université",
+      "Orientation professionnelle et reconversion",
+      "Accompagnement dans les transitions de vie",
+      "Coaching de carrière personnalisé",
+      "Développement des compétences relationnelles",
     ],
-    image: null,
-    imageAlt: "",
   },
   {
-    icon: ShieldCheck,
-    title: "Suivi HSE sur Chantiers",
-    desc: "Hygiène, Sécurité et Environnement intégrés à chaque projet pour des chantiers sûrs et responsables.",
+    icon: GraduationCap,
+    title: "Prévention des échecs scolaires",
+    desc: "Suivi psycho-éducatif pour aider les enfants et adolescents à réussir leur parcours académique.",
     details: [
-      "Audit HSE avant démarrage des travaux",
-      "Plan de prévention des risques",
-      "Formation des ouvriers aux gestes de sécurité",
-      "Fourniture et contrôle des EPI",
-      "Gestion environnementale des déchets de chantier",
-      "Rapports HSE réguliers et documentation",
+      "Diagnostic des difficultés d'apprentissage",
+      "Stratégies d'étude personnalisées",
+      "Renforcement de la confiance en soi",
+      "Accompagnement des troubles de l'attention",
+      "Médiation scolaire parents-enseignants",
+      "Ateliers de méthodologie de travail",
     ],
-    image: null,
-    imageAlt: "",
   },
   {
-    icon: Wrench,
-    title: "Rénovation & Extension",
-    desc: "Modernisation et agrandissement de bâtiments existants avec des finitions haut de gamme.",
+    icon: BookOpen,
+    title: "Formations professionnelles & ateliers",
+    desc: "Programmes de formation et ateliers pour le développement personnel et professionnel.",
     details: [
-      "Diagnostic structural avant intervention",
-      "Rénovation de façades et toitures",
-      "Extension de bâtiments existants",
-      "Mise aux normes électriques et plomberie",
-      "Ravalement et traitement d'humidité",
-      "Aménagement de combles et surélévation",
+      "Gestion du stress en entreprise",
+      "Communication non violente",
+      "Leadership et intelligence émotionnelle",
+      "Ateliers de développement personnel",
+      "Formation en genre et environnement",
+      "Séminaires sur la santé mentale au travail",
     ],
-    image: null,
-    imageAlt: "",
+  },
+  {
+    icon: Users,
+    title: "Expertise-recherche, études et enquêtes",
+    desc: "Études et recherches en psychologie, éducation, genre et environnement pour les organisations.",
+    details: [
+      "Études de terrain et enquêtes sociales",
+      "Recherches en psychologie appliquée",
+      "Évaluation de programmes éducatifs",
+      "Consultation en genre et inclusion",
+      "Rapports d'expertise pour institutions",
+      "Accompagnement en politiques publiques",
+    ],
+  },
+  {
+    icon: Leaf,
+    title: "Suivi psycho-éducatif, Genre & Environnement",
+    desc: "Accompagnement transversal intégrant les dimensions psychologiques, de genre et environnementales.",
+    details: [
+      "Suivi psychologique continu",
+      "Intégration de la dimension genre",
+      "Sensibilisation environnementale",
+      "Accompagnement communautaire",
+      "Programmes de résilience sociale",
+      "Projets d'impact social et éducatif",
+    ],
   },
 ];
 
 const ServicesPage = () => (
   <>
     <Helmet>
-      <title>Nos Services BTP | HENA BTP Cotonou - Construction & Génie Civil Bénin</title>
-      <meta name="description" content="Découvrez les services BTP de HENA BTP à Cotonou : construction de villas, bâtiments publics, travaux publics, assainissement, suivi HSE et rénovation au Bénin." />
+      <title>Nos Services | Cabinet Meilleure Vie Cotonou - Psychologie & Éducation</title>
+      <meta name="description" content="Découvrez les services du Cabinet Meilleure Vie : consultations psychologiques, bilans, orientation scolaire, formations et expertise-recherche à Cotonou, Bénin." />
     </Helmet>
 
     <Navbar />
     <main>
-      {/* Hero banner */}
       <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div className="container mx-auto text-center">
           <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
             Nos Services
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            Des solutions BTP complètes pour vos projets à Cotonou
+            Un accompagnement complet pour votre bien-être
           </h1>
           <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            De la construction neuve à la rénovation, HENA BTP couvre tous vos besoins en bâtiment et travaux publics au Bénin.
+            Consultation, formation et expertise en psychologie et sciences de l'éducation à Cotonou.
           </p>
         </div>
       </section>
 
-      {/* Services detail */}
       <section className="section-padding">
         <div className="container mx-auto space-y-20">
           {services.map((s, i) => (
-            <div key={s.title} className={`grid gap-10 lg:grid-cols-2 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
+            <div key={s.title} className={`grid gap-10 lg:grid-cols-2 items-center`}>
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
@@ -151,11 +160,11 @@ const ServicesPage = () => (
                     to="/contact"
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-transform hover:scale-105"
                   >
-                    <FileText className="h-4 w-4" />
-                    Demander un devis
+                    <CalendarCheck className="h-4 w-4" />
+                    Prendre rendez-vous
                   </Link>
                   <a
-                    href="https://wa.me/2290155496155?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20BTP."
+                    href="https://wa.me/2290194390295?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
@@ -166,40 +175,27 @@ const ServicesPage = () => (
                 </div>
               </div>
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                {s.image ? (
-                  <img
-                    src={s.image}
-                    alt={s.imageAlt}
-                    loading="lazy"
-                    width={800}
-                    height={600}
-                    className="w-full rounded-2xl object-cover aspect-[4/3]"
-                    style={{ boxShadow: "var(--card-shadow)" }}
-                  />
-                ) : (
-                  <div className="w-full rounded-2xl bg-secondary aspect-[4/3] flex items-center justify-center">
-                    <s.icon className="h-20 w-20 text-accent/30" />
-                  </div>
-                )}
+                <div className="w-full rounded-2xl bg-secondary aspect-[4/3] flex items-center justify-center">
+                  <s.icon className="h-20 w-20 text-accent/30" />
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-accent section-padding">
         <div className="container mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-accent-foreground">Prêt à démarrer votre projet ?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-accent-foreground">Prêt à prendre soin de votre bien-être ?</h2>
           <p className="mt-3 text-accent-foreground/80 max-w-lg mx-auto">
-            Contactez HENA BTP dès aujourd'hui pour un devis gratuit et personnalisé.
+            Prenez rendez-vous dès aujourd'hui pour une consultation confidentielle et bienveillante.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
             >
-              Demander un devis gratuit
+              Prendre rendez-vous
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

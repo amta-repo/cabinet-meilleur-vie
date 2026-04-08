@@ -1,50 +1,48 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Building2, Target, Eye, Shield, Users, Award, ArrowRight } from "lucide-react";
+import { Leaf, Target, Eye, Heart, Users, Brain, BookOpen, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import heroImg from "@/assets/hero-construction.jpg";
+import heroImg from "@/assets/hero-psychology.jpg";
 
 const values = [
-  { icon: Shield, title: "Sécurité", desc: "La sécurité de nos équipes et de vos biens est notre priorité absolue sur chaque chantier." },
-  { icon: Award, title: "Qualité", desc: "Nous visons l'excellence dans chaque détail, des fondations aux finitions." },
-  { icon: Users, title: "Collaboration", desc: "Nous travaillons main dans la main avec nos clients pour réaliser leur vision." },
-  { icon: Target, title: "Innovation", desc: "Nous adoptons les techniques modernes pour des constructions durables et performantes." },
+  { icon: Heart, title: "Bienveillance", desc: "Chaque personne est accueillie avec empathie, respect et sans jugement." },
+  { icon: Users, title: "Écoute", desc: "Nous accordons une attention sincère à chaque histoire, chaque souffrance, chaque espoir." },
+  { icon: Brain, title: "Excellence", desc: "Des approches scientifiquement validées, portées par des professionnels qualifiés." },
+  { icon: BookOpen, title: "Engagement", desc: "Un accompagnement continu et engagé pour des résultats durables." },
 ];
 
 const timeline = [
-  { year: "Fondation", desc: "Création de HENA BTP à Cotonou, Bénin, avec pour mission de bâtir des ouvrages de qualité." },
-  { year: "Croissance", desc: "Expansion des activités dans la construction de villas, bâtiments publics et travaux de génie civil." },
-  { year: "Groupe HSE", desc: "Intégration au Groupe HSE, renforçant notre engagement en Hygiène, Sécurité et Environnement." },
-  { year: "Aujourd'hui", desc: "Plus de 150 projets réalisés, une équipe de professionnels qualifiés et une réputation d'excellence au Bénin." },
+  { year: "Fondation", desc: "Création du Cabinet Meilleure Vie à Cotonou, avec pour mission de rendre la psychologie accessible à tous." },
+  { year: "Développement", desc: "Élargissement des services : bilans psychologiques, orientation scolaire et formations professionnelles." },
+  { year: "Expertise", desc: "Reconnaissance en tant que centre d'expertise-recherche en psychologie, éducation, genre et environnement." },
+  { year: "Aujourd'hui", desc: "Plus de 500 patients accompagnés, des partenariats avec des organisations et un impact croissant au Bénin." },
 ];
 
 const AProposPage = () => (
   <>
     <Helmet>
-      <title>À Propos de HENA BTP | Entreprise BTP Cotonou, Bénin - Groupe HSE</title>
-      <meta name="description" content="Découvrez HENA BTP, Groupe HSE : entreprise de BTP à Cotonou, Bénin. Notre histoire, nos valeurs, notre mission et notre engagement pour la qualité." />
+      <title>À Propos | Cabinet Meilleure Vie - Psychologue Cotonou, Bénin</title>
+      <meta name="description" content="Découvrez le Cabinet Meilleure Vie : notre histoire, nos valeurs et notre mission pour le bien-être mental et la réussite éducative à Cotonou, Bénin." />
     </Helmet>
 
     <Navbar />
     <main>
-      {/* Hero */}
       <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div className="container mx-auto text-center">
           <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
             À propos
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            HENA BTP, Groupe HSE
+            Cabinet Meilleure Vie
           </h1>
           <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Bâtir l'avenir du Bénin, un projet à la fois.
+            Pour une vie meilleure – Consultation, Formation et Expertise en Psychologie & Sciences de l'Éducation.
           </p>
         </div>
       </section>
 
-      {/* About content */}
       <section className="section-padding">
         <div className="container mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -52,24 +50,23 @@ const AProposPage = () => (
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">Notre histoire</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Fondée à Cotonou, au Bénin, <strong className="text-foreground">HENA BTP</strong> est née de la volonté de proposer des services de construction de qualité internationale, adaptés aux réalités du marché béninois.
+                  <strong className="text-foreground">Cabinet Meilleure Vie</strong> est un cabinet de Consultation, Formation et Expertise-Recherche en Psychologie, Éducation, Genre et Environnement basé à Cotonou, Bénin.
                 </p>
                 <p>
-                  Membre du <strong className="text-foreground">Groupe HSE</strong>, nous plaçons l'Hygiène, la Sécurité et l'Environnement au cœur de chaque projet. Cette philosophie nous distingue et garantit des chantiers sûrs, propres et respectueux de l'environnement.
+                  Fondé avec la conviction que chacun mérite un accompagnement de qualité pour son bien-être mental, notre cabinet réunit des professionnels passionnés et expérimentés qui placent l'humain au cœur de leur pratique.
                 </p>
                 <p>
-                  Notre équipe d'ingénieurs, d'architectes et de techniciens qualifiés accompagne nos clients de la conception à la livraison, en passant par le suivi de chantier et le contrôle qualité.
+                  Notre mission : rendre la psychologie accessible et contribuer au bien-être et à l'épanouissement des individus, des familles et des communautés béninoises.
                 </p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-              <img src={heroImg} alt="Équipe HENA BTP sur un chantier de construction à Cotonou" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
+              <img src={heroImg} alt="Intérieur chaleureux du Cabinet Meilleure Vie à Cotonou" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="bg-secondary section-padding">
         <div className="container mx-auto grid gap-8 sm:grid-cols-2">
           <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -80,7 +77,7 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Mission</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Bâtir des ouvrages durables, esthétiques et conformes aux normes internationales, tout en contribuant au développement des infrastructures au Bénin. Nous voulons être le partenaire BTP de référence pour chaque famille et entreprise béninoise.
+              Offrir un accompagnement psychologique et éducatif de qualité, accessible et adapté aux réalités béninoises, pour favoriser le bien-être mental, le développement personnel et la réussite éducative de chaque individu.
             </p>
           </div>
           <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -91,13 +88,12 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Vision</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Devenir l'entreprise de BTP de référence au Bénin et en Afrique de l'Ouest, reconnue pour la qualité de ses réalisations, le respect des normes HSE et son impact positif sur le développement urbain.
+              Devenir le centre de référence en psychologie et sciences de l'éducation au Bénin, reconnu pour l'excellence de ses services, son approche humaine et son impact positif sur la société.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Values */}
       <section className="section-padding">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">Nos valeurs</h2>
@@ -115,7 +111,6 @@ const AProposPage = () => (
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="bg-primary section-padding">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-bold text-primary-foreground text-center mb-10">Notre parcours</h2>
@@ -138,21 +133,20 @@ const AProposPage = () => (
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding">
         <div className="container mx-auto text-center">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-primary mb-6">
-            <Building2 className="h-10 w-10 text-primary-foreground" />
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-accent mb-6">
+            <Leaf className="h-10 w-10 text-accent-foreground" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Travaillons ensemble</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Commencez votre chemin vers le bien-être</h2>
           <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-            Confiez votre projet de construction à une équipe passionnée et expérimentée.
+            Confiez-vous à une équipe bienveillante et professionnelle.
           </p>
           <Link
             to="/contact"
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-sm font-semibold text-accent-foreground transition-transform hover:scale-105"
           >
-            Nous contacter
+            Prendre rendez-vous
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

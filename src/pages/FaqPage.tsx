@@ -8,80 +8,88 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const faqCategories = [
   {
-    title: "Construction & Prix",
+    title: "Consultations & rendez-vous",
     faqs: [
       {
-        q: "Combien coûte la construction d'une maison au Bénin ?",
-        a: "Le coût de construction varie selon la taille, les matériaux et les finitions. En moyenne, comptez entre 150 000 et 350 000 FCFA/m² pour une maison moderne à Cotonou. Une villa de 3 chambres (environ 120 m²) peut coûter entre 18 et 42 millions FCFA. Contactez-nous pour un devis personnalisé gratuit.",
+        q: "Comment se déroule une consultation psychologique ?",
+        a: "La première consultation est un entretien d'accueil d'environ 45 à 60 minutes. Le psychologue vous écoute, comprend votre demande et définit avec vous les objectifs de l'accompagnement. Les séances suivantes durent généralement 45 minutes et sont adaptées à vos besoins spécifiques.",
       },
       {
-        q: "Quels sont les délais de construction d'une villa à Cotonou ?",
-        a: "Les délais dépendent de la complexité du projet. Une villa standard de 3 chambres peut être livrée en 6 à 10 mois. Un bâtiment R+2 nécessite généralement 12 à 18 mois. Nous nous engageons contractuellement sur les délais avec des pénalités en cas de retard.",
+        q: "Comment prendre rendez-vous ?",
+        a: "Vous pouvez prendre rendez-vous par téléphone au +229 01 94 39 02 95, via WhatsApp, ou en remplissant le formulaire de contact sur notre site. Nous vous répondons dans les plus brefs délais.",
       },
       {
-        q: "Proposez-vous des facilités de paiement ?",
-        a: "Oui, nous proposons un échéancier de paiement adapté à l'avancement des travaux. En général, un acompte de 30% est demandé au démarrage, puis les versements sont échelonnés selon les étapes clés du chantier.",
+        q: "Combien coûte une consultation ?",
+        a: "Les tarifs varient selon le type de prestation (consultation individuelle, bilan psychologique, formation…). Contactez-nous pour obtenir nos tarifs détaillés. Nous proposons des solutions adaptées à différents budgets.",
       },
       {
-        q: "Le prix inclut-il les finitions ?",
-        a: "Oui, nos devis sont complets et incluent toutes les finitions : carrelage, peinture, menuiserie, électricité, plomberie, sanitaires. Nous proposons différents niveaux de finitions (standard, premium, luxe) selon votre budget.",
+        q: "Les consultations peuvent-elles se faire à distance ?",
+        a: "Oui, nous proposons des consultations en visioconférence pour les personnes qui ne peuvent pas se déplacer. L'efficacité de l'accompagnement est maintenue grâce à nos outils adaptés.",
       },
     ],
   },
   {
-    title: "Normes & Sécurité HSE",
+    title: "Confidentialité & déontologie",
     faqs: [
       {
-        q: "Quelles sont les normes HSE en BTP au Bénin ?",
-        a: "Les normes HSE (Hygiène, Sécurité, Environnement) incluent le port d'EPI (casques, gants, chaussures de sécurité), la signalisation de chantier, la gestion des déchets, la prévention des risques d'accident et la protection de l'environnement. HENA BTP, Groupe HSE, applique ces normes rigoureusement sur chaque chantier.",
+        q: "Est-ce que les consultations sont confidentielles ?",
+        a: "Absolument. Le secret professionnel est un pilier fondamental de notre pratique. Tout ce qui est partagé en consultation reste strictement confidentiel, conformément au code de déontologie des psychologues.",
       },
       {
-        q: "Vos chantiers sont-ils assurés ?",
-        a: "Oui, tous nos chantiers sont couverts par une assurance tous risques chantier (TRC) et une assurance responsabilité civile professionnelle. Nous offrons également une garantie décennale sur tous nos ouvrages.",
+        q: "Qui peut consulter un psychologue ?",
+        a: "Tout le monde peut consulter : enfants, adolescents, adultes, couples et familles. Il n'est pas nécessaire d'avoir un trouble diagnostiqué. On peut consulter pour mieux se connaître, traverser une période difficile, ou simplement améliorer sa qualité de vie.",
       },
       {
-        q: "Comment gérez-vous la sécurité sur les chantiers ?",
-        a: "Chaque chantier dispose d'un responsable HSE dédié. Nous réalisons un audit de sécurité avant le démarrage, formons les ouvriers, fournissons les EPI, et effectuons des inspections régulières. Un rapport HSE est produit chaque semaine.",
+        q: "Quelle est la différence entre un psychologue et un psychiatre ?",
+        a: "Le psychologue utilise la parole et des techniques thérapeutiques pour accompagner ses patients. Le psychiatre est un médecin qui peut prescrire des médicaments. Notre cabinet collabore avec des psychiatres lorsqu'un traitement médicamenteux est nécessaire.",
       },
     ],
   },
   {
-    title: "Processus & Garanties",
+    title: "Services spécifiques",
     faqs: [
       {
-        q: "Comment obtenir un devis gratuit ?",
-        a: "Contactez-nous via le formulaire sur notre site, par téléphone au +229 01 55 49 61 55, ou directement sur WhatsApp. Décrivez votre projet et nous vous répondons sous 24h avec un devis détaillé et gratuit.",
+        q: "En quoi consiste un bilan psychologique ?",
+        a: "Un bilan psychologique comprend des tests standardisés et des entretiens pour évaluer le fonctionnement cognitif, émotionnel et comportemental. Il aboutit à un rapport détaillé avec des recommandations personnalisées.",
       },
       {
-        q: "HENA BTP intervient-il en dehors de Cotonou ?",
-        a: "Oui, nous intervenons dans tout le Bénin : Cotonou, Abomey-Calavi, Porto-Novo, Parakou, Bohicon, Natitingou et toutes les autres villes et communes du pays.",
+        q: "Comment fonctionne l'orientation scolaire ?",
+        a: "L'orientation scolaire inclut un bilan d'intérêts et d'aptitudes, des entretiens approfondis et une exploration des filières et métiers. Nous aidons l'élève à faire des choix éclairés en fonction de ses talents et aspirations.",
       },
       {
-        q: "Quels types de bâtiments construisez-vous ?",
-        a: "Nous construisons des maisons individuelles, villas de luxe, immeubles de bureaux, bâtiments scolaires, centres de santé, entrepôts industriels, et réalisons des travaux de génie civil (routes, ponts, assainissement).",
+        q: "Proposez-vous des formations pour les entreprises ?",
+        a: "Oui, nous proposons des formations sur mesure pour les entreprises : gestion du stress, communication, leadership, santé mentale au travail, etc. Contactez-nous pour un programme adapté à vos besoins.",
       },
       {
-        q: "Quelle est la durée de la garantie sur vos constructions ?",
-        a: "Nous offrons une garantie de parfait achèvement d'un an, une garantie biennale de 2 ans sur les équipements, et une garantie décennale de 10 ans sur la structure et le gros œuvre.",
-      },
-      {
-        q: "Puis-je suivre l'avancement de mon chantier ?",
-        a: "Absolument ! Nous envoyons des rapports photo et vidéo hebdomadaires. Vous pouvez également visiter le chantier à tout moment accompagné de notre chef de projet. Un planning détaillé est partagé au démarrage.",
+        q: "Accompagnez-vous les enfants en difficulté scolaire ?",
+        a: "Oui, nous proposons un suivi psycho-éducatif spécialisé pour les enfants et adolescents en difficulté scolaire. Nous identifions les causes (troubles de l'attention, anxiété, problèmes familiaux…) et mettons en place un accompagnement adapté.",
       },
     ],
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqCategories.flatMap((cat) =>
+    cat.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    }))
+  ),
+};
+
 const FaqPage = () => (
   <>
     <Helmet>
-      <title>FAQ Construction Bénin | HENA BTP Cotonou - Questions Fréquentes BTP</title>
-      <meta name="description" content="Réponses à vos questions sur la construction au Bénin : coûts, délais, normes HSE, garanties. FAQ complète par HENA BTP, expert BTP à Cotonou." />
+      <title>FAQ Psychologue Cotonou | Cabinet Meilleure Vie - Questions Fréquentes</title>
+      <meta name="description" content="Réponses à vos questions sur la consultation psychologique à Cotonou : déroulement, confidentialité, tarifs, bilans, orientation scolaire. Cabinet Meilleure Vie." />
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>
 
     <Navbar />
     <main>
-      {/* Hero */}
       <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div className="container mx-auto text-center">
           <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
@@ -91,12 +99,11 @@ const FaqPage = () => (
             Questions fréquentes
           </h1>
           <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Tout ce que vous devez savoir sur la construction au Bénin avec HENA BTP.
+            Tout ce que vous devez savoir sur nos services de psychologie et d'éducation.
           </p>
         </div>
       </section>
 
-      {/* FAQ sections */}
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl space-y-12">
           {faqCategories.map((cat) => (
@@ -124,12 +131,11 @@ const FaqPage = () => (
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-secondary section-padding">
         <div className="container mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Vous avez d'autres questions ?</h2>
           <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-            Notre équipe est disponible pour répondre à toutes vos questions sur votre projet de construction.
+            Notre équipe est disponible pour répondre à toutes vos questions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
@@ -140,7 +146,7 @@ const FaqPage = () => (
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://wa.me/2290155496155?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20services%20BTP."
+              href="https://wa.me/2290194390295?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"

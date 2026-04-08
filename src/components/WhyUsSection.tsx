@@ -1,19 +1,19 @@
-import { MapPin, ShieldCheck, Clock, Lightbulb } from "lucide-react";
+import { Users, Shield, HandHeart, Sparkles } from "lucide-react";
 
 const reasons = [
-  { icon: MapPin, title: "Expertise locale à Cotonou", desc: "Une connaissance approfondie du terrain, des réglementations et des spécificités du BTP au Bénin." },
-  { icon: ShieldCheck, title: "Engagement HSE fort", desc: "Hygiène, Sécurité et Environnement sont au cœur de chaque projet du Groupe HSE." },
-  { icon: Clock, title: "Respect des délais et budget", desc: "Nous nous engageons sur des délais précis et un budget transparent, sans surprise." },
-  { icon: Lightbulb, title: "Solutions adaptées", desc: "Des constructions pensées pour les parcelles béninoises, le climat tropical et vos besoins spécifiques." },
+  { icon: Users, title: "Équipe expérimentée", desc: "Des professionnels qualifiés et à l'écoute, formés aux meilleures pratiques." },
+  { icon: Shield, title: "Confidentialité totale", desc: "Approche bienveillante et strictement confidentielle pour votre sérénité." },
+  { icon: HandHeart, title: "Adaptée au Bénin", desc: "Solutions pensées pour la réalité culturelle et sociale béninoise." },
+  { icon: Sparkles, title: "Résultats concrets", desc: "Accompagnement personnalisé et suivi pour des résultats durables." },
 ];
 
 const WhyUsSection = () => (
   <section id="pourquoi" className="section-padding bg-primary">
     <div className="container mx-auto">
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <span className="text-xs font-semibold tracking-widest uppercase text-accent">Pourquoi HENA BTP ?</span>
-        <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">La confiance bâtie sur l'excellence</h2>
-        <p className="mt-3 text-primary-foreground/70">Ce qui nous distingue dans le secteur du BTP à Cotonou, Bénin.</p>
+        <span className="text-xs font-semibold tracking-widest uppercase text-accent">Pourquoi nous choisir ?</span>
+        <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">La confiance au cœur de notre approche</h2>
+        <p className="mt-3 text-primary-foreground/70">Ce qui nous distingue dans l'accompagnement psychologique à Cotonou.</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
