@@ -2,28 +2,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    q: "Combien coûte la construction d'une maison au Bénin ?",
-    a: "Le coût de construction varie selon la taille, les matériaux et les finitions. En moyenne, comptez entre 150 000 et 350 000 FCFA/m² pour une maison moderne à Cotonou. Contactez-nous pour un devis personnalisé gratuit.",
+    q: "Comment se déroule une consultation psychologique ?",
+    a: "La première consultation est un entretien d'accueil d'environ 45 à 60 minutes. Le psychologue vous écoute, comprend votre demande et définit avec vous les objectifs de l'accompagnement.",
   },
   {
-    q: "Quelles sont les normes HSE en BTP au Bénin ?",
-    a: "Les normes HSE (Hygiène, Sécurité, Environnement) incluent le port d'EPI, la signalisation de chantier, la gestion des déchets et la prévention des risques. HENA BTP, Groupe HSE, applique ces normes rigoureusement sur chaque chantier.",
+    q: "Est-ce que les consultations sont confidentielles ?",
+    a: "Absolument. Le secret professionnel est un pilier fondamental de notre pratique. Tout ce qui est partagé en consultation reste strictement confidentiel.",
   },
   {
-    q: "Quels sont les délais de construction d'une villa à Cotonou ?",
-    a: "Les délais dépendent de la complexité du projet. Une villa standard de 3 chambres peut être livrée en 6 à 10 mois. Nous nous engageons contractuellement sur les délais.",
+    q: "Qui peut consulter un psychologue ?",
+    a: "Tout le monde : enfants, adolescents, adultes, couples et familles. Il n'est pas nécessaire d'avoir un trouble diagnostiqué pour consulter.",
   },
   {
-    q: "HENA BTP intervient-il en dehors de Cotonou ?",
-    a: "Oui, nous intervenons dans tout le Bénin : Cotonou, Abomey-Calavi, Porto-Novo, Parakou, et toutes les autres villes et communes du pays.",
+    q: "Comment prendre rendez-vous ?",
+    a: "Vous pouvez prendre rendez-vous par téléphone au +229 01 94 39 02 95, via WhatsApp, ou en remplissant le formulaire de contact sur notre site.",
   },
   {
-    q: "Comment obtenir un devis gratuit ?",
-    a: "Contactez-nous via le formulaire sur notre site, par téléphone au +229 01 55 49 61 55, ou directement sur WhatsApp. Nous vous répondons sous 24h.",
+    q: "En quoi consiste un bilan psychologique ?",
+    a: "Un bilan psychologique comprend des tests standardisés et des entretiens pour évaluer le fonctionnement cognitif, émotionnel et comportemental, avec un rapport détaillé.",
   },
   {
-    q: "Quels types de bâtiments construisez-vous ?",
-    a: "Nous construisons des maisons individuelles, villas, immeubles de bureaux, bâtiments scolaires, centres de santé, entrepôts, et réalisons des travaux de génie civil (routes, ponts, assainissement).",
+    q: "Proposez-vous des formations pour les entreprises ?",
+    a: "Oui, nous proposons des formations sur mesure : gestion du stress, communication, leadership, santé mentale au travail. Contactez-nous pour un programme adapté.",
   },
 ];
 
@@ -33,7 +33,7 @@ const FaqSection = () => (
       <div className="text-center mb-10">
         <span className="text-xs font-semibold tracking-widest uppercase text-accent">FAQ</span>
         <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Questions fréquentes</h2>
-        <p className="mt-3 text-muted-foreground">Tout ce que vous devez savoir sur la construction au Bénin avec HENA BTP.</p>
+        <p className="mt-3 text-muted-foreground">Tout ce que vous devez savoir sur nos services de psychologie et d'éducation.</p>
       </div>
 
       <Accordion type="single" collapsible className="space-y-3">

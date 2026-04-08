@@ -10,41 +10,39 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. Service: ${form.service}. ${form.message}`);
-    window.open(`https://wa.me/2290155496155?text=${msg}`, "_blank");
+    const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. Service souhaité: ${form.service}. ${form.message}`);
+    window.open(`https://wa.me/2290194390295?text=${msg}`, "_blank");
   };
 
   return (
     <>
       <Helmet>
-        <title>Contactez HENA BTP Cotonou | Devis Gratuit Construction Bénin</title>
-        <meta name="description" content="Contactez HENA BTP à Cotonou pour un devis gratuit. Téléphone, WhatsApp, email ou formulaire. Construction de maisons, travaux publics au Bénin." />
+        <title>Contact | Cabinet Meilleure Vie Cotonou - Prendre Rendez-vous</title>
+        <meta name="description" content="Contactez le Cabinet Meilleure Vie à Cotonou pour prendre rendez-vous. Téléphone, WhatsApp ou formulaire. Psychologue et éducation au Bénin." />
       </Helmet>
 
       <Navbar />
       <main>
-        {/* Hero */}
         <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
           <div className="container mx-auto text-center">
             <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
               Contact
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-              Parlons de votre projet
+              Prenez rendez-vous
             </h1>
             <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-              Contactez HENA BTP à Cotonou pour un devis gratuit et sans engagement.
+              Contactez Cabinet Meilleure Vie à Cotonou pour une consultation confidentielle et bienveillante.
             </p>
           </div>
         </section>
 
-        {/* Contact info cards */}
         <section className="py-12 bg-secondary">
           <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Phone, title: "Téléphone", value: "+229 01 55 49 61 55", href: "tel:+2290155496155", desc: "Appelez-nous directement" },
-              { icon: MessageCircle, title: "WhatsApp", value: "+229 01 55 49 61 55", href: "https://wa.me/2290155496155", desc: "Réponse rapide garantie" },
-              { icon: Mail, title: "Email", value: "contact@henabtp.com", href: "mailto:contact@henabtp.com", desc: "Envoyez-nous un email" },
+              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95", href: "tel:+2290194390295", desc: "Appelez-nous directement" },
+              { icon: MessageCircle, title: "WhatsApp", value: "+229 94 39 02 95", href: "https://wa.me/2290194390295", desc: "Réponse rapide garantie" },
+              { icon: Mail, title: "Email", value: "contact@cabinetmeilleurevie.com", href: "mailto:contact@cabinetmeilleurevie.com", desc: "Envoyez-nous un email" },
               { icon: Clock, title: "Horaires", value: "Lun - Sam : 8h - 18h", href: null, desc: "Disponibles 6j/7" },
             ].map((c) => (
               <div key={c.title} className="rounded-xl bg-card p-6 text-center hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -65,12 +63,10 @@ const ContactPage = () => {
           </div>
         </section>
 
-        {/* Form + Map */}
         <section className="section-padding">
           <div className="container mx-auto grid gap-10 lg:grid-cols-2">
-            {/* Form */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Demander un devis gratuit</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Prendre rendez-vous</h2>
               <p className="text-muted-foreground mb-6">Remplissez le formulaire et nous vous répondons sous 24h.</p>
 
               <form onSubmit={handleSubmit} className="space-y-5 rounded-xl bg-card p-6 sm:p-8" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -116,25 +112,25 @@ const ContactPage = () => {
                       className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     >
                       <option value="">Sélectionnez un service</option>
-                      <option value="Construction villa">Construction de villa</option>
-                      <option value="Bâtiment public">Bâtiment administratif/scolaire</option>
-                      <option value="Travaux publics">Travaux publics & Génie civil</option>
-                      <option value="Aménagement">Aménagement & Assainissement</option>
-                      <option value="HSE">Suivi HSE</option>
-                      <option value="Rénovation">Rénovation & Extension</option>
+                      <option value="Consultation psychologique">Consultation psychologique</option>
+                      <option value="Bilan psychologique">Bilan psychologique</option>
+                      <option value="Orientation scolaire">Orientation scolaire</option>
+                      <option value="Formation">Formation professionnelle</option>
+                      <option value="Accompagnement éducatif">Accompagnement éducatif</option>
+                      <option value="Expertise-recherche">Expertise-recherche</option>
                       <option value="Autre">Autre</option>
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Décrivez votre projet *</label>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">Votre message *</label>
                   <textarea
                     required
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                    placeholder="Décrivez votre projet : type de construction, surface souhaitée, localisation de la parcelle, budget estimé..."
+                    placeholder="Décrivez brièvement votre besoin ou votre situation..."
                   />
                 </div>
                 <button
@@ -150,11 +146,10 @@ const ContactPage = () => {
               </form>
             </div>
 
-            {/* Map + Address */}
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Notre emplacement</h2>
-                <p className="text-muted-foreground mb-6">Rendez-nous visite à nos bureaux de Cotonou.</p>
+                <p className="text-muted-foreground mb-6">Rendez-nous visite à notre cabinet de Cotonou.</p>
               </div>
 
               <div className="rounded-xl bg-card p-5" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -163,17 +158,17 @@ const ContactPage = () => {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-foreground">HENA BTP, Groupe HSE</h3>
+                    <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
                     <p className="text-sm text-muted-foreground mt-1">Cotonou, Bénin</p>
-                    <p className="text-sm text-muted-foreground">Tél : <a href="tel:+2290155496155" className="text-accent hover:underline">+229 01 55 49 61 55</a></p>
+                    <p className="text-sm text-muted-foreground">Tél : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
                   </div>
                 </div>
               </div>
 
               <div className="overflow-hidden rounded-xl" style={{ boxShadow: "var(--card-shadow)" }}>
                 <iframe
-                  title="Localisation HENA BTP Cotonou Bénin"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d2.3279387!3d6.4073475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjQnMjYuNSJOIDLCsDE5JzQwLjYiRQ!5e0!3m2!1sfr!2sbj!4v1700000000000"
+                  title="Localisation Cabinet Meilleure Vie Cotonou Bénin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5!2d2.3170377!3d6.3893166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a900069c7c45%3A0x4a8ee7e8d7c75af3!2sCABINET%20MEILLEURE%20VIE!5e0!3m2!1sfr!2sbj!4v1700000000000"
                   width="100%"
                   height="350"
                   style={{ border: 0 }}
@@ -183,9 +178,8 @@ const ContactPage = () => {
                 />
               </div>
 
-              {/* Quick WhatsApp CTA */}
               <a
-                href="https://wa.me/2290155496155?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20web%20et%20je%20souhaite%20discuter%20de%20mon%20projet%20de%20construction."
+                href="https://wa.me/2290194390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"
