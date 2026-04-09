@@ -30,19 +30,12 @@ const AProposPage = () => (
 
     <Navbar />
     <main>
-      <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
-        <div className="container mx-auto text-center">
-          <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
-            À propos
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            Cabinet Meilleure Vie
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Pour une vie meilleure – Consultation, Formation et Expertise en Psychologie & Sciences de l'Éducation.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        badge="À propos"
+        title="Cabinet Meilleure Vie"
+        subtitle="Pour une vie meilleure – Consultation, Formation et Expertise en Psychologie & Sciences de l'Éducation."
+        bgImage={headerBg}
+      />
 
       <section className="section-padding">
         <div className="container mx-auto">
@@ -62,7 +55,7 @@ const AProposPage = () => (
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-              <img src={heroImg} alt="Intérieur chaleureux du Cabinet Meilleure Vie à Cotonou" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
+              <img src={headerBg} alt="Intérieur chaleureux du Cabinet Meilleure Vie à Cotonou" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
             </div>
           </div>
         </div>
