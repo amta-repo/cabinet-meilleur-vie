@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom";
-import { Leaf } from "lucide-react";
+import logoImg from "@/assets/logo-cabinet.jpg";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
-              <Leaf className="h-6 w-6 text-accent-foreground" />
-            </div>
-            <div className="leading-tight">
-              <span className="block text-sm font-bold">CABINET MEILLEURE VIE</span>
-              <span className="block text-[10px] tracking-widest text-primary-foreground/60 uppercase">Psychologie & Éducation</span>
-            </div>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logoImg} alt="Cabinet Meilleure Vie" className="h-12 w-auto object-contain brightness-0 invert" />
           </Link>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
             Pour une vie meilleure – Consultation, Formation et Expertise en Psychologie & Sciences de l'Éducation à Cotonou.
