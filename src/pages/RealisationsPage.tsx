@@ -4,6 +4,8 @@ import { ArrowRight, Star, Quote } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageHeader from "@/components/PageHeader";
+import headerBg from "@/assets/header-temoignages.jpg";
 
 const testimonials = [
   { text: "Grâce au Cabinet Meilleure Vie, j'ai pu surmonter une période très difficile de ma vie. L'écoute bienveillante et le professionnalisme de l'équipe m'ont redonné confiance.", name: "Marie K.", role: "Patiente – consultation individuelle", rating: 5 },
@@ -23,19 +25,12 @@ const RealisationsPage = () => (
 
     <Navbar />
     <main>
-      <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
-        <div className="container mx-auto text-center">
-          <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
-            Témoignages
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            Ce que disent nos patients
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Chaque témoignage reflète notre engagement pour votre bien-être et votre réussite.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        badge="Témoignages"
+        title="Ce que disent nos patients"
+        subtitle="Chaque témoignage reflète notre engagement pour votre bien-être et votre réussite."
+        bgImage={headerBg}
+      />
 
       <section className="section-padding">
         <div className="container mx-auto">

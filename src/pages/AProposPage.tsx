@@ -4,7 +4,8 @@ import { Leaf, Target, Eye, Heart, Users, Brain, BookOpen, ArrowRight } from "lu
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import heroImg from "@/assets/hero-psychology.jpg";
+import PageHeader from "@/components/PageHeader";
+import headerBg from "@/assets/header-apropos.jpg";
 
 const values = [
   { icon: Heart, title: "Bienveillance", desc: "Chaque personne est accueillie avec empathie, respect et sans jugement." },
