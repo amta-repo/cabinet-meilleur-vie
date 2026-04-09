@@ -16,7 +16,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-white backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 sm:h-20">
         <Link to="/" className="flex items-center gap-2">
           <img src={logoImg} alt="Cabinet Meilleure Vie" className="h-12 w-auto object-contain" />
