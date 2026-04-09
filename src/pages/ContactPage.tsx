@@ -4,6 +4,8 @@ import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageHeader from "@/components/PageHeader";
+import headerBg from "@/assets/header-contact.jpg";
 
 const ContactPage = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
@@ -23,19 +25,12 @@ const ContactPage = () => {
 
       <Navbar />
       <main>
-        <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
-          <div className="container mx-auto text-center">
-            <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
-              Contact
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-              Prenez rendez-vous
-            </h1>
-            <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-              Contactez Cabinet Meilleure Vie à Cotonou pour une consultation confidentielle et bienveillante.
-            </p>
-          </div>
-        </section>
+        <PageHeader
+          badge="Contact"
+          title="Prenez rendez-vous"
+          subtitle="Contactez Cabinet Meilleure Vie à Cotonou pour une consultation confidentielle et bienveillante."
+          bgImage={headerBg}
+        />
 
         <section className="py-12 bg-secondary">
           <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

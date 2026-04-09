@@ -5,6 +5,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageHeader from "@/components/PageHeader";
+import headerBg from "@/assets/header-faq.jpg";
 
 const faqCategories = [
   {
@@ -90,19 +92,12 @@ const FaqPage = () => (
 
     <Navbar />
     <main>
-      <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
-        <div className="container mx-auto text-center">
-          <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
-            FAQ
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            Questions fréquentes
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Tout ce que vous devez savoir sur nos services de psychologie et d'éducation.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        badge="FAQ"
+        title="Questions fréquentes"
+        subtitle="Tout ce que vous devez savoir sur nos services de psychologie et d'éducation."
+        bgImage={headerBg}
+      />
 
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl space-y-12">

@@ -4,6 +4,9 @@ import { Users, Shield, HandHeart, Sparkles, Heart, Brain, Clock, Award, ArrowRi
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageHeader from "@/components/PageHeader";
+import { useCountUp } from "@/hooks/useCountUp";
+import headerBg from "@/assets/header-pourquoi.jpg";
 
 const reasons = [
   { icon: Users, title: "Équipe expérimentée et à l'écoute", desc: "Nos psychologues et éducateurs sont formés aux meilleures pratiques internationales, avec une profonde sensibilité aux réalités béninoises. Chaque membre de l'équipe s'engage à vous offrir un espace d'écoute authentique." },
@@ -16,12 +19,15 @@ const reasons = [
   { icon: Award, title: "Expertise reconnue", desc: "Notre cabinet est reconnu pour la qualité de ses prestations par les institutions, les entreprises et les familles de Cotonou et du Bénin." },
 ];
 
-const stats = [
-  { num: "10+", label: "Années d'expérience en psychologie" },
-  { num: "500+", label: "Patients accompagnés avec succès" },
-  { num: "100%", label: "Confidentialité garantie" },
-  { num: "98%", label: "Taux de satisfaction" },
-];
+const CounterCard = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+  const { count, ref } = useCountUp(end, 2000);
+  return (
+    <div ref={ref} className="text-center p-6 rounded-xl bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
+      <p className="text-3xl sm:text-4xl font-bold text-accent">{count}{suffix}</p>
+      <p className="mt-2 text-sm text-muted-foreground">{label}</p>
+    </div>
+  );
+};
 
 const PourquoiPage = () => (
   <>
@@ -32,28 +38,19 @@ const PourquoiPage = () => (
 
     <Navbar />
     <main>
-      <section className="bg-primary pt-28 pb-16 sm:pt-32 sm:pb-20">
-        <div className="container mx-auto text-center">
-          <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">
-            Pourquoi nous choisir
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground max-w-3xl mx-auto leading-tight">
-            La confiance au cœur de notre approche
-          </h1>
-          <p className="mt-4 max-w-xl mx-auto text-primary-foreground/70">
-            Ce qui distingue Cabinet Meilleure Vie dans l'accompagnement psychologique à Cotonou.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        badge="Pourquoi nous choisir"
+        title="La confiance au cœur de notre approche"
+        subtitle="Ce qui distingue Cabinet Meilleure Vie dans l'accompagnement psychologique à Cotonou."
+        bgImage={headerBg}
+      />
 
       <section className="bg-secondary py-12">
         <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center p-6 rounded-xl bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
-              <p className="text-3xl sm:text-4xl font-bold text-accent">{s.num}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
+          <CounterCard end={10} suffix="+" label="Années d'expérience en psychologie" />
+          <CounterCard end={500} suffix="+" label="Patients accompagnés avec succès" />
+          <CounterCard end={100} suffix="%" label="Confidentialité garantie" />
+          <CounterCard end={98} suffix="%" label="Taux de satisfaction" />
         </div>
       </section>
 
