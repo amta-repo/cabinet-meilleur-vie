@@ -1,4 +1,5 @@
 import { Users, Shield, HandHeart, Sparkles } from "lucide-react";
+import whyUsBg from "@/assets/why-us-bg.jpg";
 
 const reasons = [
   { icon: Users, title: "Équipe expérimentée", desc: "Des professionnels qualifiés et à l'écoute, formés aux meilleures pratiques." },
@@ -8,8 +9,12 @@ const reasons = [
 ];
 
 const WhyUsSection = () => (
-  <section id="pourquoi" className="section-padding bg-primary">
-    <div className="container mx-auto">
+  <section id="pourquoi" className="section-padding relative overflow-hidden">
+    <div className="absolute inset-0">
+      <img src={whyUsBg} alt="" className="h-full w-full object-cover" loading="lazy" width={1920} height={1080} />
+      <div className="absolute inset-0 bg-primary/80" />
+    </div>
+    <div className="container mx-auto relative z-10">
       <div className="text-center max-w-2xl mx-auto mb-12">
         <span className="text-xs font-semibold tracking-widest uppercase text-accent">Pourquoi nous choisir ?</span>
         <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">La confiance au cœur de notre approche</h2>
