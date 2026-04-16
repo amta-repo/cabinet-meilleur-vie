@@ -6,42 +6,44 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    /* Background & Foreground - Soft Beige & Charcoal Grey */
+    --background: 60 20% 95%; /* Soft Warm Beige */
+    --foreground: 0 0% 29%;   /* Muted Dark Grey for readability */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 0 0% 29%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 0 0% 29%;
 
-    --primary: 215 55% 30%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Muted Sage Green (Promotes calmness and safety) */
+    --primary: 94 18% 62%; 
+    --primary-foreground: 60 20% 95%;
 
-    --secondary: 210 25% 95%;
-    --secondary-foreground: 215 25% 15%;
+    /* Secondary - Soft Muted Blue (Fosters trust and serenity) */
+    --secondary: 210 38% 63%;
+    --secondary-foreground: 0 0% 29%;
 
-    --muted: 210 15% 93%;
+    --muted: 60 10% 90%;
     --muted-foreground: 215 10% 45%;
 
-    --accent: 215 70% 45%;
-    --accent-foreground: 0 0% 100%;
-
-    --warm: 10 70% 55%;
-    --warm-foreground: 0 0% 100%;
+    /* Accent - Lighter Sage or Azure depending on preference */
+    --accent: 94 18% 70%;
+    --accent-foreground: 0 0% 29%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 215 70% 45%;
+    --border: 216 12% 84%; /* Light neutral grey border */
+    --input: 216 12% 84%;
+    --ring: 94 18% 62%;
 
     --radius: 0.75rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(215 55% 30%) 0%, hsl(215 45% 40%) 100%);
-    --card-shadow: 0 4px 24px -4px hsl(215 25% 15% / 0.06);
-    --card-shadow-hover: 0 12px 40px -8px hsl(215 25% 15% / 0.12);
+    /* Updated Gradients to match the soft nature tones */
+    --hero-gradient: linear-gradient(135deg, hsl(94 18% 62%) 0%, hsl(210 38% 63%) 100%);
+    --card-shadow: 0 4px 24px -4px hsla(0, 0%, 0%, 0.05);
+    --card-shadow-hover: 0 12px 40px -8px hsla(0, 0%, 0%, 0.08);
     --star-yellow: 45 95% 55%;
 
     --sidebar-background: 0 0% 98%;
