@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Users, Shield, HandHeart, Sparkles, Heart, Brain, Clock, Award, ArrowRight } from "lucide-react";
+import { Users, Shield, HandHeart, Sparkles, Heart, Brain, Clock, Award, ArrowRight, Lock, Eye } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -8,15 +8,17 @@ import PageHeader from "@/components/PageHeader";
 import { useCountUp } from "@/hooks/useCountUp";
 import headerBg from "@/assets/header-pourquoi.jpg";
 
+const DOMAIN = "https://cabinetmeilleurvie.com";
+
 const reasons = [
-  { icon: Users, title: "Équipe expérimentée et à l'écoute", desc: "Nos psychologues et éducateurs sont formés aux meilleures pratiques internationales, avec une profonde sensibilité aux réalités béninoises. Chaque membre de l'équipe s'engage à vous offrir un espace d'écoute authentique." },
-  { icon: Shield, title: "Approche bienveillante et confidentielle", desc: "La confidentialité est au cœur de notre pratique. Vous pouvez vous exprimer en toute liberté dans un cadre sécurisant, sans jugement. Votre vie privée est strictement protégée." },
-  { icon: HandHeart, title: "Solutions adaptées à la réalité béninoise", desc: "Nous comprenons les spécificités culturelles et sociales du Bénin. Nos approches intègrent ces dimensions pour des résultats véritablement pertinents et durables." },
-  { icon: Sparkles, title: "Résultats concrets et accompagnement personnalisé", desc: "Chaque patient bénéficie d'un plan d'accompagnement sur mesure. Nous mesurons régulièrement les progrès et ajustons notre approche pour des résultats tangibles." },
-  { icon: Brain, title: "Approches thérapeutiques variées", desc: "Nous utilisons différentes approches (TCC, systémique, psychodynamique) pour trouver celle qui vous convient le mieux et maximiser l'efficacité de l'accompagnement." },
-  { icon: Heart, title: "Environnement chaleureux et apaisant", desc: "Notre cabinet est conçu pour vous mettre à l'aise dès votre arrivée. Un espace serein et accueillant qui favorise l'expression et la guérison." },
-  { icon: Clock, title: "Flexibilité et disponibilité", desc: "Des horaires adaptés à votre emploi du temps, avec la possibilité de consultations en soirée et le week-end. Nous sommes disponibles quand vous en avez besoin." },
-  { icon: Award, title: "Expertise reconnue", desc: "Notre cabinet est reconnu pour la qualité de ses prestations par les institutions, les entreprises et les familles de Cotonou et du Bénin." },
+  { icon: Users, title: "Équipe expérimentée et à l'écoute", desc: "Nos psychologues et éducateurs sont formés aux meilleures pratiques internationales, avec une profonde sensibilité aux réalités béninoises." },
+  { icon: Lock, title: "Secret professionnel garanti", desc: "Le secret professionnel est un pilier fondamental. Vous pouvez vous exprimer en toute liberté dans un cadre sécurisant." },
+  { icon: HandHeart, title: "Solutions adaptées à la réalité béninoise", desc: "Nos approches intègrent les dimensions culturelles et sociales du Bénin pour des résultats véritablement pertinents." },
+  { icon: Sparkles, title: "Résultats concrets et personnalisés", desc: "Chaque patient bénéficie d'un plan sur mesure. Nous mesurons les progrès et ajustons notre approche." },
+  { icon: Brain, title: "Approches thérapeutiques variées", desc: "TCC, systémique, psychodynamique, hypnose jungienne — nous trouvons l'approche qui vous convient." },
+  { icon: Heart, title: "Environnement chaleureux et apaisant", desc: "Notre cabinet est conçu pour vous mettre à l'aise. Un espace serein qui favorise la guérison." },
+  { icon: Clock, title: "Flexibilité et disponibilité", desc: "Des horaires adaptés avec la possibilité de consultations en soirée et le week-end." },
+  { icon: Award, title: "Expertise reconnue", desc: "Reconnu pour la qualité de ses prestations par les institutions, entreprises et familles de Cotonou." },
 ];
 
 const CounterCard = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
@@ -32,8 +34,9 @@ const CounterCard = ({ end, suffix, label }: { end: number; suffix: string; labe
 const PourquoiPage = () => (
   <>
     <Helmet>
-      <title>Pourquoi nous choisir | Cabinet Meilleure Vie Cotonou - Psychologue Bénin</title>
-      <meta name="description" content="Découvrez pourquoi choisir Cabinet Meilleure Vie pour votre suivi psychologique à Cotonou. Équipe expérimentée, approche bienveillante, résultats concrets." />
+      <title>Pourquoi nous choisir | Cabinet Meilleure Vie Cotonou</title>
+      <meta name="description" content="Découvrez pourquoi choisir Cabinet Meilleure Vie pour votre suivi psychologique à Cotonou. Équipe expérimentée, secret professionnel, résultats concrets." />
+      <link rel="canonical" href={`${DOMAIN}/pourquoi-nous`} />
     </Helmet>
 
     <Navbar />

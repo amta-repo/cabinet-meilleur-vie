@@ -7,20 +7,23 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-contact.jpg";
 
+const DOMAIN = "https://cabinetmeilleurvie.com";
+
 const ContactPage = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. Service souhaité: ${form.service}. ${form.message}`);
-    window.open(`https://wa.me/2290194390295?text=${msg}`, "_blank");
+    window.open(`https://wa.me/22901676180021?text=${msg}`, "_blank");
   };
 
   return (
     <>
       <Helmet>
         <title>Contact | Cabinet Meilleure Vie Cotonou - Prendre Rendez-vous</title>
-        <meta name="description" content="Contactez le Cabinet Meilleure Vie à Cotonou pour prendre rendez-vous. Téléphone, WhatsApp ou formulaire. Psychologue et éducation au Bénin." />
+        <meta name="description" content="Contactez Cabinet Meilleure Vie à Cotonou pour prendre rendez-vous. Téléphone, WhatsApp ou formulaire. Psychologue et éducation au Bénin." />
+        <link rel="canonical" href={`${DOMAIN}/contact`} />
       </Helmet>
 
       <Navbar />
@@ -35,9 +38,9 @@ const ContactPage = () => {
         <section className="py-12 bg-secondary">
           <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95", href: "tel:+2290194390295", desc: "Appelez-nous directement" },
-              { icon: MessageCircle, title: "WhatsApp", value: "+229 94 39 02 95", href: "https://wa.me/2290194390295", desc: "Réponse rapide garantie" },
-              { icon: Mail, title: "Email", value: "contact@cabinetmeilleurevie.com", href: "mailto:contact@cabinetmeilleurevie.com", desc: "Envoyez-nous un email" },
+              { icon: Phone, title: "Téléphone", value: "+229 01 67 618 021", href: "tel:+22901676180021", desc: "Appelez-nous directement" },
+              { icon: MessageCircle, title: "WhatsApp", value: "+229 01 67 618 021", href: "https://wa.me/22901676180021", desc: "Réponse rapide garantie" },
+              { icon: Mail, title: "Email", value: "contact@cabinetmeilleurvie.com", href: "mailto:contact@cabinetmeilleurvie.com", desc: "Envoyez-nous un email" },
               { icon: Clock, title: "Horaires", value: "Lun - Sam : 8h - 18h", href: null, desc: "Disponibles 6j/7" },
             ].map((c) => (
               <div key={c.title} className="rounded-xl bg-card p-6 text-center hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -68,76 +71,41 @@ const ContactPage = () => {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">Nom complet *</label>
-                    <input
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="Votre nom complet"
-                    />
+                    <input type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Votre nom complet" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">Email</label>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="votre@email.com"
-                    />
+                    <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="votre@email.com" />
                   </div>
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">Téléphone</label>
-                    <input
-                      type="tel"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="+229 ..."
-                    />
+                    <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="+229 ..." />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">Service souhaité</label>
-                    <select
-                      value={form.service}
-                      onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    >
+                    <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                       <option value="">Sélectionnez un service</option>
-                      <option value="Consultation psychologique">Consultation psychologique</option>
-                      <option value="Bilan psychologique">Bilan psychologique</option>
-                      <option value="Orientation scolaire">Orientation scolaire</option>
-                      <option value="Formation">Formation professionnelle</option>
-                      <option value="Accompagnement éducatif">Accompagnement éducatif</option>
-                      <option value="Expertise-recherche">Expertise-recherche</option>
+                      <option value="Services psychométriques">Services psychométriques</option>
+                      <option value="Psychothérapie">Psychothérapie</option>
+                      <option value="Formation pluridisciplinaire">Formation pluridisciplinaire</option>
+                      <option value="Formation psychologique">Formation psychologique</option>
+                      <option value="Thérapie individuelle">Thérapie individuelle</option>
+                      <option value="Thérapie de couple">Thérapie de couple</option>
+                      <option value="Accompagnement scolaire">Accompagnement scolaire</option>
                       <option value="Autre">Autre</option>
                     </select>
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">Votre message *</label>
-                  <textarea
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                    placeholder="Décrivez brièvement votre besoin ou votre situation..."
-                  />
+                  <textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Décrivez brièvement votre besoin ou votre situation..." />
                 </div>
-                <button
-                  type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.02]"
-                >
+                <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.02]">
                   <Send className="h-4 w-4" />
                   Envoyer via WhatsApp
                 </button>
-                <p className="text-xs text-muted-foreground text-center">
-                  En soumettant ce formulaire, votre message sera envoyé directement sur notre WhatsApp pour une réponse rapide.
-                </p>
               </form>
             </div>
 
@@ -154,8 +122,9 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Cotonou, Bénin</p>
-                    <p className="text-sm text-muted-foreground">Tél : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
+                    <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin</p>
+                    <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+22901676180021" className="text-accent hover:underline">+229 01 67 618 021</a></p>
+                    <p className="text-sm text-muted-foreground">Tél 2 : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
                   </div>
                 </div>
               </div>
@@ -174,7 +143,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://wa.me/2290194390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                href="https://wa.me/22901676180021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"
