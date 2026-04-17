@@ -16,8 +16,12 @@
 
     /* Secondary: Professional Navy Blue (Trust) */
     /* This will be used for your footer background */
-    --secondary: 215 42% 17%;
-    --secondary-foreground: 0 0% 98%;
+    /* --secondary: 215 42% 17%; */
+    /* --secondary-foreground: 0 0% 98%; */
+   /* Secondary: THE NEW FOOTER COLOR (Warm Muted Slate) */
+    /* It's a mid-tone: noticeable but not dark or heavy */
+    --secondary: 155 8% 85%;
+    --secondary-foreground: 155 15% 30%;
 
     /* Muted: Soft Sand/Beige (Removes the 'cold' blue feel) */
     --muted: 45 15% 88%;
