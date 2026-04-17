@@ -140,7 +140,7 @@ const Index = () => {
               </span>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
-                Faites-Vous Écouter.{" "}
+                Faites-Vous Écouter-{" "}
                 <span className="text-gradient">Sans Être Jugé</span>
               </h1>
 
