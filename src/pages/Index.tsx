@@ -23,6 +23,7 @@ import {
   MessageSquare,
   Target,
   Briefcase,
+  Activity,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
