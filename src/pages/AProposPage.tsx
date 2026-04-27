@@ -28,10 +28,10 @@ const timeline = [
 
 const teamMembers = [
   {
-    name: "AGOSSOU Sagbo",
+    name: "Agossou SAGBO",
     role: "Directeur Général – Psychologue en Chef",
     img: dgImg,
-    bio: "Psychologue clinicien de formation, M. AGOSSOU Sagbo est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 15 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
+    bio: "Psychologue clinicien de formation, M. Agossou SAGBO est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 15 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
   },
   {
     name: "ANTONIO Fêmi C.",
@@ -49,7 +49,7 @@ const aboutJsonLd = {
   mainEntity: {
     "@type": "MedicalBusiness",
     name: "Cabinet Meilleure Vie",
-    founder: { "@type": "Person", name: "AGOSSOU Sagbo", jobTitle: "Psychologue en Chef" },
+    founder: { "@type": "Person", name: "Agossou SAGBO", jobTitle: "Psychologue en Chef" },
     employee: teamMembers.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role })),
   },
 };

@@ -129,7 +129,7 @@ const testimonials = [
 
 const teamMembers = [
   {
-    name: "AGOSSOU Sagbo",
+    name: "Agossou SAGBO",
     role: "Directeur Général – Psychologue en Chef",
     img: dgImg,
     bio: "Psychologue clinicien de formation et fondateur du Cabinet Meilleure Vie.",
