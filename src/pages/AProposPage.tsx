@@ -8,7 +8,7 @@ import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-apropos.jpg";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
-import assistantPsyImg from "@assets/assistant-tongnon.jpg";
+import assistantPsyImgTon from "@assets/assistant-tongnon.jpg";
 import equipeImg from "@/assets/equipe.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
@@ -44,7 +44,7 @@ const teamMembers = [
   {
     name: "M. TOGNON Marcos",
     role: "Assistante Psychologue",
-    img: assistantPsyImg,
+    img: assistantPsyImgTon,
     bio: "Responsable du Service Technique et attaché du Service Clinique et d'Expertise au Cabinet Meilleure Vie",
   },
 ];
