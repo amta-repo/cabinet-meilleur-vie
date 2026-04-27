@@ -43,7 +43,7 @@ import partner3 from "@/assets/Partner 3.jpeg";
 import partner4 from "@/assets/Partner 4.png";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
-import assistantPsyImg from "@assets/assistant-tognon.jpeg";
+import assistantPsyImg from "@assets/assistant-tongnon.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
