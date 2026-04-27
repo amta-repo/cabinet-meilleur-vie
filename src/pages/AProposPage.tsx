@@ -145,8 +145,8 @@ const AProposPage = () => (
                 </p>
               </div>
               <div className="not-italic">
-                <p className="text-foreground font-semibold">AGOSSOU Sagbo</p>
-                <p className="text-sm text-accent">Directeur Général – Psychologue en Chef</p>
+                <p className="text-foreground font-semibold">Agossou SAGBO</p>
+                <p className="text-sm text-accent">Directeur Général – Psychologue Clinicien, Psychopathologue et Psychanalyste jungien</p>
               </div>
             </div>
           </div>
