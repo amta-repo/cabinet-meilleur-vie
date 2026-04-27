@@ -84,14 +84,14 @@ const serviceCards = [
   {
     img: svcPedoPsychiatrie,
     title: "Services Pédopsychiatrie",
-    desc: "​Destinée aux enfants et adolescents (généralement de 0 à 18 ans), la pédopsychiatrie libérale se concentre sur le développement et les troubles précoces.​Évaluation Diagnostique : Identification des troubles du neurodéveloppement (TDAH, Troubles du Spectre de l'Autisme), troubles de l'apprentissage (dys), ou troubles anxieux.​Suivi Médical et Pharmacologique : Prescription et ajustement de traitements médicamenteux si nécessaire (ex: psychostimulants pour le TDAH). ​Guidance Parentale : Soutien aux parents pour adapter l'environnement familial et éducatif aux besoins de l'enfant",
+    desc: "Destinée aux enfants et adolescents (généralement de 0 à 18 ans). Identification des troubles du neurodéveloppement, suivi médical et pharmacologique, guidance parentale.",
     slug: "services-pédopsychiatrie",
   },
 
   {
     img: svcPsychiatrie,
     title: "Services Psychiatrie",
-    desc: "Le psychiatre libéral traite les pathologies mentales de l'adulte via deux leviers principaux : la parole et la biologie.​Traitement des Troubles Communs : Dépression, troubles bipolaires, troubles anxieux (phobies, TOC, anxiété généralisée), et burn-out. ​Psychothérapie : Beaucoup de psychiatres libéraux pratiquent des thérapies spécifiques  psychanalyse, thérapies systémiques).​Gestion des Pathologies Chroniques : Suivi au long cours des troubles psychotiques stabilisés (schizophrénie) en lien avec les structures sanitaires. ​Certificats et Expertise : Rédaction de certificats médicaux pour des dossiers administratifs (MDPH, arrêts de travail, médecine du travail).",
+    desc: "Traitement des pathologies mentales de l'adulte via la parole et la biologie. Suivi des troubles courants et expertise en santé mentale.",
     slug: "services-psychologiques",
   },
 
@@ -119,12 +119,12 @@ const serviceCards = [
 ];
 
 const testimonials = [
-  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens" },
-  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil" },
-  { text: "Très Professionnel.", motivation: "Prince Zékoulékou Prof Backras" },
-  { text: "Bien.", motivation: "Marios Tohon" },
-  { text: "Un accompagnement de qualité, je recommande.", motivation: "Faysale Ilboudo" },
-  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens" },
+  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens", name: "Anonyme" },
+  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil", name: "Anonyme" },
+  { text: "Très Professionnel.", motivation: "Prince Zékoulékou Prof Backras", name: "Prince Zékoulékou Prof Backras" },
+  { text: "Bien.", motivation: "Marios Tohon", name: "Marios Tohon" },
+  { text: "Un accompagnement de qualité, je recommande.", motivation: "Faysale Ilboudo", name: "Faysale Ilboudo" },
+  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens", name: "Anonyme" },
 ];
 
 const teamMembers = [
@@ -324,20 +324,17 @@ const Index = () => {
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
-                <div className="space-y-3">
-                  {calendarEvents.map((event) => (
+                <div className="grid grid-cols-3 gap-3">
+                  {calendarEvents.slice(0, 9).map((event) => (
                     <button
                       key={event.date}
                       onClick={() => setSelectedEvent(event)}
-                      className="group w-full rounded-3xl border border-border p-4 text-left transition hover:border-accent/70 hover:bg-accent/10"
+                      className="group rounded-[1px] border border-border p-3 text-center transition hover:border-accent/70 hover:bg-accent/10"
                     >
-                      <div className="flex items-center justify-between gap-4">
-                        <div className={`flex h-11 w-11 items-center justify-center rounded-2xl ${event.color} text-white`}>
-                          <event.icon className="h-5 w-5" />
-                        </div>
-                        <span className="text-sm font-semibold text-foreground">{event.date}</span>
+                      <div className={`flex h-8 w-8 items-center justify-center rounded-sm ${event.color} text-white mx-auto mb-2`}>
+                        <event.icon className="h-4 w-4" />
                       </div>
-                      <p className="mt-3 text-sm text-muted-foreground">{event.title}</p>
+                      <span className="text-xs font-semibold text-foreground block">{event.date}</span>
                     </button>
                   ))}
                 </div>
@@ -456,10 +453,10 @@ const Index = () => {
                   <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>
                   <div className="mt-4 flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-semibold text-sm">
-                      A
+                      {t.name?.charAt(0).toUpperCase() || "A"}
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">Anonyme</p>
+                      <p className="text-sm font-semibold text-foreground">{t.name}</p>
                       <p className="text-xs text-muted-foreground">Patient(e) vérifié(e)</p>
                     </div>
                   </div>

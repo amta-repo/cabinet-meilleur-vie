@@ -9,7 +9,6 @@ const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/services", label: "Services" },
   { href: "/realisations", label: "Témoignages" },
-  { href: "/pourquoi-nous", label: "Pourquoi nous" },
   { href: "/a-propos", label: "À propos" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -51,19 +50,18 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-accent text-accent-foreground">
-        <div className="container mx-auto flex items-center gap-4 px-4 py-2 text-xs sm:text-sm">
-          <span className="font-semibold uppercase tracking-[0.2em]">Actualités</span>
-          <div className="relative flex-1 overflow-hidden rounded-full border border-white/10 bg-white/10">
-            <div className="flex animate-marquee gap-6 px-4 py-2 whitespace-nowrap">
+      <div className="bg-background text-foreground py-1.5">
+        <div className="container mx-auto flex items-center gap-4 px-4 text-xs sm:text-sm">
+          <span className="font-semibold uppercase tracking-[0.2em] text-accent">Actualités</span>
+          <div className="relative flex-1 overflow-hidden">
+            <div className="flex animate-marquee gap-8 px-0 whitespace-nowrap">
               {actualites.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActiveActualite(item)}
-                  className="inline-flex min-w-[280px] cursor-pointer flex-col items-start rounded-full border border-white/10 bg-white/10 px-4 py-2 text-left text-white transition hover:bg-white/20"
+                  className="cursor-pointer text-left text-accent font-medium hover:text-accent/70 transition"
                 >
-                  <span className="font-semibold text-sm">{item.title}</span>
-                  <span className="mt-1 block text-[0.7rem] text-white/80 line-clamp-2">{item.preview}</span>
+                  <span className="text-sm">{item.title}</span>
                 </button>
               ))}
             </div>
@@ -135,14 +133,16 @@ const Navbar = () => {
 
       {activeActualite && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
-          <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-6 shadow-2xl ring-1 ring-border">
-            <div className="grid gap-6 lg:grid-cols-[1fr_120px] items-start">
-              <img src={activeActualite.img} alt={activeActualite.title} className="h-48 w-full rounded-3xl object-cover lg:h-full" />
-              <div className="space-y-4">
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Actualité</div>
-                <h2 className="text-2xl font-bold text-foreground">{activeActualite.title}</h2>
-                <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="w-full max-w-4xl overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border">
+            <div className="grid gap-0 md:grid-cols-2 items-stretch">
+              <img src={activeActualite.img} alt={activeActualite.title} className="h-64 w-full object-cover md:h-full" />
+              <div className="p-6 md:p-8 flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Actualité</div>
+                  <h2 className="text-2xl font-bold text-foreground">{activeActualite.title}</h2>
+                  <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mt-6">
                   <a
                     href={activeActualite.whatsapp}
                     target="_blank"

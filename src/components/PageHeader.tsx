@@ -6,10 +6,10 @@ interface PageHeaderProps {
 }
 
 const PageHeader = ({ badge, title, subtitle, bgImage }: PageHeaderProps) => (
-  <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
+  <section className="relative pt-56 pb-32 sm:pt-64 sm:pb-40 overflow-hidden">
     <div className="absolute inset-0">
       <img src={bgImage} alt="" className="h-full w-full object-cover" loading="eager" width={1920} height={600} />
-      <div className="absolute inset-0 bg-primary/75" />
+      <div className="absolute inset-0 bg-primary/50" />
     </div>
     <div className="container mx-auto text-center relative z-10">
       <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground mb-4">

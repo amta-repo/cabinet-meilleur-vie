@@ -82,7 +82,10 @@ const AProposPage = () => (
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">Qui sommes-nous ?</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">Cabinet Meilleure Vie</strong> est votre cabinet de psychologie et des sciences de l'éducation, qui vous garantit une santé mentale équilibrée, aussi bien en entreprise, en famille ou dans votre vie personnelle, par la psychothérapie, les consultations psychologiques, l'information et la recherche.
+                  <strong className="text-foreground">Cabinet Meilleure Vie</strong> est votre cabinet de psychologie et des 
+                  sciences de l'éducation, qui vous garantit une santé mentale équilibrée, aussi 
+                  bien en entreprise, en famille ou dans votre vie personnelle, par la psychothérapie, 
+                  les consultations psychologiques, l'information et la recherche.
                 </p>
               </div>
             </div>

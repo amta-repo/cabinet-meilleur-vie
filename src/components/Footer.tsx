@@ -29,10 +29,12 @@ const Footer = () => (
         <div>
           <h4 className="text-sm font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
-            <li><Link to="/services#psychometriques" className="hover:text-accent transition-colors">Services Psychométriques</Link></li>
-            <li><Link to="/services#formations-pluridisciplinaires" className="hover:text-accent transition-colors">Formations Pluridisciplinaires</Link></li>
-            <li><Link to="/services#formations-psychologiques" className="hover:text-accent transition-colors">Formations Psychologiques</Link></li>
             <li><Link to="/services#services-psychologiques" className="hover:text-accent transition-colors">Services Psychologiques</Link></li>
+            <li><Link to="/services#services-pedopsychiatrie" className="hover:text-accent transition-colors">Services Pédopsychiatrie</Link></li>
+            <li><Link to="/services#services-psychiatrie" className="hover:text-accent transition-colors">Services Psychiatrie</Link></li>
+            <li><Link to="/services#psychometriques" className="hover:text-accent transition-colors">Services Psychométriques</Link></li>
+            <li><Link to="/services#formations-psychologiques" className="hover:text-accent transition-colors">Formations Psychologiques</Link></li>
+            <li><Link to="/services#formations-pluridisciplinaires" className="hover:text-accent transition-colors">Formations Pluridisciplinaires</Link></li>
           </ul>
         </div>
 
@@ -44,6 +46,7 @@ const Footer = () => (
               { label: "Services", href: "/services" },
               { label: "Témoignages", href: "/realisations" },
               { label: "À propos", href: "/a-propos" },
+              { label: "Pourquoi nous", href: "/pourquoi-nous" },
               { label: "Blog", href: "/blog" },
               { label: "FAQ", href: "/faq" },
               { label: "Contact", href: "/contact" },
@@ -67,6 +70,9 @@ const Footer = () => (
             </li>
             <li>
               <a href="tel:+2290194390295" className="hover:text-accent transition-colors">+229 01 94 39 02 95</a>
+            </li>
+            <li>
+              <a href="mailto:contact.cmv@gmail.com" className="hover:text-accent transition-colors">contact.cmv@gmail.com</a>
             </li>
             <li>
               <a href="https://wa.me/22901676180021" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp: +229 01 67 618 021</a>

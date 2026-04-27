@@ -100,10 +100,10 @@ const RealisationsPage = () => (
                 <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>
                 <div className="mt-6 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-semibold text-sm">
-                    A
+                    {t.name?.charAt(0).toUpperCase() || "A"}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">Anonyme</p>
+                    <p className="text-sm font-semibold text-foreground">{t.name}</p>
                     <p className="text-xs text-muted-foreground">Patient(e) vérifié(e)</p>
                   </div>
                 </div>
