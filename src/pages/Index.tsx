@@ -348,7 +348,7 @@ const Index = () => {
 
           <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border">
             <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-border">
-              <CounterStat end={10} suffix="+" label="Années d'expérience" />
+              <CounterStat end={15} suffix="+" label="Années d'expérience" />
               <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" />
               <CounterStat end={100} suffix="%" label="Confidentialité" />
               <CounterStat end={98} suffix="%" label="Taux de satisfaction" />
