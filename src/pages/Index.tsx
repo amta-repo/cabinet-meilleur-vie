@@ -283,7 +283,7 @@ const Index = () => {
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
-                  🌿 Psychologie & Sciences de l'Éducation — Cotonou, Bénin
+                  🌿 Psychologie, Sante Mentale et Bien Être - Cotonou, Bénin
                 </span>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
