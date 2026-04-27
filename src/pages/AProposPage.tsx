@@ -8,6 +8,7 @@ import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-apropos.jpg";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
+import assistantImg1 from "@assets/M TOGNON Marcos Assistant Psychologue Responsable du Service Technique et attache du Service Clinique et dExpertise au Cabinet Meilleure Vie.jpeg";
 import equipeImg from "@/assets/equipe.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
@@ -31,13 +32,20 @@ const teamMembers = [
     name: "Agossou SAGBO",
     role: "Directeur Général – Psychologue en Chef",
     img: dgImg,
-    bio: "Psychologue clinicien de formation, M. Agossou SAGBO est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 15 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
+    bio: "Psychologue clinicien,Psychopathologue, Psychanalyste jungien, M. Agossou SAGBO est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 15 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
   },
   {
     name: "ANTONIO Fêmi C.",
     role: "Assistante Psychologue",
     img: assistantImg,
     bio: "Responsable du Service Clinique et d'Expertise au Cabinet Meilleure Vie Collaboratrice du Directeur Général du Cabinet",
+  },
+
+  {
+    name: "M. TOGNON Marcos",
+    role: "Assistante Psychologue",
+    img: assistantImg1,
+    bio: "Responsable du Service Technique et attaché du Service Clinique et d'Expertise au Cabinet Meilleure Vie",
   },
 ];
 

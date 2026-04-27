@@ -72,7 +72,7 @@ const Footer = () => (
               <a href="tel:+2290194390295" className="hover:text-accent transition-colors">+229 01 94 39 02 95</a>
             </li>
             <li>
-              <a href="mailto:contact.cmv@gmail.com" className="hover:text-accent transition-colors">contact.cmv@gmail.com</a>
+              <a href="mailto:contact.cmv.benin@gmail.com" className="hover:text-accent transition-colors">Envoyez-nous un email</a>
             </li>
             <li>
               <a href="https://wa.me/22901676180021" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp: +229 01 67 618 021</a>
