@@ -11,6 +11,116 @@ const DOMAIN = "https://cabinetmeilleurvie.com";
 
 const blogPosts = [
   {
+    slug: "addiction-definition-causes-symptomes-prevention",
+    title: "L’addiction : définition, causes, symptômes et prévention",
+    excerpt: "Comprendre l'addiction pour mieux la prévenir chez les jeunes : causes, symptômes et stratégies de protection.",
+    date: "2026-04-27",
+    readTime: "10 min",
+    author: "AGOSSOU Sagbo",
+    category: "Addiction",
+    content: `L’addiction est aujourd’hui un problème majeur de santé mentale qui touche de nombreuses personnes, en particulier les jeunes. Elle peut concerner aussi bien des substances que des comportements du quotidien.
+
+## Définition de l’addiction
+
+L’addiction se définit comme une dépendance à une substance ou à une activité, caractérisée par l’incapacité de s’arrêter malgré les conséquences négatives.
+
+Elle se manifeste par :
+
+- une perte de contrôle
+- un besoin irrépressible (craving)
+- une répétition du comportement
+
+L’addiction peut concerner :
+
+- des substances (alcool, drogue, tabac)
+- des comportements (jeux, internet, réseaux sociaux)
+
+Une caractéristique essentielle est la poursuite du comportement malgré ses effets nocifs sur la vie personnelle, scolaire ou sociale.
+
+## Les causes de l’addiction
+
+L’addiction est un phénomène complexe qui résulte de plusieurs facteurs.
+
+### Facteurs psychologiques
+- stress
+- anxiété
+- mal-être émotionnel
+
+Ces éléments peuvent pousser une personne à chercher un soulagement temporaire.
+
+### Facteurs sociaux
+- influence des amis
+- environnement familial
+- pression sociale
+
+### Facteurs liés au cerveau
+
+Les comportements addictifs activent des mécanismes de plaisir, ce qui renforce leur répétition.
+
+Avec le temps, la personne perd progressivement le contrôle et développe une dépendance.
+
+## Les symptômes de l’addiction
+
+Les signes de l’addiction peuvent être variés, mais certains sont fréquents :
+
+- incapacité à arrêter
+- augmentation de la consommation ou du temps passé
+- négligence des responsabilités
+- isolement social
+- changements de comportement
+
+Une personne dépendante continue souvent malgré les conséquences négatives sur sa vie.
+
+## Les conséquences de l’addiction
+
+L’addiction a des impacts importants sur plusieurs aspects de la vie.
+
+### Sur la santé mentale
+- anxiété
+- dépression
+- troubles émotionnels
+
+### Sur la vie sociale
+- conflits familiaux
+- isolement
+- perte de relations
+
+### Sur la vie scolaire ou professionnelle
+- baisse des performances
+- manque de concentration
+
+Sans prise en charge, ces effets peuvent s’aggraver avec le temps.
+
+## Pourquoi l’addiction persiste
+
+L’addiction modifie progressivement les comportements et les habitudes.
+Elle crée un cycle difficile à interrompre :
+
+- envie
+- passage à l’acte
+- soulagement temporaire
+- rechute
+
+Ce mécanisme explique pourquoi il est difficile de s’en sortir sans aide.
+
+## Prévention de l’addiction chez les jeunes
+
+La prévention est essentielle, surtout chez les adolescents.
+
+Quelques mesures importantes :
+
+- développer la confiance en soi
+- apprendre à gérer le stress
+- éviter les environnements à risque
+- s’informer sur les dangers
+
+## Conclusion
+
+L’addiction est une problématique complexe liée à la santé mentale et aux comportements. Elle ne doit pas être réduite à un simple manque de volonté.
+
+Mieux comprendre ses causes et ses symptômes permet de mieux la prévenir et d’agir plus tôt.`,
+  },
+  {
     slug: "comprendre-anxiete-traitement-cotonou",
     title: "Comprendre l'anxiété : causes, symptômes et traitement à Cotonou",
     excerpt: "L'anxiété touche des millions de personnes en Afrique. Découvrez comment reconnaître les signes d'anxiété et les options de traitement disponibles au Cabinet Meilleure Vie à Cotonou.",

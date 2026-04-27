@@ -10,13 +10,16 @@ import headerBg from "@/assets/header-temoignages.jpg";
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
 const testimonials = [
-  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens, la qualité de l'accompagnement et des séances, l'ambiance et le cadre du cabinet, l'organisation et l'accueil", rating: 5 },
-  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil", rating: 5 },
-  { text: "Je me suis sentie bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5 },
-  { text: "Je me sens très bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5 },
-  { text: "Une stabilité dans ma vie sentimentale.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5 },
-  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5 },
-  { text: "Au début, avant de commencer les consultations au cabinet, j'avais beaucoup de mal avec les enfants de 0 à 3 ans. Je n'étais pas du tout à l'aise avec eux. Puis j'ai commencé la thérapie avec le Dr ANTONIO qui avec des discussions et des exercices ainsi que des apports de solutions m'a aidé à trouver la source de ce mal. Nous avions beaucoup travaillé dessus et aujourd'hui je suis plus qu'à l'aise avec les enfants. Et j'ai beaucoup de plaisir à les côtoyer.", motivation: "La qualité de l'accompagnement et des séances", rating: 5 },
+  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens, la qualité de l'accompagnement et des séances, l'ambiance et le cadre du cabinet, l'organisation et l'accueil", rating: 5, name: "Anonyme" },
+  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil", rating: 5, name: "Anonyme" },
+  { text: "Très Professionnel.", motivation: "Prince Zékoulékou Prof Backras", rating: 5, name: "Prince Zékoulékou Prof Backras" },
+  { text: "Bien.", motivation: "Marios Tohon", rating: 5, name: "Marios Tohon" },
+  { text: "Un accompagnement de qualité, je recommande.", motivation: "Faysale Ilboudo", rating: 5, name: "Faysale Ilboudo" },
+  { text: "Je me suis sentie bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
+  { text: "Je me sens très bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
+  { text: "Une stabilité dans ma vie sentimentale.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5, name: "Anonyme" },
+  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5, name: "Anonyme" },
+  { text: "Au début, avant de commencer les consultations au cabinet, j'avais beaucoup de mal avec les enfants de 0 à 3 ans. Je n'étais pas du tout à l'aise avec eux. Puis j'ai commencé la thérapie avec le Dr ANTONIO qui avec des discussions et des exercices ainsi que des apports de solutions m'a aidé à trouver la source de ce mal. Nous avions beaucoup travaillé dessus et aujourd'hui je suis plus qu'à l'aise avec les enfants. Et j'ai beaucoup de plaisir à les côtoyer.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
 ];
 
 const reviewJsonLd = {
@@ -34,7 +37,7 @@ const reviewJsonLd = {
     "@type": "Review",
     reviewRating: { "@type": "Rating", ratingValue: String(t.rating) },
     reviewBody: t.text,
-    author: { "@type": "Person", name: "Anonyme" },
+    author: { "@type": "Person", name: t.name || "Anonyme" },
   })),
 };
 

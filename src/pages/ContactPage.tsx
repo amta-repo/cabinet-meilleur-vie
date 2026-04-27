@@ -38,7 +38,7 @@ const ContactPage = () => {
         <section className="py-12 bg-secondary">
           <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95", "+229 01 67 61 80 21", href: "tel:+229 01 94 39 02 95", desc: "Appelez-nous directement" },
+              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95 / +229 01 67 61 80 21", href: "tel:+2290194390295", desc: "Appelez-nous directement" },
               { icon: MessageCircle, title: "WhatsApp", value: "+229 94 39 02 95", href: "https://wa.me/22994390295", desc: "Réponse rapide garantie" },
               { icon: Mail, title: "Email", value: "contact.cmv@gmail.com", href: "mailto:contact.cmv@gmail.com", desc: "Envoyez-nous un email" },
               { icon: Clock, title: "Horaires", value: "Lun - Sam : 8h - 18h", href: null, desc: "Disponibles 6j/7" },

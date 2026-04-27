@@ -104,7 +104,7 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Mission</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              La mission de Meilleure Vie est d'accompagner le bien-être mental tout en offrant des formations professionnelles, pour renforcer les compétences en gestion de la santé psychologique dans la vie quotidienne.
+              "Accompagner nos clients sur le chemin de la transformation personelle, en leur offrant un espace de consultation sûr et une expertise de pointe."
             </p>
           </div>
           <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -115,7 +115,7 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Vision</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Devenir le centre de référence en psychologie et sciences de l'éducation en Afrique de l'Ouest, reconnu pour l'excellence de ses services, son approche humaine et son impact positif sur la société.
+              Devenir le centre de référence en soin de sante mentale.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ const AProposPage = () => (
           <div className="grid gap-10 lg:grid-cols-5 items-center">
             <div className="lg:col-span-2">
               <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-                <img src={dgImg} alt="AGOSSOU Sagbo - Directeur Général, Psychologue en Chef" loading="lazy" width={800} height={1024} className="w-full object-cover aspect-[3/4]" />
+                <img src={dgImg} alt="Agossou SAGBO - Directeur Général, Psychologue Clinicien, Psychopathologue et Psychanalyste jungien" loading="lazy" width={800} height={1024} className="w-full object-cover aspect-[3/4]" />
               </div>
             </div>
             <div className="lg:col-span-3 space-y-6">

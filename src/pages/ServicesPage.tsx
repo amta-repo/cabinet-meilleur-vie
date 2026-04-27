@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
-import headerBg from "@/assets/header-services.jpg";
+import headerBg from "@/assets/header-pourquoi.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
