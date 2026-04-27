@@ -8,7 +8,7 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-primary/70" />
     </div>
 
-    <div className="container relative z-10 mx-auto py-32 sm:py-40">
+    <div className="container relative z-10 mx-auto py-48 sm:py-40">
       <div className="max-w-3xl space-y-6 animate-fade-in-up">
         <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground">
           🌿 Psychologie, Sante Mentale et Bien Être — Cotonou, Bénin
