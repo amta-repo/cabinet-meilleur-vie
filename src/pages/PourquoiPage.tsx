@@ -15,7 +15,7 @@ const reasons = [
   { icon: Lock, title: "Secret professionnel garanti", desc: "Le secret professionnel est un pilier fondamental. Vous pouvez vous exprimer en toute liberté dans un cadre sécurisant." },
   { icon: HandHeart, title: "Solutions adaptées à la réalité béninoise", desc: "Nos approches intègrent les dimensions culturelles et sociales du Bénin pour des résultats véritablement pertinents." },
   { icon: Sparkles, title: "Résultats concrets et personnalisés", desc: "Chaque patient bénéficie d'un plan sur mesure. Nous mesurons les progrès et ajustons notre approche." },
-  { icon: Brain, title: "Approches thérapeutiques variées", desc: "TCC, systémique, psychodynamique, hypnose jungienne — nous trouvons l'approche qui vous convient." },
+  { icon: Brain, title: "Approches thérapeutiques unique", desc: "Psychanalyse jungienne pour favorise un travail therapeutique en profendeur." },
   { icon: Heart, title: "Environnement chaleureux et apaisant", desc: "Notre cabinet est conçu pour vous mettre à l'aise. Un espace serein qui favorise la guérison." },
   { icon: Clock, title: "Flexibilité et disponibilité", desc: "Des horaires adaptés avec la possibilité de consultations en soirée et le week-end." },
   { icon: Award, title: "Expertise reconnue", desc: "Reconnu pour la qualité de ses prestations par les institutions, entreprises et familles de Cotonou." },

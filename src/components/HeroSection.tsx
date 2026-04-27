@@ -11,7 +11,7 @@ const HeroSection = () => (
     <div className="container relative z-10 mx-auto py-32 sm:py-40">
       <div className="max-w-3xl space-y-6 animate-fade-in-up">
         <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-accent-foreground">
-          🌿 Psychologie & Sciences de l'Éducation — Cotonou, Bénin
+          🌿 Psychologie, Sante Mentale et Bien Être — Cotonou, Bénin
         </span>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
@@ -20,7 +20,7 @@ const HeroSection = () => (
         </h1>
 
         <p className="max-w-xl text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
-          Votre partenaire pour le bien-être mental, le développement personnel et la réussite éducative à Cotonou.
+          Votre partenaire pour la sante mentale et bien-être, le développement personnel et la réussite éducative à Cotonou.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 pt-4">

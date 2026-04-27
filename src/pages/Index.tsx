@@ -12,6 +12,9 @@ import svcPsychometrique from "@/assets/service-psychometrique.jpg";
 import svcFormationPluri from "@/assets/service-formation-pluri.jpg";
 import svcFormationPsy from "@/assets/service-formation-psy.jpg";
 import svcPsyPro from "@/assets/service-psy-pro.jpg";
+// newly added photos services photos
+import svcPsychiatrie from "@assets/service-psychiatrie.jpg"
+import svcPedoPsychiatrie from "assets/service-pedo-psychiatrie.jpg"
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
@@ -21,7 +24,7 @@ const jsonLd = {
   name: "Cabinet Meilleure Vie",
   description: "Cabinet de Consultation, Formation et Expertise-Recherche en Psychologie, Éducation, Genre et Environnement à Cotonou, Bénin.",
   url: DOMAIN,
-  telephone: ["+22901676180021", "+2290194390295"],
+  telephone: ["+2290167618021", "+2290194390295"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison",
@@ -30,7 +33,7 @@ const jsonLd = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 6.3893166, longitude: 2.3170377 },
   areaServed: "Bénin",
-  medicalSpecialty: "Psychology",
+  medicalSpecialty: "Psychology","Psychiatry","Pedopsychiatry","Psychometry",
   sameAs: [
     "https://www.facebook.com/Meilleurvie",
     "https://www.instagram.com/Meilleurvie1",
@@ -42,28 +45,47 @@ const slides = [heroSlide1, heroSlide2];
 
 const serviceCards = [
   {
+    img: svcPsyPro,
+    title: "Services Psychologiques",
+    desc: "Thérapie individuelle, du couple, familiale, analyse de soi, thérapie de groupe en entreprise et accompagnement scolaire.",
+    slug: "services-psychologiques",
+  },
+
+  // the newly created service -1
+  {
+    img: svcPedoPsychiatrie,
+    title: "Services Pédopsychiatrie",
+    desc: "​Destinée aux enfants et adolescents (généralement de 0 à 18 ans), la pédopsychiatrie libérale se concentre sur le développement et les troubles précoces.​Évaluation Diagnostique : Identification des troubles du neurodéveloppement (TDAH, Troubles du Spectre de l'Autisme), troubles de l'apprentissage (dys), ou troubles anxieux.​Suivi Médical et Pharmacologique : Prescription et ajustement de traitements médicamenteux si nécessaire (ex: psychostimulants pour le TDAH). ​Guidance Parentale : Soutien aux parents pour adapter l'environnement familial et éducatif aux besoins de l'enfant",
+    slug: "services-pédopsychiatrie",
+  },
+
+  {
+    img: svcPsychiatrie,
+    title: "Services Psychiatrie",
+    desc: "Le psychiatre libéral traite les pathologies mentales de l'adulte via deux leviers principaux : la parole et la biologie.​Traitement des Troubles Communs : Dépression, troubles bipolaires, troubles anxieux (phobies, TOC, anxiété généralisée), et burn-out. ​Psychothérapie : Beaucoup de psychiatres libéraux pratiquent des thérapies spécifiques  psychanalyse, thérapies systémiques).​Gestion des Pathologies Chroniques : Suivi au long cours des troubles psychotiques stabilisés (schizophrénie) en lien avec les structures sanitaires. ​Certificats et Expertise : Rédaction de certificats médicaux pour des dossiers administratifs (MDPH, arrêts de travail, médecine du travail).",
+    slug: "services-psychologiques",
+  },
+
+//  the newly created service -2
+  {
     img: svcPsychometrique,
-    title: "Services Professionnels Psychométriques",
+    title: "Services d'Evaluations",
     desc: "Tests de personnalité, échelles d'évaluation, tests projectifs et actuariels. Psychothérapie individuelle, du couple, familiale et de groupe.",
     slug: "psychometriques",
   },
-  {
-    img: svcFormationPluri,
-    title: "Formations Professionnelles Pluridisciplinaires",
-    desc: "Gestion de projet, rédaction de projets d'établissement, discipline positive, TICE et méthodologie de recherche scientifique.",
-    slug: "formations-pluridisciplinaires",
-  },
-  {
+
+   {
     img: svcFormationPsy,
     title: "Formations Professionnelles Psychologiques",
     desc: "Certificats en hypnose jungienne, psychométrie, psychosocial, protection de l'enfant, accompagnement VBG et handicap.",
     slug: "formations-psychologiques",
   },
+  
   {
-    img: svcPsyPro,
-    title: "Services Professionnels Psychologiques",
-    desc: "Thérapie individuelle, du couple, familiale, analyse de soi, thérapie de groupe en entreprise et accompagnement scolaire.",
-    slug: "services-psychologiques",
+    img: svcFormationPluri,
+    title: "Formations Professionnelles Pluridisciplinaires",
+    desc: "Gestion de projet, rédaction de projets d'établissement, discipline positive, TICE et méthodologie de recherche scientifique.",
+    slug: "formations-pluridisciplinaires",
   },
 ];
 
@@ -141,15 +163,11 @@ const Index = () => {
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
                 Faites-Vous Écouter-{" "}
-                <span className="text-gradient">Sans Être Jugé</span>
+                <span className="#C49A6C">Sans Être Jugé</span>
               </h1>
 
               <p className="max-w-xl text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
-                Votre cabinet qui vous garantit la santé mentale au quotidien.
-              </p>
-
-              <p className="max-w-xl text-base sm:text-lg text-primary-foreground/70 italic">
-                ..dans la confidentialité, dans un cadre sécurisé.
+                Votre cabinet qui vous garantit la santé mentale au quotidien dans la confidentialité, dans un cadre sécurisé.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -161,7 +179,7 @@ const Index = () => {
                   Prendre rendez-vous
                 </Link>
                 <a
-                  href="https://wa.me/22901676180021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                  href="https://wa.me/22994390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3.5 text-sm font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20"
@@ -189,7 +207,7 @@ const Index = () => {
           <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border">
             <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-border">
               <CounterStat end={10} suffix="+" label="Années d'expérience" />
-              <CounterStat end={500} suffix="+" label="Patients accompagnés" />
+              <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" />
               <CounterStat end={100} suffix="%" label="Confidentialité" />
               <CounterStat end={98} suffix="%" label="Taux de satisfaction" />
             </div>

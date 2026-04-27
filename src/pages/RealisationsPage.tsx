@@ -71,7 +71,7 @@ const RealisationsPage = () => (
             </div>
             <span className="text-sm font-semibold text-foreground">5.0</span>
             <a
-              href="https://www.google.com/maps/place/CABINET+MEILLEURE+VIE/"
+              href="https://www.google.com/maps/place/CABINET+MEILLEURE+VIE/@6.3892618,2.3144574,17z/data=!3m1!4b1!4m6!3m5!1s0x102357003f5ebd47:0xafbf9f3002f4d23!8m2!3d6.3892565!4d2.3170323!16s%2Fg%2F11lctvjgdb?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-accent hover:underline ml-2"

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Brain, GraduationCap, Compass, Heart, CheckCircle, CalendarCheck, MessageCircle, ArrowRight } from "lucide-react";
+import { Brain, GraduationCap, Compass, Heart, CheckCircle, CalendarCheck, MessageCircle, ArrowRight, BrainCircuit } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,8 +11,67 @@ const DOMAIN = "https://cabinetmeilleurvie.com";
 
 const servicesData = [
   {
+    id: "services-psychologiques",
+    category: "Services Psychologiques",
+    icon: Heart,
+    description: "Nos services psychologiques offrent des seances de consultation clinique et un accompagnement thérapeutique personnalisé pour toutes les situations de vie.",
+    items: [
+      { title: "Thérapie individuelle", desc: "Accompagnement personnalisé pour surmonter l'anxiété, la dépression et les traumatismes." },
+      { title: "Thérapie du couple", desc: "Un espace pour restaurer la communication et renforcer les liens affectifs." },
+      { title: "Thérapie familiale", desc: "Résolution des conflits et amélioration de la dynamique familiale." },
+      { title: "Analyse de soi", desc: "Exploration approfondie de votre personnalité, vos émotions et vos schémas de pensée." },
+      { title: "Thérapie de groupe en entreprise", desc: "Séances collectives pour améliorer le bien-être au travail et la cohésion d'équipe." },
+      { title: "Accompagnement scolaire", desc: "Suivi psycho-éducatif spécialisé pour surmonter les difficultés scolaires." },
+    ],
+  },
+
+  // this is the new services that the cabinet is introducing - finish it later.
+    {
+  id: "services-pedopsychiatrie",
+  category: "Pédopsychiatrie",
+  icon: BrainCircuit,
+  description: "La pédopsychiatrie est dédiée aux enfants et adolescents, avec une approche spécialisée centrée sur le développement, le bien-être émotionnel et les troubles précoces.",
+  items: [
+    {title: "Évaluation diagnostique", desc: "Identification des troubles du neurodéveloppement comme le TDAH, les troubles du spectre de l’autisme, ainsi que les troubles de l’apprentissage et de l’anxiété."},
+    {title: "Suivi médical et pharmacologique", desc: "Prescription et ajustement de traitements médicamenteux adaptés, notamment pour le TDAH ou d’autres troubles nécessitant une prise en charge médicale."},
+    {title: "Guidance parentale", desc: "Accompagnement des parents pour mieux comprendre les besoins de leur enfant et adapter l’environnement familial et éducatif." },
+    {title: "Accompagnement du développement", desc: "Suivi global pour soutenir le développement émotionnel, cognitif et social de l’enfant ou de l’adolescent."},
+    {title: "Prise en charge des troubles précoces", desc: "Interventions ciblées pour les difficultés apparaissant dès la petite enfance afin de favoriser une évolution positive."}
+  ],
+},
+
+{
+  id: "services-psychiatrie-adulte",
+  category: "Psychiatrie",
+  icon: Brain,
+  description: "La psychiatrie s’adresse à l’adulte et combine une approche clinique, psychothérapeutique et biologique pour traiter les troubles mentaux.",
+  items: [
+    { 
+      title: "Traitement des troubles courants", 
+      desc: "Prise en charge de la dépression, des troubles bipolaires, des troubles anxieux (phobies, TOC, anxiété généralisée) et du burn-out." 
+    },
+    { 
+      title: "Psychothérapie", 
+      desc: "Mise en place de thérapies adaptées telles que la psychanalyse ou les thérapies systémiques selon les besoins du patient." 
+    },
+    { 
+      title: "Suivi des pathologies chroniques", 
+      desc: "Accompagnement au long cours des troubles psychotiques stabilisés, notamment la schizophrénie, en coordination avec les structures de soins." 
+    },
+    { 
+      title: "Prise en charge médicamenteuse", 
+      desc: "Prescription et ajustement de traitements psychotropes en fonction de l’évolution clinique." 
+    },
+    { 
+      title: "Certificats et expertise", 
+      desc: "Rédaction de certificats médicaux pour les démarches administratives, professionnelles ou médico-sociales." 
+    }
+  ],
+},
+
+  {
     id: "psychometriques",
-    category: "Services Professionnels Psychométriques",
+    category: "Services d'Evaluations",
     icon: Brain,
     description: "Nos services psychométriques offrent des évaluations rigoureuses et scientifiquement validées pour les enfants, adultes et couples.",
     items: [
@@ -21,18 +80,33 @@ const servicesData = [
       { title: "Tests projectifs", desc: "Exploration de l'inconscient et de la dynamique psychique à travers des techniques projectives validées." },
       { title: "Échelles actuarielles", desc: "Outils d'évaluation statistiques pour une analyse objective et prédictive des comportements." },
     ],
-    subServices: [
-      {
-        title: "Psychothérapie",
-        items: ["Individuelle", "Du couple", "Familiale", "Du groupe"],
-      },
-      {
-        title: "Autres services",
-        items: ["Analyse de soi", "Accompagnement scolaire"],
-      },
-    ],
+
     cibles: "Enfants, Adultes, Couples",
   },
+
+  {
+    id: "formations-psychologiques",
+    category: "Formations Psychologiques",
+    icon: Compass,
+    description: "Des certifications professionnelles reconnues en psychologie appliquée pour renforcer votre expertise.",
+    items: [
+      { title: "Certificat psychosocial de travail et des organisations", desc: "Formation certifiante pour intervenir en psychologie du travail et des organisations." },
+      { title: "Certificat en hypnose jungienne", desc: "Maîtriser les techniques d'hypnose jungienne pour l'accompagnement thérapeutique." },
+      { title: "Certificat psychométrique des tests", desc: "Devenir expert en administration et interprétation des tests psychométriques." },
+      { title: "Certificat professionnel des éducateurs de jeunes enfants", desc: "Formation spécialisée pour l'encadrement psycho-éducatif de la petite enfance." },
+      { title: "Intervention humanitaire et sociale", desc: "Acquérir les compétences pour intervenir dans les contextes humanitaires et sociaux." },
+      { title: "Discipline positive à l'école", desc: "Approches bienveillantes pour instaurer un climat scolaire favorable à l'apprentissage." },
+      { title: "Certificat de pris en charge de violence base sur le genre", desc: "Document médical attestant les violences subies dans un cadre médico-légal." },
+
+    ],
+    subServices: [
+      {
+        title: "Formation spécialisée",
+        items: ["Formation des chefs d'établissement scolaires en gestion d'école sur les TICE"],
+      },
+    ],
+  },
+
   {
     id: "formations-pluridisciplinaires",
     category: "Formations Professionnelles Pluridisciplinaires",
@@ -41,10 +115,6 @@ const servicesData = [
     items: [
       { title: "Gestion de projet", desc: "Maîtriser les outils et méthodologies de gestion de projet pour mener vos initiatives à bien." },
       { title: "Gagner des appels d'offres d'ONG internationales", desc: "Techniques et stratégies pour remporter des marchés auprès d'organisations internationales." },
-      { title: "Rédaction de projet d'établissement", desc: "Concevoir et rédiger des projets d'établissement solides et structurés." },
-      { title: "Discipline positive à l'école", desc: "Approches bienveillantes pour instaurer un climat scolaire favorable à l'apprentissage." },
-      { title: "Gestion des conflits scolaires", desc: "Méthodes de médiation et résolution des conflits en milieu scolaire." },
-      { title: "Gestion administrative", desc: "Optimiser l'organisation et la gestion administrative de votre structure." },
       { title: "Méthodologie de recherche scientifique", desc: "Acquérir les bases méthodologiques pour mener des recherches rigoureuses." },
     ],
     subServices: [
@@ -58,36 +128,7 @@ const servicesData = [
       },
     ],
   },
-  {
-    id: "formations-psychologiques",
-    category: "Formations Professionnelles Psychologiques",
-    icon: Compass,
-    description: "Des certifications professionnelles reconnues en psychologie appliquée pour renforcer votre expertise.",
-    items: [
-      { title: "Certificat psychosocial de travail et des organisations", desc: "Formation certifiante pour intervenir en psychologie du travail et des organisations." },
-      { title: "Certificat en hypnose jungienne", desc: "Maîtriser les techniques d'hypnose jungienne pour l'accompagnement thérapeutique." },
-      { title: "Certificat psychométrique des tests", desc: "Devenir expert en administration et interprétation des tests psychométriques." },
-      { title: "Certificat professionnel des éducateurs de jeunes enfants", desc: "Formation spécialisée pour l'encadrement psycho-éducatif de la petite enfance." },
-      { title: "Intervention humanitaire et sociale", desc: "Acquérir les compétences pour intervenir dans les contextes humanitaires et sociaux." },
-      { title: "Professionnel de protection de l'enfant", desc: "Formation aux normes et pratiques de protection de l'enfance." },
-      { title: "Accompagnement psychosocial des violences basées sur le genre", desc: "Prise en charge psychosociale adaptée aux victimes de VBG." },
-      { title: "Accompagnement socioprofessionnel des personnes handicapées", desc: "Accompagnement spécialisé pour l'insertion des personnes en situation de handicap." },
-    ],
-  },
-  {
-    id: "services-psychologiques",
-    category: "Services Professionnels Psychologiques",
-    icon: Heart,
-    description: "Nos services psychologiques offrent un accompagnement thérapeutique personnalisé pour toutes les situations de vie.",
-    items: [
-      { title: "Thérapie individuelle", desc: "Accompagnement personnalisé pour surmonter l'anxiété, la dépression et les traumatismes." },
-      { title: "Thérapie du couple", desc: "Un espace pour restaurer la communication et renforcer les liens affectifs." },
-      { title: "Thérapie familiale", desc: "Résolution des conflits et amélioration de la dynamique familiale." },
-      { title: "Analyse de soi", desc: "Exploration approfondie de votre personnalité, vos émotions et vos schémas de pensée." },
-      { title: "Thérapie de groupe en entreprise", desc: "Séances collectives pour améliorer le bien-être au travail et la cohésion d'équipe." },
-      { title: "Accompagnement scolaire", desc: "Suivi psycho-éducatif spécialisé pour surmonter les difficultés scolaires." },
-    ],
-  },
+
 ];
 
 const servicesJsonLd = {

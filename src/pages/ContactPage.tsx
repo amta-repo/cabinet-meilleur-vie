@@ -15,7 +15,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. Service souhaité: ${form.service}. ${form.message}`);
-    window.open(`https://wa.me/22901676180021?text=${msg}`, "_blank");
+    window.open(`https://wa.me/2290167618021?text=${msg}`, "_blank");
   };
 
   return (
@@ -38,9 +38,9 @@ const ContactPage = () => {
         <section className="py-12 bg-secondary">
           <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Phone, title: "Téléphone", value: "+229 01 67 618 021", href: "tel:+22901676180021", desc: "Appelez-nous directement" },
-              { icon: MessageCircle, title: "WhatsApp", value: "+229 01 67 618 021", href: "https://wa.me/22901676180021", desc: "Réponse rapide garantie" },
-              { icon: Mail, title: "Email", value: "contact@cabinetmeilleurvie.com", href: "mailto:contact@cabinetmeilleurvie.com", desc: "Envoyez-nous un email" },
+              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95", "+229 01 67 61 80 21", href: "tel:+229 01 94 39 02 95", desc: "Appelez-nous directement" },
+              { icon: MessageCircle, title: "WhatsApp", value: "+229 94 39 02 95", href: "https://wa.me/22994390295", desc: "Réponse rapide garantie" },
+              { icon: Mail, title: "Email", value: "contact.cmv@gmail.com", href: "mailto:contact.cmv@gmail.com", desc: "Envoyez-nous un email" },
               { icon: Clock, title: "Horaires", value: "Lun - Sam : 8h - 18h", href: null, desc: "Disponibles 6j/7" },
             ].map((c) => (
               <div key={c.title} className="rounded-xl bg-card p-6 text-center hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -87,13 +87,11 @@ const ContactPage = () => {
                     <label className="block text-sm font-medium text-foreground mb-1.5">Service souhaité</label>
                     <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                       <option value="">Sélectionnez un service</option>
-                      <option value="Services psychométriques">Services psychométriques</option>
-                      <option value="Psychothérapie">Psychothérapie</option>
-                      <option value="Formation pluridisciplinaire">Formation pluridisciplinaire</option>
-                      <option value="Formation psychologique">Formation psychologique</option>
-                      <option value="Thérapie individuelle">Thérapie individuelle</option>
-                      <option value="Thérapie de couple">Thérapie de couple</option>
-                      <option value="Accompagnement scolaire">Accompagnement scolaire</option>
+                      <option value="Services Psychologique">Consultation Psychologique</option>
+                      <option value="Consultation Psychiatrique">Consultation Psychiatrique</option>
+                      <option value="Consultation Pedopsychiatrique">Consultation Pedopsychiatrique</option>
+                      <option value="Passe un test">Passe un test</option>
+                      <option value="Faire une Formation">Faire une Formation</option>
                       <option value="Autre">Autre</option>
                     </select>
                   </div>
@@ -123,7 +121,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
                     <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin</p>
-                    <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+22901676180021" className="text-accent hover:underline">+229 01 67 618 021</a></p>
+                    <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+2290167618021" className="text-accent hover:underline">+229 01 67 618 021</a></p>
                     <p className="text-sm text-muted-foreground">Tél 2 : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
                   </div>
                 </div>
@@ -143,7 +141,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://wa.me/22901676180021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                href="https://wa.me/2290167618021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"

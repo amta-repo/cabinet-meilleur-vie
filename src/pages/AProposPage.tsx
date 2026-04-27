@@ -31,13 +31,13 @@ const teamMembers = [
     name: "AGOSSOU Sagbo",
     role: "Directeur Général – Psychologue en Chef",
     img: dgImg,
-    bio: "Psychologue clinicien de formation, M. AGOSSOU Sagbo est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 10 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
+    bio: "Psychologue clinicien de formation, M. AGOSSOU Sagbo est le fondateur et Directeur Général du Cabinet Meilleure Vie. Fort de plus de 15 ans d'expérience en psychologie clinique et en sciences de l'éducation, il dirige l'équipe avec passion et engagement pour le bien-être mental de chaque patient.",
   },
   {
-    name: "Mlle Nifemi",
+    name: "ANTONIO Fêmi C.",
     role: "Assistante Psychologue",
     img: assistantImg,
-    bio: "Mlle Nifemi accompagne les patients dans leur parcours thérapeutique avec douceur et professionnalisme. Elle assiste dans la conduite des bilans psychométriques et le suivi des consultations.",
+    bio: "Responsable du Service Clinique et d'Expertise au Cabinet Meilleure Vie Collaboratrice du Directeur Général du Cabinet",
   },
 ];
 
@@ -58,7 +58,7 @@ const AProposPage = () => (
   <>
     <Helmet>
       <title>À Propos de Meilleure Vie | Psychologue Cotonou, Bénin</title>
-      <meta name="description" content="Découvrez Cabinet Meilleure Vie : votre cabinet de psychologie et des sciences de l'éducation à Cotonou. Équipe expérimentée, mission de bien-être mental." />
+      <meta name="description" content="Découvrez Cabinet Meilleure Vie : votre cabinet de psychologie et psychiatrie à Cotonou. Équipe expérimentée, mission de bien-être mental." />
       <link rel="canonical" href={`${DOMAIN}/a-propos`} />
       <meta property="og:title" content="À Propos de Meilleure Vie | Cabinet de Psychologie Cotonou" />
       <meta property="og:url" content={`${DOMAIN}/a-propos`} />
