@@ -8,7 +8,7 @@ import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-apropos.jpg";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
-import assistantPsyImgTon from "@assets/assistant-tongnon.jpg";
+import assistantPsyImgTon from "@/assets/assistant-tongnon.jpg";
 import equipeImg from "@/assets/equipe.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";

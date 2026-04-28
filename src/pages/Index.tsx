@@ -43,7 +43,7 @@ import partner3 from "@/assets/Partner 3.jpeg";
 import partner4 from "@/assets/Partner 4.png";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
-import assistantPsyImgTon from "@assets/assistant-tongnon.jpg";
+import assistantPsyImgTon from "@/assets/assistant-tongnon.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
@@ -314,31 +314,31 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-white/15 bg-background/95 p-6 shadow-2xl backdrop-blur-xl">
-                <div className="mb-6">
+              <div className="rounded-[2rem] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+                <div className="mb-4 sm:mb-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                     Calendrier des activités
                   </p>
-                  <h2 className="mt-3 text-2xl font-bold text-foreground">Événements majeurs 2026</h2>
+                  <h2 className="mt-3 text-xl sm:text-2xl font-bold text-foreground">Événements majeurs 2026</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                   {calendarEvents.slice(0, 9).map((event) => (
                     <button
                       key={event.date}
                       onClick={() => setSelectedEvent(event)}
-                      className="group rounded-[1px] border border-border p-3 text-center transition hover:border-accent/70 hover:bg-accent/10"
+                      className="group rounded-[1px] border border-border p-2 sm:p-3 text-center transition hover:border-accent/70 hover:bg-accent/10"
                     >
-                      <div className={`flex h-8 w-8 items-center justify-center rounded-sm ${event.color} text-white mx-auto mb-2`}>
-                        <event.icon className="h-4 w-4" />
+                      <div className={`flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-sm ${event.color} text-white mx-auto mb-2`}>
+                        <event.icon className="h-3 w-3 sm:h-4 sm:w-4" />
                       </div>
                       <span className="text-xs font-semibold text-foreground block">{event.date}</span>
                     </button>
                   ))}
                 </div>
-                <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-accent">
+                <div className="mt-4 sm:mt-5 flex items-center gap-2 text-sm font-semibold text-accent">
                   <ArrowRight className="h-4 w-4 animate-bounce" />
                   Cliquez sur un événement pour en savoir plus.
                 </div>
@@ -358,11 +358,11 @@ const Index = () => {
 
         {selectedEvent && (
           <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
-            <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-6 shadow-2xl ring-1 ring-border">
+            <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-4 sm:p-6 shadow-2xl ring-1 ring-border">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Détail de l'événement</p>
-                  <h2 className="mt-2 text-2xl font-bold text-foreground">{selectedEvent.title}</h2>
+                  <h2 className="mt-2 text-xl sm:text-2xl font-bold text-foreground">{selectedEvent.title}</h2>
                   <p className="mt-1 text-sm text-muted-foreground">{selectedEvent.date}</p>
                 </div>
                 <button
@@ -373,10 +373,10 @@ const Index = () => {
                   ×
                 </button>
               </div>
-              <div className="mt-6 space-y-4">
+              <div className="mt-4 sm:mt-6 space-y-4">
                 <p className="text-sm leading-relaxed text-muted-foreground">{selectedEvent.description}</p>
               </div>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="mt-4 sm:mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <a
                   href={`https://wa.me/22994390295?text=${encodeURIComponent(
                     `Bonjour, je souhaite en savoir plus sur l'événement : ${selectedEvent.title}`
