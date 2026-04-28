@@ -121,7 +121,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
                     <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin</p>
-                    <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+2290167618021" className="text-accent hover:underline">+229 01 67 618 021</a></p>
+                    <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+22967618021" className="text-accent hover:underline">+229 67 618 021</a></p>
                     <p className="text-sm text-muted-foreground">Tél 2 : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://wa.me/2290167618021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                href="https://wa.me/22967618021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"
