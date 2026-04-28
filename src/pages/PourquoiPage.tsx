@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Users, Shield, HandHeart, Sparkles, Heart, Brain, Clock, Award, ArrowRight, Lock, Eye } from "lucide-react";
+import { Award, Users, ShieldCheck, Smile, ArrowRight, Lock, Eye, Brain, Heart, Clock, Sparkles, HandHeart } from "lucide-react";
+// import { Users, Shield, HandHeart, Sparkles, Heart, Brain, Clock, Award, ArrowRight, Lock, Eye } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,15 +22,45 @@ const reasons = [
   { icon: Award, title: "Expertise reconnue", desc: "Reconnu pour la qualité de ses prestations par les institutions, entreprises et familles de Cotonou." },
 ];
 
-const CounterCard = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+
+// const CounterCard = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+//   const { count, ref } = useCountUp(end, 2000);
+//   return (
+//     <div ref={ref} className="text-center p-6 rounded-xl bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
+//       <p className="text-3xl sm:text-4xl font-bold text-accent">{count}{suffix}</p>
+//       <p className="mt-2 text-sm text-muted-foreground">{label}</p>
+//     </div>
+//   );
+// };
+
+
+const CounterCard = ({
+  end,
+  suffix,
+  label,
+  icon: Icon,
+  bgColor
+}: {
+  end: number;
+  suffix: string;
+  label: string;
+  icon: any;
+  bgColor: string;
+}) => {
   const { count, ref } = useCountUp(end, 2000);
   return (
-    <div ref={ref} className="text-center p-6 rounded-xl bg-card" style={{ boxShadow: "var(--card-shadow)" }}>
-      <p className="text-3xl sm:text-4xl font-bold text-accent">{count}{suffix}</p>
-      <p className="mt-2 text-sm text-muted-foreground">{label}</p>
+    <div
+      ref={ref}
+      className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`}
+      style={{ boxShadow: "var(--card-shadow)" }}
+    >
+      <Icon className="h-10 w-10 text-white/50 mb-3" />
+      <p className="text-3xl sm:text-4xl font-bold text-white">{count}{suffix}</p>
+      <p className="mt-2 text-sm text-white/80">{label}</p>
     </div>
   );
 };
+
 
 const PourquoiPage = () => (
   <>
@@ -48,14 +79,81 @@ const PourquoiPage = () => (
         bgImage={headerBg}
       />
 
-      <section className="bg-secondary py-12">
-        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
-          <CounterCard end={10} suffix="+" label="Années d'expérience en psychologie" />
+      {/* <section className="bg-secondary py-12"> */}
+      {/* Changed grid-cols-2 to grid-cols-1 for mobile, kept lg:grid-cols-4 for desktop */}
+      {/* <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CounterCard end={15} suffix="+" label="Années d'expérience en psychologie" />
           <CounterCard end={500} suffix="+" label="Patients accompagnés avec succès" />
           <CounterCard end={100} suffix="%" label="Confidentialité garantie" />
           <CounterCard end={98} suffix="%" label="Taux de satisfaction" />
+        </div> */}
+      {/* </section> */}
+      {/* <section className="bg-secondary py-12 px-4">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CounterCard
+            icon={Award}
+            end={15}
+            suffix="+"
+            label="Années d'expérience en psychologie"
+            bgColor="bg-[#0056b3]"
+          />
+          <CounterCard
+            icon={Users}
+            end={500}
+            suffix="+"
+            label="Patients accompagnés avec succès"
+            bgColor="bg-pink-500"
+          />
+          <CounterCard
+            icon={ShieldCheck}
+            end={100}
+            suffix="%"
+            label="Confidentialité garantie"
+            bgColor="bg-purple-500"
+          />
+          <CounterCard
+            icon={Smile}
+            end={98}
+            suffix="%"
+            label="Taux de satisfaction"
+            bgColor="bg-green-500"
+          />
         </div>
-      </section>
+      </section> */}
+      <section className="bg-secondary py-12 px-4">
+  {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
+  <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <CounterCard 
+      icon={Award} 
+      end={15} 
+      suffix="+" 
+      label="Années d'expérience en psychologie" 
+      bgColor="bg-[#0056b3]" 
+    />
+    <CounterCard 
+      icon={Users} 
+      end={500} 
+      suffix="+" 
+      label="Patients accompagnés avec succès" 
+      bgColor="bg-pink-500" 
+    />
+    <CounterCard 
+      icon={ShieldCheck} 
+      end={100} 
+      suffix="%" 
+      label="Confidentialité garantie" 
+      bgColor="bg-purple-500" 
+    />
+    <CounterCard 
+      icon={Smile} 
+      end={98} 
+      suffix="%" 
+      label="Taux de satisfaction" 
+      bgColor="bg-green-500" 
+    />
+  </div>
+</section>
+
 
       <section className="section-padding">
         <div className="container mx-auto">

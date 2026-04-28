@@ -106,3 +106,19 @@
     background-color: #25D366;
   }
 }
+
+@keyframes marquee-fast {
+  /* Starts from where we positioned it (middle) and moves fully left */
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); } /* Adjust percentage based on item count */
+}
+
+.animate-marquee-fast {
+  /* Reduced time (15s) makes it faster */
+  animation: marquee-fast 15s linear infinite;
+}
+
+/* Pause on hover so people can actually click the fast text */
+.animate-marquee-fast:hover {
+  animation-play-state: paused;
+}

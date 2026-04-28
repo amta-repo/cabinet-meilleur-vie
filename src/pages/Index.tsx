@@ -109,14 +109,14 @@ const serviceCards = [
 
    {
     img: svcFormationPsy,
-    title: "Formations Professionnelles Psychologiques",
+    title: "Formations Psychologiques",
     desc: "Certificats en hypnose jungienne, psychométrie, psychosocial, protection de l'enfant, accompagnement VBG et handicap.",
     slug: "formations-psychologiques",
   },
   
   {
     img: svcFormationPluri,
-    title: "Formations Professionnelles Pluridisciplinaires",
+    title: "Formations Pluridisciplinaires",
     desc: "Gestion de projet, rédaction de projets d'établissement, discipline positive, TICE et méthodologie de recherche scientifique.",
     slug: "formations-pluridisciplinaires",
   },
@@ -222,15 +222,43 @@ const calendarEvents = [
 
 const partnerLogos = [partner1, partner2, partner3, partner4];
 
-const CounterStat = ({ end, suffix, label, textColor = "text-accent", labelColor = "text-muted-foreground" }: { end: number; suffix: string; label: string; textColor?: string; labelColor?: string }) => {
+// const CounterStat = ({ end, suffix, label, textColor = "text-accent", labelColor = "text-muted-foreground" }: { end: number; suffix: string; label: string; textColor?: string; labelColor?: string }) => {
+//   const { count, ref } = useCountUp(end, 2000);
+//   return (
+//     <div ref={ref} className="px-4 py-4 sm:py-5 text-center">
+//       <p className={`text-xl sm:text-2xl font-bold ${textColor}`}>{count}{suffix}</p>
+//       <p className={`text-xs sm:text-sm ${labelColor}`}>{label}</p>
+//     </div>
+//   );
+// };
+
+const CounterCard = ({ 
+  end, 
+  suffix, 
+  label, 
+  icon: Icon, 
+  bgColor 
+}: { 
+  end: number; 
+  suffix: string; 
+  label: string; 
+  icon: any; 
+  bgColor: string; 
+}) => {
   const { count, ref } = useCountUp(end, 2000);
   return (
-    <div ref={ref} className="px-4 py-4 sm:py-5 text-center">
-      <p className={`text-xl sm:text-2xl font-bold ${textColor}`}>{count}{suffix}</p>
-      <p className={`text-xs sm:text-sm ${labelColor}`}>{label}</p>
+    <div 
+      ref={ref} 
+      className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`} 
+      style={{ boxShadow: "var(--card-shadow)" }}
+    >
+      <Icon className="h-10 w-10 text-white/50 mb-3" />
+      <p className="text-3xl sm:text-4xl font-bold text-white">{count}{suffix}</p>
+      <p className="mt-2 text-sm text-white/80">{label}</p>
     </div>
   );
 };
+
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -355,32 +383,41 @@ const Index = () => {
             </div>
           </div> */}
         </section>
-         <div className="xl:hidden grid grid-cols-1 gap-4 mt-6">
-  {/* Experience - Blue/Cabinet Theme */}
-  <div className="bg-[#0056b3] rounded-lg h-52 flex flex-col items-center justify-center p-4">
-    <Award className="h-10 w-10 text-white/50 mb-2" />
-    <CounterStat end={15} suffix="+" label="Années d'expérience" textColor="text-white" labelColor="text-white/80" />
-  </div>
-
-  {/* Patients - Pink */}
-  <div className="bg-pink-500 rounded-lg h-52 flex flex-col items-center justify-center p-4 text-center">
-    <Users className="h-10 w-10 text-white/50 mb-2" />
-    <CounterStat end={500} suffix="+" label="Patients accompagnés au Bénin, France, Togo, Canada" textColor="text-white" labelColor="text-white/80" />
-  </div>
-
-  {/* Confidentiality - Purple */}
-  <div className="bg-purple-500 rounded-lg h-52 flex flex-col items-center justify-center p-4">
-    <ShieldCheck className="h-10 w-10 text-white/50 mb-2" />
-    <CounterStat end={100} suffix="%" label="Confidentialité" textColor="text-white" labelColor="text-white/80" />
-  </div>
-
-  {/* Satisfaction - Green */}
-  <div className="bg-green-500 rounded-lg h-52 flex flex-col items-center justify-center p-4">
-    <Smile className="h-10 w-10 text-white/50 mb-2" />
-    <CounterStat end={98} suffix="%" label="Taux de satisfaction" textColor="text-white" labelColor="text-white/80" />
+       <div className="bg-secondary py-12 px-4">
+  {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
+  <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <CounterCard 
+      icon={Award} 
+      end={15} 
+      suffix="+" 
+      label="Années d'expérience en psychologie" 
+      bgColor="bg-[#0056b3]" 
+    />
+    <CounterCard 
+      icon={Users} 
+      end={500} 
+      suffix="+" 
+      label="Patients accompagnés avec succès" 
+      bgColor="bg-pink-500" 
+    />
+    <CounterCard 
+      icon={ShieldCheck} 
+      end={100} 
+      suffix="%" 
+      label="Confidentialité garantie" 
+      bgColor="bg-purple-500" 
+    />
+    <CounterCard 
+      icon={Smile} 
+      end={98} 
+      suffix="%" 
+      label="Taux de satisfaction" 
+      bgColor="bg-green-500" 
+    />
   </div>
 </div>
 
+{/* Calendar events */}
         {selectedEvent && (
           <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
             <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-4 sm:p-6 shadow-2xl ring-1 ring-border">

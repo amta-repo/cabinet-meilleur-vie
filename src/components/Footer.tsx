@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { MapPin, Facebook, Instagram, Twitter, PhoneCall, Mail, MessageCircle, } from "lucide-react";
 import logoImg from "@/assets/logo-cabinet.jpg";
 
 const Footer = () => (
@@ -26,6 +26,7 @@ const Footer = () => (
           </div>
         </div>
 
+{/* Services */}
         <div>
           <h4 className="text-sm font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
@@ -38,6 +39,8 @@ const Footer = () => (
           </ul>
         </div>
 
+
+{/* Navigation */}
         <div>
           <h4 className="text-sm font-semibold mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
@@ -58,31 +61,50 @@ const Footer = () => (
           </ul>
         </div>
 
+
+{/* Contact */}
         <div>
-          <h4 className="text-sm font-semibold mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm text-primary-foreground/60">
-            <li className="flex items-start gap-2">
-              <MapPin className="h-4 w-4 shrink-0 mt-0.5 text-accent" />
-              <span>Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin</span>
+          <h4 className="text-sm font-semibold mb-4 text-center sm:text-left">Contact</h4>
+          <ul className="space-y-4 text-sm text-primary-foreground/60">
+
+            {/* Address - Using items-start because the text is long */}
+            {/* Address - Optimized for perfect centering on mobile */}
+            <li className="flex flex-col items-center sm:flex-row sm:items-start sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+              <MapPin className="h-5 w-5 shrink-0 text-accent" />
+              <span className="max-w-[280px] sm:max-w-none">
+                Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin
+              </span>
             </li>
-            <li>
-              <a href="tel:+22901676180021" className="hover:text-accent transition-colors">+229 01 67 618 021</a>
+
+            {/* Phone 1 */}
+            <li className="flex items-center justify-center sm:justify-start gap-3">
+              <PhoneCall className="h-5 w-5 shrink-0 text-accent" />
+              <a href="tel:+2290167618021" className="hover:text-accent transition-colors">+229 01 67 618 021</a>
             </li>
-            <li>
+
+            {/* Phone 2 */}
+            <li className="flex items-center justify-center sm:justify-start gap-3">
+              <PhoneCall className="h-5 w-5 shrink-0 text-accent" />
               <a href="tel:+2290194390295" className="hover:text-accent transition-colors">+229 01 94 39 02 95</a>
             </li>
-            <li>
+
+            {/* Email */}
+            <li className="flex items-center justify-center sm:justify-start gap-3">
+              <Mail className="h-5 w-5 shrink-0 text-accent" />
               <a href="mailto:contact.cmv.benin@gmail.com" className="hover:text-accent transition-colors">Envoyez-nous un email</a>
             </li>
-            <li>
-              <a href="https://wa.me/22901676180021" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp: +229 01 67 618 021</a>
+
+            {/* WhatsApp */}
+            <li className="flex items-center justify-center sm:justify-start gap-3">
+              <MessageCircle className="h-5 w-5 shrink-0 text-accent" />
+              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">
-        © {new Date().getFullYear()} Cabinet Meilleure Vie. Tous droits réservés. — Psychologie & Éducation, Cotonou, Bénin
+        © {new Date().getFullYear()} Cabinet Meilleure Vie. Tous droits réservés. — Psychologie, Sante Mentale et Bien-être, Cotonou, Bénin
       </div>
     </div>
   </footer>
