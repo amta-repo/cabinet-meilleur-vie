@@ -89,7 +89,7 @@ const ContactPage = () => {
                       <option value="">Sélectionnez un service</option>
                       <option value="Services Psychologique">Consultation Psychologique</option>
                       <option value="Consultation Psychiatrique">Consultation Psychiatrique</option>
-                      <option value="Consultation Pedopsychiatrique">Consultation Pedopsychiatrique</option>
+                      <option value="Consultation Pedopsychiatrique">Consultation Pédopsychiatrique</option>
                       <option value="Passe un test">Passe un test</option>
                       <option value="Faire une Formation">Faire une Formation</option>
                       <option value="Autre">Autre</option>

@@ -219,12 +219,12 @@ const calendarEvents = [
 
 const partnerLogos = [partner1, partner2, partner3, partner4];
 
-const CounterStat = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+const CounterStat = ({ end, suffix, label, textColor = "text-accent", labelColor = "text-muted-foreground" }: { end: number; suffix: string; label: string; textColor?: string; labelColor?: string }) => {
   const { count, ref } = useCountUp(end, 2000);
   return (
     <div ref={ref} className="px-4 py-4 sm:py-5 text-center">
-      <p className="text-xl sm:text-2xl font-bold text-accent">{count}{suffix}</p>
-      <p className="text-xs sm:text-sm text-muted-foreground">{label}</p>
+      <p className={`text-xl sm:text-2xl font-bold ${textColor}`}>{count}{suffix}</p>
+      <p className={`text-xs sm:text-sm ${labelColor}`}>{label}</p>
     </div>
   );
 };
@@ -280,7 +280,7 @@ const Index = () => {
             </div>
           ))}
 
-          <div className="container relative z-10 mx-auto pt-28 pb-20 sm:pt-32 sm:pb-24">
+          <div className="container relative z-10 mx-auto pt-36 pb-20 sm:pt-40 sm:pb-24">
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
@@ -315,7 +315,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="rounded-[2px] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
+              <div className="mr-4 sm:mr-6 rounded-[2px] border border-white/15 bg-background/50 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
                 <div className="mb-4 sm:mb-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                     Calendrier des activités
@@ -338,6 +338,21 @@ const Index = () => {
                       <span className="text-xs font-semibold text-foreground block">{event.date}</span>
                     </button>
                   ))}
+                </div>
+              </div>
+
+              <div className="xl:hidden grid grid-cols-1 gap-4">
+                <div className="bg-green-500 rounded-lg h-52 flex items-center justify-center">
+                  <CounterStat end={15} suffix="+" label="Années d'expérience" textColor="text-white" labelColor="text-white/80" />
+                </div>
+                <div className="bg-pink-500 rounded-lg h-52 flex items-center justify-center">
+                  <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" textColor="text-white" labelColor="text-white/80" />
+                </div>
+                <div className="bg-purple-500 rounded-lg h-52 flex items-center justify-center">
+                  <CounterStat end={100} suffix="%" label="Confidentialité" textColor="text-white" labelColor="text-white/80" />
+                </div>
+                <div className="bg-green-500 rounded-lg h-52 flex items-center justify-center">
+                  <CounterStat end={98} suffix="%" label="Taux de satisfaction" textColor="text-white" labelColor="text-white/80" />
                 </div>
               </div>
             </div>
