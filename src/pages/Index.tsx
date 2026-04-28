@@ -44,6 +44,7 @@ import partner4 from "@/assets/Partner 4.png";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
 import assistantPsyImgTon from "@/assets/assistant-tongnon.jpg";
+import bgNotreValeurs from "@/assets/bg-notre-valeurs.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
@@ -260,7 +261,7 @@ const Index = () => {
       <Navbar />
       <main>
         {/* Hero with Slider */}
-        <section className="relative min-h-[95vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[130vh] flex items-center overflow-hidden">
           {slides.map((slide, i) => (
             <div
               key={i}
@@ -314,7 +315,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
+              <div className="rounded-[2px] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
                 <div className="mb-4 sm:mb-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                     Calendrier des activités
@@ -337,10 +338,6 @@ const Index = () => {
                       <span className="text-xs font-semibold text-foreground block">{event.date}</span>
                     </button>
                   ))}
-                </div>
-                <div className="mt-4 sm:mt-5 flex items-center gap-2 text-sm font-semibold text-accent">
-                  <ArrowRight className="h-4 w-4 animate-bounce" />
-                  Cliquez sur un événement pour en savoir plus.
                 </div>
               </div>
             </div>
@@ -502,8 +499,12 @@ const Index = () => {
         </section>
 
         {/* Values */}
-        <section className="bg-primary section-padding">
-          <div className="container mx-auto">
+        <section
+          className="relative section-padding overflow-hidden"
+          style={{ backgroundImage: `url(${bgNotreValeurs})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          <div className="absolute inset-0 bg-primary/85" />
+          <div className="relative container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent">Nos Valeurs</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">Ce qui guide notre pratique</h2>

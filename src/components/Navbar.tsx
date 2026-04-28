@@ -8,7 +8,6 @@ import campaign2Img from "@/assets/Campaign 2.jpeg";
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/services", label: "Services" },
-  { href: "/realisations", label: "Témoignages" },
   { href: "/a-propos", label: "À propos" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -17,7 +16,7 @@ const navLinks = [
 const actualites = [
   {
     id: "campagne1",
-    title: "UNE BONNE NOUVELLE POUR VOUS",
+    title: "📣 Une bonne nouvelle pour vous",
     preview:
       "Le Cabinet Meilleure Vie met en place une campagne exceptionnelle du 27 avril au 6 mai, avec une réduction de 50% sur les consultations psychologiques et psychiatriques.",
     details:
@@ -29,7 +28,7 @@ const actualites = [
   },
   {
     id: "campagne2",
-    title: "DEVENEZ UN PROFESSIONNEL CERTIFIÉ EN TEST DE PERSONNALITÉ HEXACO",
+    title: "✨ Devenez un professionnel certifié en test de personnalité Hexaco",
     preview:
       "75 000 FCFA Afrique / 150 000 FCFA hors Afrique - 5 séances en ligne de 09h-12h GMT. Nombre de places limité.",
     details:
@@ -54,7 +53,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center gap-4 px-4 text-xs sm:text-sm">
           <span className="font-semibold uppercase tracking-[0.2em] text-accent">Actualités</span>
           <div className="relative flex-1 overflow-hidden">
-            <div className="flex animate-marquee gap-8 px-0 whitespace-nowrap">
+            <div className="flex animate-marquee gap-16 px-0 whitespace-nowrap">
               {actualites.map((item) => (
                 <button
                   key={item.id}
@@ -135,12 +134,12 @@ const Navbar = () => {
         <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
           <div className="w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border">
             <div className="grid h-full gap-0 md:grid-cols-2 items-stretch">
-              <img src={activeActualite.img} alt={activeActualite.title} className="h-64 w-full object-cover md:h-full" />
+              <img src={activeActualite.img} alt={activeActualite.title} className="h-40 sm:h-48 w-full object-cover md:h-full" />
               <div className="flex h-full min-h-0 flex-col justify-between p-4 sm:p-6">
                 <div className="flex-1 min-h-0 space-y-4 overflow-y-auto pr-0 sm:pr-2">
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Actualité</div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">{activeActualite.title}</h2>
-                  <p className="whitespace-pre-line text-sm sm:text-base leading-relaxed text-muted-foreground">{activeActualite.details}</p>
+                  <div className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent">Actualité</div>
+                  <h2 className="text-lg sm:text-xl font-bold text-foreground">{activeActualite.title}</h2>
+                  <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
                 </div>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <a

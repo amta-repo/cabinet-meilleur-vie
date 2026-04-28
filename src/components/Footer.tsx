@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoImg} alt="Cabinet Meilleure Vie" className="h-12 w-auto object-contain brightness-0 invert" />
+            <img src={logoImg} alt="Cabinet Meilleure Vie" className="h-12 w-auto object-contain" />
           </Link>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
             Votre cabinet qui vous garantit la santé mentale au quotidien.
