@@ -24,6 +24,9 @@ import {
   Target,
   Briefcase,
   Activity,
+  Award,
+  ShieldCheck,
+  Smile,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -340,33 +343,43 @@ const Index = () => {
                   ))}
                 </div>
               </div>
-
-              <div className="xl:hidden grid grid-cols-1 gap-4">
-                <div className="bg-green-500 rounded-lg h-52 flex items-center justify-center">
-                  <CounterStat end={15} suffix="+" label="Années d'expérience" textColor="text-white" labelColor="text-white/80" />
-                </div>
-                <div className="bg-pink-500 rounded-lg h-52 flex items-center justify-center">
-                  <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" textColor="text-white" labelColor="text-white/80" />
-                </div>
-                <div className="bg-purple-500 rounded-lg h-52 flex items-center justify-center">
-                  <CounterStat end={100} suffix="%" label="Confidentialité" textColor="text-white" labelColor="text-white/80" />
-                </div>
-                <div className="bg-green-500 rounded-lg h-52 flex items-center justify-center">
-                  <CounterStat end={98} suffix="%" label="Taux de satisfaction" textColor="text-white" labelColor="text-white/80" />
-                </div>
-              </div>
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border">
+          {/* <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border">
             <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-border">
               <CounterStat end={15} suffix="+" label="Années d'expérience" />
               <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" />
               <CounterStat end={100} suffix="%" label="Confidentialité" />
               <CounterStat end={98} suffix="%" label="Taux de satisfaction" />
             </div>
-          </div>
+          </div> */}
         </section>
+         <div className="xl:hidden grid grid-cols-1 gap-4 mt-6">
+  {/* Experience - Blue/Cabinet Theme */}
+  <div className="bg-[#0056b3] rounded-lg h-52 flex flex-col items-center justify-center p-4">
+    <Award className="h-10 w-10 text-white/50 mb-2" />
+    <CounterStat end={15} suffix="+" label="Années d'expérience" textColor="text-white" labelColor="text-white/80" />
+  </div>
+
+  {/* Patients - Pink */}
+  <div className="bg-pink-500 rounded-lg h-52 flex flex-col items-center justify-center p-4 text-center">
+    <Users className="h-10 w-10 text-white/50 mb-2" />
+    <CounterStat end={500} suffix="+" label="Patients accompagnés au Bénin, France, Togo, Canada" textColor="text-white" labelColor="text-white/80" />
+  </div>
+
+  {/* Confidentiality - Purple */}
+  <div className="bg-purple-500 rounded-lg h-52 flex flex-col items-center justify-center p-4">
+    <ShieldCheck className="h-10 w-10 text-white/50 mb-2" />
+    <CounterStat end={100} suffix="%" label="Confidentialité" textColor="text-white" labelColor="text-white/80" />
+  </div>
+
+  {/* Satisfaction - Green */}
+  <div className="bg-green-500 rounded-lg h-52 flex flex-col items-center justify-center p-4">
+    <Smile className="h-10 w-10 text-white/50 mb-2" />
+    <CounterStat end={98} suffix="%" label="Taux de satisfaction" textColor="text-white" labelColor="text-white/80" />
+  </div>
+</div>
 
         {selectedEvent && (
           <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
