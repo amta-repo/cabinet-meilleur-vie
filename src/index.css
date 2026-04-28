@@ -107,18 +107,42 @@
   }
 }
 
-@keyframes marquee-fast {
-  /* Starts from where we positioned it (middle) and moves fully left */
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-200%); } /* Adjust percentage based on item count */
+/* Add this to your index.css or global stylesheet */
+
+/* Update this in your index.css */
+
+/* --- MOBILE (default) --- */
+@keyframes marquee-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 100%));
+  }
 }
 
 .animate-marquee-fast {
-  /* Reduced time (15s) makes it faster */
-  animation: marquee-fast 15s linear infinite;
+  animation: marquee-mobile 8s linear infinite;
 }
 
-/* Pause on hover so people can actually click the fast text */
+
+/* --- DESKTOP --- */
+@media (min-width: 640px) {
+  @keyframes marquee-desktop {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee-fast {
+    animation: marquee-desktop 18s linear infinite;
+  }
+}
+
+/* --- HOVER PAUSE (unchanged) --- */
 .animate-marquee-fast:hover {
   animation-play-state: paused;
 }

@@ -19,7 +19,7 @@ const actualites = [
     title: "📣 Une bonne nouvelle pour vous",
     details: "Le Cabinet Meilleure Vie met en place une campagne exceptionnelle du 27 avril au 6 mai, avec une réduction de 50% sur les consultations psychologiques et psychiatriques.\n\n✨ Une belle opportunité de faire le premier pas, ou de reprendre un accompagnement, dans un cadre professionnel, bienveillant et confidentiel.\n\n📅 Les consultations se font uniquement sur rendez-vous.",
     img: campaign1Img,
-    whatsapp: "https://wa.me.",
+    whatsapp: "https://wa.me",
     button: "Découvrir la campagne",
   },
   {
@@ -27,7 +27,7 @@ const actualites = [
     title: "✨ Devenez un professionnel certifié en test HEXACO",
     details: "DEVENEZ UN PROFESSIONNEL CERTIFIÉ EN TEST DE PERSONNALITÉ HEXACO\n\n💰 75 000 FCFA (tarif préférentiel Afrique) - 150 000 FCFA (hors Afrique)\n⏳ 5 séances en ligne de 09h-12h GMT\n📌 Nombre de places limité",
     img: campaign2Img,
-    whatsapp: "https://wa.me.",
+    whatsapp: "https://wa.me",
     button: "Je veux m'inscrire",
   },
 ];
@@ -48,9 +48,8 @@ const Navbar = () => {
             Actualités
           </span>
           <div className="relative flex-1 overflow-hidden">
-            {/* The gap-[40vw] ensures the second item enters while the first is still on screen */}
-            <div className="flex animate-marquee-fast gap-[40vw] whitespace-nowrap ml-[50vw]">
-              {/* Original List */}
+            {/* gap-[100vw] ensures the second item only enters after the first leaves */}
+           <div className="flex animate-marquee-fast whitespace-nowrap gap-6 sm:gap-16">
               {actualites.map((item) => (
                 <button
                   key={item.id}
@@ -60,7 +59,7 @@ const Navbar = () => {
                   <span className="text-sm">{item.title}</span>
                 </button>
               ))}
-              {/* Cloned List for seamless looping */}
+              {/* Duplicate the items to create the infinite loop effect */}
               {actualites.map((item) => (
                 <button
                   key={`${item.id}-clone`}
@@ -107,7 +106,7 @@ const Navbar = () => {
             <ul className="flex flex-col gap-1">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} onClick={() => setOpen(false)} className={`block rounded-lg px-4 py-3 text-sm font-medium ${location.pathname === l.href ? "bg-accent/10 text-accent" : "text-foreground"}`}>
+                  <Link to={l.href} onClick={() => setOpen(false)} className={`block rounded-lg px-4 py-3 text-sm font-medium ${location.pathname === l.href ? "bg-accent/10 text-accent" : "text-foreground hover:bg-secondary"}`}>
                     {l.label}
                   </Link>
                 </li>
@@ -117,25 +116,19 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* --- CAMPAIGN MODAL (Responsive & Fixed) --- */}
+      {/* --- MODAL --- */}
       {activeActualite && (
         <div className="fixed inset-0 z-[60] grid place-items-center bg-slate-950/80 p-4">
           <div className="flex flex-col w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border md:flex-row">
-            
-            {/* Banner Area: Height capped on mobile to avoid pushing content off-screen */}
             <div className="w-full h-[35vh] md:h-auto md:w-1/2 shrink-0 bg-white border-b md:border-b-0 md:border-r border-border">
               <img src={activeActualite.img} alt={activeActualite.title} className="h-full w-full object-contain" />
             </div>
-
-            {/* Scrollable Text Area */}
             <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
               <div className="flex-1 overflow-y-auto p-5 sm:p-8 custom-scrollbar">
                 <div className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent mb-2">Actualité</div>
                 <h2 className="text-lg md:text-xl font-bold text-foreground mb-4">{activeActualite.title}</h2>
                 <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
               </div>
-
-              {/* Fixed Footer Buttons */}
               <div className="p-4 border-t border-border bg-background">
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
                   <a href={activeActualite.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 order-1 sm:order-2">
@@ -147,7 +140,6 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       )}
