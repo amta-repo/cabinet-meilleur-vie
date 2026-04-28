@@ -279,7 +279,7 @@ const Index = () => {
             </div>
           ))}
 
-          <div className="container relative z-10 mx-auto py-24 sm:py-32">
+          <div className="container relative z-10 mx-auto pt-28 pb-20 sm:pt-32 sm:pb-24">
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
@@ -314,7 +314,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+              <div className="rounded-[2rem] border border-white/15 bg-background/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
                 <div className="mb-4 sm:mb-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                     Calendrier des activités
@@ -324,7 +324,7 @@ const Index = () => {
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 overflow-y-auto max-h-[14rem] sm:max-h-none">
                   {calendarEvents.slice(0, 9).map((event) => (
                     <button
                       key={event.date}

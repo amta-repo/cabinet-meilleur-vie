@@ -133,16 +133,16 @@ const Navbar = () => {
 
       {activeActualite && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
-          <div className="w-full max-w-4xl overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border">
-            <div className="grid gap-0 md:grid-cols-2 items-stretch">
+          <div className="w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border">
+            <div className="grid h-full gap-0 md:grid-cols-2 items-stretch">
               <img src={activeActualite.img} alt={activeActualite.title} className="h-64 w-full object-cover md:h-full" />
-              <div className="p-6 md:p-8 flex flex-col justify-between">
-                <div className="space-y-4">
+              <div className="flex h-full min-h-0 flex-col justify-between p-4 sm:p-6">
+                <div className="flex-1 min-h-0 space-y-4 overflow-y-auto pr-0 sm:pr-2">
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Actualité</div>
-                  <h2 className="text-2xl font-bold text-foreground">{activeActualite.title}</h2>
-                  <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
+                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">{activeActualite.title}</h2>
+                  <p className="whitespace-pre-line text-sm sm:text-base leading-relaxed text-muted-foreground">{activeActualite.details}</p>
                 </div>
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mt-6">
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <a
                     href={activeActualite.whatsapp}
                     target="_blank"
