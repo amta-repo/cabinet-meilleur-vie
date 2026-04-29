@@ -51,12 +51,14 @@ const CounterCard = ({
   return (
     <div
       ref={ref}
-      className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`}
+      // className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`}
+      className={`${bgColor} text-center p-6 rounded-2xl flex flex-col items-center justify-center h-52 shadow-lg ring-1 ring-white/10`}
       style={{ boxShadow: "var(--card-shadow)" }}
     >
-      <Icon className="h-10 w-10 text-white/50 mb-3" />
+      {/* <Icon className="h-10 w-10 text-white/50 mb-3" /> */}
+      <Icon className="h-10 w-10 text-white/80 mb-3" />
       <p className="text-3xl sm:text-4xl font-bold text-white">{count}{suffix}</p>
-      <p className="mt-2 text-sm text-white/80">{label}</p>
+      <p className="mt-2 text-sm text-white/80 font-medium leading-snug">{label}</p>
     </div>
   );
 };
@@ -78,49 +80,8 @@ const PourquoiPage = () => (
         subtitle="Ce qui distingue Cabinet Meilleure Vie dans l'accompagnement psychologique à Cotonou."
         bgImage={headerBg}
       />
-
-      {/* <section className="bg-secondary py-12"> */}
-      {/* Changed grid-cols-2 to grid-cols-1 for mobile, kept lg:grid-cols-4 for desktop */}
-      {/* <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <CounterCard end={15} suffix="+" label="Années d'expérience en psychologie" />
-          <CounterCard end={500} suffix="+" label="Patients accompagnés avec succès" />
-          <CounterCard end={100} suffix="%" label="Confidentialité garantie" />
-          <CounterCard end={98} suffix="%" label="Taux de satisfaction" />
-        </div> */}
-      {/* </section> */}
-      {/* <section className="bg-secondary py-12 px-4">
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <CounterCard
-            icon={Award}
-            end={15}
-            suffix="+"
-            label="Années d'expérience en psychologie"
-            bgColor="bg-[#0056b3]"
-          />
-          <CounterCard
-            icon={Users}
-            end={500}
-            suffix="+"
-            label="Patients accompagnés avec succès"
-            bgColor="bg-pink-500"
-          />
-          <CounterCard
-            icon={ShieldCheck}
-            end={100}
-            suffix="%"
-            label="Confidentialité garantie"
-            bgColor="bg-purple-500"
-          />
-          <CounterCard
-            icon={Smile}
-            end={98}
-            suffix="%"
-            label="Taux de satisfaction"
-            bgColor="bg-green-500"
-          />
-        </div>
-      </section> */}
-      <section className="bg-secondary py-12 px-4">
+      {/* <section className="bg-secondary py-12 px-4"> */}
+      <section className="relative py-12 px-4 bg-gradient-to-b from-secondary via-white to-secondary/40">
   {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
   <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     <CounterCard 
@@ -155,26 +116,31 @@ const PourquoiPage = () => (
 </section>
 
 
-      <section className="section-padding">
+      {/* <section className="section-padding"> */}
+      <section className="section-padding bg-gradient-to-b from-white via-secondary/30 to-white">
         <div className="container mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">8 raisons de nous faire confiance</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">8 raisons de nous faire confiance</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+  Les piliers qui définissent notre accompagnement psychologique
+</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((r) => (
-              <div key={r.title} className="rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <div key={r.title} className="group rounded-2xl bg-white border border-slate-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{ boxShadow: "var(--card-shadow)" }}>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 text-accent group-hover:scale-110 transition">
                   <r.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-base font-semibold text-foreground">{r.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+                <h3 className="text-base font-semibold text-foreground tracking-tight">{r.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed/90 leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-accent section-padding">
+      {/* <section className="bg-accent section-padding"> */}
+      <section className="relative section-padding bg-gradient-to-r from-accent to-accent/80">
         <div className="container mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-accent-foreground">Convaincu ? Prenez rendez-vous</h2>
           <p className="mt-3 text-accent-foreground/80 max-w-lg mx-auto">
@@ -182,7 +148,8 @@ const PourquoiPage = () => (
           </p>
           <Link
             to="/contact"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+           className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-accent transition-transform hover:scale-105"
+            // className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white text-accent px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
           >
             Prendre rendez-vous
             <ArrowRight className="h-4 w-4" />

@@ -100,7 +100,7 @@ const serviceCards = [
     slug: "services-psychiatriques",
   },
 
-//  the newly created service -2
+  //  the newly created service -2
   {
     img: svcPsychometrique,
     title: "Services d'Evaluation",
@@ -108,13 +108,13 @@ const serviceCards = [
     slug: "serivices-evaluation",
   },
 
-   {
+  {
     img: svcFormationPsy,
     title: "Formations Psychologiques",
     desc: "Certificats en hypnose jungienne, psychosocial, protection de l'enfant, pris en charge VBG.",
     slug: "formations-psychologiques",
   },
-  
+
   {
     img: svcFormationPluri,
     title: "Formations Pluridisciplinaires",
@@ -161,7 +161,7 @@ const teamMembers = [
 
 const teamSliderItems = [...teamMembers,];
 
-  const calendarEvents = [
+const calendarEvents = [
   {
     date: "04 Mai",
     title: "Début de 10 Jrs d’activisme pour comprendre et prévenir les addictions",
@@ -229,24 +229,24 @@ const teamSliderItems = [...teamMembers,];
 
 const partnerLogos = [partner1, partner2, partner3, partner4];
 
-const CounterCard = ({ 
-  end, 
-  suffix, 
-  label, 
-  icon: Icon, 
-  bgColor 
-}: { 
-  end: number; 
-  suffix: string; 
-  label: string; 
-  icon: any; 
-  bgColor: string; 
+const CounterCard = ({
+  end,
+  suffix,
+  label,
+  icon: Icon,
+  bgColor
+}: {
+  end: number;
+  suffix: string;
+  label: string;
+  icon: any;
+  bgColor: string;
 }) => {
   const { count, ref } = useCountUp(end, 2000);
   return (
-    <div 
-      ref={ref} 
-      className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`} 
+    <div
+      ref={ref}
+      className={`${bgColor} text-center p-6 rounded-xl flex flex-col items-center justify-center h-52`}
       style={{ boxShadow: "var(--card-shadow)" }}
     >
       <Icon className="h-10 w-10 text-white/50 mb-3" />
@@ -312,20 +312,20 @@ const Index = () => {
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
-                🌿 Psychologie • Psychiatrie • Psychanalyse • Santé mentale - Abomey-Calavi, Bénin
+                  🌿 Psychologie • Psychiatrie • Psychanalyse • Santé mentale - Abomey-Calavi, Bénin
                 </span>
 
                 {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
                   Faîtes-Vous Écouter - <span className="text-[#C49A6C]">Sans Être Jugé</span>
                 </h1> */}
-<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
-  Vous méritez d’être écouté
-  <br />
-  <span className="relative inline-block">
-    sans jugement, en toute confiance
-    <span className="absolute left-0 -bottom-2 w-full h-2 bg-accent/30 rounded"></span>
-  </span>
-</h1>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
+                  Vous méritez d’être écouté
+                  <br />
+                  <span className="relative inline-block">
+                    sans jugement, en toute confiance
+                    <span className="absolute left-0 -bottom-2 w-full h-2 bg-accent/30 rounded"></span>
+                  </span>
+                </h1>
 
                 <p className="max-w-xl text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
                   Votre cabinet qui vous garantit la santé mentale au quotidien dans la confidentialité et dans un cadre sécurisé.
@@ -343,7 +343,16 @@ const Index = () => {
                     href="https://wa.me/22994390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3.5 text-sm font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20"
+                    className="
+    inline-flex items-center justify-center gap-2
+    rounded-lg border border-primary-foreground/30
+    bg-primary-foreground/10
+    px-4 py-2.5 sm:px-6 sm:py-3.5
+    text-xs sm:text-sm font-semibold
+    text-primary-foreground
+    backdrop-blur-sm
+    transition-all hover:bg-primary-foreground/20
+  "
                   >
                     <MessageCircle className="h-4 w-4" />
                     Nous contacter sur WhatsApp
@@ -351,7 +360,8 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="mr-4 sm:mr-6 rounded-[2px] border border-white/15 bg-background/50 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
+              {/* <div className="mr-4 sm:mr-6 rounded-[2px] border border-white/15 bg-background/50 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden"> */}
+              <div className="w-full rounded-[2px] border border-white/15 bg-background/50 p-4 sm:p-6 shadow-2xl backdrop-blur-xl max-h-[26rem] sm:max-h-none overflow-hidden">
                 <div className="mb-4 sm:mb-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                     Calendrier des activités
@@ -361,61 +371,76 @@ const Index = () => {
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 overflow-y-auto max-h-[14rem] sm:max-h-none">
-                  {calendarEvents.slice(0, 9).map((event) => (
-                    <button
-                      key={event.date}
-                      onClick={() => setSelectedEvent(event)}
-                      className="group rounded-[1px] border border-border p-2 sm:p-3 text-center transition hover:border-accent/70 hover:bg-accent/10"
-                    >
-                      <div className={`flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-sm ${event.color} text-white mx-auto mb-2`}>
-                        <event.icon className="h-3 w-3 sm:h-4 sm:w-4" />
-                      </div>
-                      <span className="text-xs font-semibold text-foreground block">{event.date}</span>
-                    </button>
-                  ))}
-                </div>
+                {/* Calendar */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full">
+  {calendarEvents.slice(0, 9).map((event) => (
+    <button
+      key={event.date}
+      onClick={() => setSelectedEvent(event)}
+      className="
+        w-full
+        aspect-square
+        rounded-[2px]
+        border border-border
+        p-2
+        text-center
+        flex flex-col items-center justify-center
+        transition
+        hover:border-accent/70
+        hover:bg-accent/10
+      "
+    >
+      <div className={`flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-sm ${event.color} text-white mb-2`}>
+        <event.icon className="h-3 w-3 sm:h-4 sm:w-4" />
+      </div>
+
+      <span className="text-[10px] sm:text-xs font-semibold text-foreground leading-tight">
+        {event.date}
+      </span>
+    </button>
+  ))}
+</div>
               </div>
             </div>
           </div>
 
         </section>
 
-       <div className="bg-white py-12 px-4 border-y border-slate-200">
-  {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
-  <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <CounterCard 
-      icon={Award} 
-      end={10} 
-      suffix="+" 
-      label="Au  service de santé mentale et du bien-être" 
-      bgColor="bg-[#0056b3]" 
-    />
-    <CounterCard 
-      icon={Users} 
-      end={500} 
-      suffix="+" 
-      label="Patients accompagnés avec succès" 
-      bgColor="bg-pink-500" 
-    />
-    <CounterCard 
-      icon={ShieldCheck} 
-      end={100} 
-      suffix="%" 
-      label="Confidentialité garantie" 
-      bgColor="bg-yellow-500" 
-    />
-    <CounterCard 
-      icon={Smile} 
-      end={98} 
-      suffix="%" 
-      label="Taux de satisfaction" 
-      bgColor="bg-green-500" 
-    />
-  </div>
-</div>
+        <div className="bg-white py-12 px-4 border-y border-slate-200">
+          {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
+          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <CounterCard
+              icon={Award}
+              end={10}
+              suffix="+"
+              label="Au  service de santé mentale et du bien-être"
+              bgColor="bg-[#0056b3]"
+            />
+            <CounterCard
+              icon={Users}
+              end={500}
+              suffix="+"
+              label="Patients accompagnés avec succès"
+              bgColor="bg-pink-500"
+            />
+            <CounterCard
+              icon={ShieldCheck}
+              end={100}
+              suffix="%"
+              label="Confidentialité garantie"
+              bgColor="bg-yellow-500"
+            />
+            <CounterCard
+              icon={Smile}
+              end={98}
+              suffix="%"
+              label="Taux de satisfaction"
+              bgColor="bg-green-500"
+            />
+          </div>
+        </div>
 
-{/* Calendar events */}
+        {/* Calendar events */}
         {selectedEvent && (
           <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4 bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-4 sm:p-6 shadow-2xl ring-1 ring-border">
@@ -454,8 +479,8 @@ const Index = () => {
         )}
 
         {/* Services */}
-           <section className="section-padding relative bg-gradient-to-br from-blue-100 via-blue-50 to-white" id="services">
-           <div className="container mx-auto">
+        <section className="section-padding relative bg-gradient-to-br from-blue-100 via-blue-50 to-white" id="services">
+          <div className="container mx-auto">
             <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,_#1e3a8a_1px,_transparent_1px)] bg-[size:22px_22px]" />
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-xs font-bold tracking-widest uppercase text-accent">Nos Services</span>
@@ -495,19 +520,19 @@ const Index = () => {
             </div> */}
 
             <div className="text-center mt-10 relative z-10">
-  <Link
-    to="/services"
-    className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline cursor-pointer relative z-10"
-  >
-    Découvrir tous nos services
-    <ArrowRight className="h-4 w-4" />
-  </Link>
-</div>
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline cursor-pointer relative z-10"
+              >
+                Découvrir tous nos services
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Testimonials preview */}
-       <section className="section-padding relative bg-gradient-to-b from-amber-50/40 to-white">
+        <section className="section-padding relative bg-gradient-to-b from-amber-50/40 to-white">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-bold tracking-widest uppercase text-accent">Témoignages</span>
@@ -544,77 +569,77 @@ const Index = () => {
           </div>
         </section>
 
-{/* team section */}
-     <section className="section-padding relative bg-gradient-to-b from-violet-50/40 to-white">
-  <div className="container mx-auto">
-    <div className="text-center max-w-2xl mx-auto mb-12">
-      <span className="text-xs font-semibold tracking-widest uppercase text-accent">
-        Notre équipe
-      </span>
-      <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
-        Une équipe engagée et disponible
-      </h2>
-      <p className="mt-3 text-slate-600">
-        Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
-      </p>
-    </div>
-
-    {/* HORIZONTAL SCROLLER */}
-    <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 pb-4 no-scrollbar snap-x snap-mandatory scroll-px-4 sm:scroll-px-6">
-      {teamSliderItems.map((member, index) => {
-        const bgVariants = [
-          "bg-blue-600 text-white",
-          "bg-green-600 text-white",
-          "bg-yellow-400 text-black",
-          "bg-rose-500 text-white",
-        ];
-
-        const bg = bgVariants[index % bgVariants.length];
-
-        return (
-          <div
-            key={member.name}
-            className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-          >
-            {/* FRONT */}
-            <div className="p-6 flex flex-col items-center text-center transition-opacity duration-300 group-hover:opacity-0">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-accent mb-4">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">
-                {member.name}
-              </h3>
-              <p className="text-sm text-accent font-medium">
-                {member.role}
+        {/* team section */}
+        <section className="section-padding relative bg-gradient-to-b from-violet-50/40 to-white">
+          <div className="container mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+                Notre équipe
+              </span>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
+                Une équipe engagée et disponible
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
               </p>
             </div>
 
-            {/* HOVER BACK */}
-            <div
-              className={`absolute inset-0 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${bg}`}
-            >
-              <h3 className="text-lg font-semibold mb-2">
-                {member.name}
-              </h3>
-              <p className="text-sm font-medium mb-3">
-                {member.role}
-              </p>
-              <p className="text-sm leading-relaxed">
-                {member.bio}
-              </p>
+            {/* HORIZONTAL SCROLLER */}
+            <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 pb-4 no-scrollbar snap-x snap-mandatory scroll-px-4 sm:scroll-px-6">
+              {teamSliderItems.map((member, index) => {
+                const bgVariants = [
+                  "bg-blue-600 text-white",
+                  "bg-green-600 text-white",
+                  "bg-yellow-400 text-black",
+                  "bg-rose-500 text-white",
+                ];
+
+                const bg = bgVariants[index % bgVariants.length];
+
+                return (
+                  <div
+                    key={member.name}
+                    className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  >
+                    {/* FRONT */}
+                    <div className="p-6 flex flex-col items-center text-center transition-opacity duration-300 group-hover:opacity-0">
+                      <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-accent mb-4">
+                        <img
+                          src={member.img}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-accent font-medium">
+                        {member.role}
+                      </p>
+                    </div>
+
+                    {/* HOVER BACK */}
+                    <div
+                      className={`absolute inset-0 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${bg}`}
+                    >
+                      <h3 className="text-lg font-semibold mb-2">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm font-medium mb-3">
+                        {member.role}
+                      </p>
+                      <p className="text-sm leading-relaxed">
+                        {member.bio}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+        </section>
 
-{/* End of team section */}
+        {/* End of team section */}
 
         {/* Values */}
         <section
