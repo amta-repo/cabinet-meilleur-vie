@@ -19,7 +19,7 @@ const actualites = [
     title: "📣 Une bonne nouvelle pour vous",
     details: "Le Cabinet Meilleure Vie met en place une campagne exceptionnelle du 27 avril au 6 mai, avec une réduction de 50% sur les consultations psychologiques et psychiatriques.\n\n✨ Une belle opportunité de faire le premier pas, ou de reprendre un accompagnement, dans un cadre professionnel, bienveillant et confidentiel.\n\n📅 Les consultations se font uniquement sur rendez-vous.",
     img: campaign1Img,
-    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20plus%20d'informations",
+    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20campagne%20de%2050%25",
     button: "Découvrir la campagne",
   },
   {
@@ -27,7 +27,7 @@ const actualites = [
     title: "✨ Devenez un professionnel certifié en test HEXACO",
     details: "DEVENEZ UN PROFESSIONNEL CERTIFIÉ EN TEST DE PERSONNALITÉ HEXACO\n\n💰 75 000 FCFA (tarif préférentiel Afrique) - 150 000 FCFA (hors Afrique)\n⏳ 5 séances en ligne de 09h-12h GMT\n📌 Nombre de places limité",
     img: campaign2Img,
-    whatsapp: "https://wa.me",
+    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20m'inscrire%20%C3%A0%20la%20formation%20HEXACO",
     button: "Je veux m'inscrire",
   },
 ];
