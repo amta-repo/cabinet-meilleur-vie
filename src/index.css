@@ -160,3 +160,12 @@
 .shake {
   animation: shake 0.5s infinite;
 }
+
+/* hide scrollbar (clean UI) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

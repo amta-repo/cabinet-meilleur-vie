@@ -153,15 +153,15 @@ const teamMembers = [
   },
   {
     name: "Sèdjro Florida TONAKPA",
-    role: "Chargée de communication digitale, Partenaire du Cabinet Meilleure Vie",
+    role: "Chargée de communication digitale",
     img: commDigitaleImg,
-    bio: "Chargée de communication digitale et partenaire du Cabinet Meilleure Vie, elle soutient la visibilité et la sensibilisation autour de la santé mentale.",
+    bio: "Chargée de communication digitale et partenaire du Cabinet Meilleure Vie.",
   },
 ];
 
-const teamSliderItems = [...teamMembers, ...teamMembers];
+const teamSliderItems = [...teamMembers,];
 
-const calendarEvents = [
+  const calendarEvents = [
   {
     date: "04 Mai",
     title: "Début de 10 Jrs d’activisme pour comprendre et prévenir les addictions",
@@ -289,7 +289,7 @@ const Index = () => {
       <Navbar />
       <main>
         {/* Hero with Slider */}
-        <section className="relative min-h-[130vh] flex items-center overflow-hidden">
+        <section className="section-padding relative relative min-h-[130vh] flex items-center overflow-hidden">
           {slides.map((slide, i) => (
             <div
               key={i}
@@ -349,7 +349,7 @@ const Index = () => {
                     Calendrier des activités
                   </p>
                   <h2 className="mt-3 text-xl sm:text-2xl font-bold text-foreground">Événements majeurs 2026</h2>
-                  <p className="mt-2 text-sm text-blue-foreground/80 leading-relaxed">
+                  <p className="mt-2 text-sm text-navy-blue leading-relaxed">
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
@@ -371,16 +371,9 @@ const Index = () => {
             </div>
           </div>
 
-          {/* <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border">
-            <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 divide-x divide-border">
-              <CounterStat end={15} suffix="+" label="Années d'expérience" />
-              <CounterStat end={500} suffix="+" label="Patients accompagnés au Benin, France, Togo, Canada" />
-              <CounterStat end={100} suffix="%" label="Confidentialité" />
-              <CounterStat end={98} suffix="%" label="Taux de satisfaction" />
-            </div>
-          </div> */}
         </section>
-       <div className="bg-secondary py-12 px-4">
+
+       <div className="bg-white py-12 px-4 border-y border-slate-200">
   {/* grid-cols-1 (Mobile) | sm:grid-cols-2 (Tablet) | lg:grid-cols-4 (Desktop) */}
   <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     <CounterCard 
@@ -416,7 +409,7 @@ const Index = () => {
 
 {/* Calendar events */}
         {selectedEvent && (
-          <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4">
+          <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/80 p-4 bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-background p-4 sm:p-6 shadow-2xl ring-1 ring-border">
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -453,26 +446,28 @@ const Index = () => {
         )}
 
         {/* Services */}
-        <section className="section-padding bg-white" id="services">
-          <div className="container mx-auto">
+           <section className="section-padding relative bg-gradient-to-br from-blue-100 via-blue-50 to-white" id="services">
+           <div className="container mx-auto">
+            <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle,_#1e3a8a_1px,_transparent_1px)] bg-[size:22px_22px]" />
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-xs font-bold tracking-widest uppercase text-accent">Nos Services</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Un accompagnement complet pour votre bien-être</h2>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-slate-600">
                 De la consultation individuelle aux formations, Cabinet Meilleure Vie vous accompagne vers une vie épanouie.
               </p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {serviceCards.map((s) => (
                 <Link
                   key={s.slug}
                   to={`/services#${s.slug}`}
-                  className="group rounded-xl bg-card overflow-hidden hover-lift"
+                  // className="group rounded-xl bg-white overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300"
+                  className="group rounded-xl bg-white/90 backdrop-blur-sm border border-blue-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   style={{ boxShadow: "var(--card-shadow)" }}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img src={s.img} alt={s.title} loading="lazy" width={800} height={512} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-primary/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">{s.title}</h3>
@@ -494,7 +489,7 @@ const Index = () => {
         </section>
 
         {/* Testimonials preview */}
-        <section className="section-padding">
+       <section className="section-padding relative bg-gradient-to-b from-amber-50/40 to-white">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-bold tracking-widest uppercase text-accent">Témoignages</span>
@@ -502,7 +497,7 @@ const Index = () => {
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {testimonials.map((t, i) => (
-                <div key={i} className="rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
+                <div key={i} className="rounded-xl bg-white p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300" style={{ boxShadow: "var(--card-shadow)" }}>
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-star text-star" />
@@ -531,38 +526,81 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="section-padding bg-secondary">
-          <div className="container mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent">Notre équipe</span>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Une équipe engagée et disponible</h2>
-              <p className="mt-3 text-navy-blue-foreground">
-                Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
+{/* team section */}
+        <section className="section-padding relative bg-gradient-to-b from-violet-50/40 to-white">
+  <div className="container mx-auto">
+    <div className="text-center max-w-2xl mx-auto mb-12">
+      <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+        Notre équipe
+      </span>
+      <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
+        Une équipe engagée et disponible
+      </h2>
+      <p className="mt-3 text-navy-blue-foreground">
+        Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
+      </p>
+    </div>
+
+    {/* HORIZONTAL SCROLLER */}
+    <div className="flex gap-6 overflow-x-auto pb-4 no-scrollbar snap-x snap-mandatory">
+      {teamSliderItems.map((member, index) => {
+        const bgVariants = [
+          "bg-blue-600 text-white",
+          "bg-green-600 text-white",
+          "bg-yellow-400 text-black",
+          "bg-rose-500 text-white",
+        ];
+
+        const bg = bgVariants[index % bgVariants.length];
+
+        return (
+          <div
+            key={member.name}
+            className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden border border-border bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]"
+          >
+            {/* FRONT */}
+            <div className="p-6 flex flex-col items-center text-center transition-opacity duration-300 group-hover:opacity-0">
+              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-accent mb-4">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground">
+                {member.name}
+              </h3>
+              <p className="text-sm text-accent font-medium">
+                {member.role}
               </p>
             </div>
-            <div className="overflow-hidden rounded-[2rem] border border-border bg-background/80 p-4">
-              <div className="flex min-w-max gap-6 animate-marquee py-4">
-                {teamSliderItems.map((member, index) => (
-                  <div
-                    key={`${member.name}-${index}`}
-                    className="min-w-[260px] shrink-0 rounded-3xl border border-border bg-card p-6 text-center shadow-lg"
-                  >
-                    <div className="mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full border-4 border-accent">
-                      <img src={member.img} alt={member.name} className="h-full w-full object-cover" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-                    <p className="mt-2 text-sm font-semibold text-accent">{member.role}</p>
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
-                  </div>
-                ))}
-              </div>
+
+            {/* HOVER BACK */}
+            <div
+              className={`absolute inset-0 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${bg}`}
+            >
+              <h3 className="text-lg font-semibold mb-2">
+                {member.name}
+              </h3>
+              <p className="text-sm font-medium mb-3">
+                {member.role}
+              </p>
+              <p className="text-sm leading-relaxed">
+                {member.bio}
+              </p>
             </div>
           </div>
-        </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+{/* End of team section */}
 
         {/* Values */}
         <section
-          className="relative section-padding overflow-hidden"
+          className="section-padding relative overflow-hidden"
           style={{ backgroundImage: `url(${bgNotreValeurs})`, backgroundSize: "cover", backgroundPosition: "center" }}
         >
           <div className="absolute inset-0 bg-primary/85" />
@@ -596,7 +634,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="section-padding">
+        <section className="section-padding relative">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent">Partenaires</span>
@@ -616,7 +654,7 @@ const Index = () => {
         </section>
 
         {/* CTA */}
-        <section className="bg-accent section-padding">
+        <section className="bg-accent section-padding relative">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-accent-foreground">Prêt à prendre soin de vous ?</h2>
             <p className="mt-3 text-accent-foreground/80 max-w-lg mx-auto">

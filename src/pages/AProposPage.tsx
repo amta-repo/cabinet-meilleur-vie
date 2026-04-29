@@ -187,8 +187,8 @@ const AProposPage = () => (
           </div>
           <div className="flex gap-6 overflow-x-auto pb-4 max-w-full mx-auto">
             {teamMembers.map((m) => (
-              <div key={m.name} className="min-w-[320px] flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-6 text-center hover-lift">
-                <div className="mx-auto mb-4 w-32 h-32 rounded-full overflow-hidden border-4 border-accent">
+              <div key={m.name} className="min-w-[256px] flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-6 text-center hover-lift">
+                <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-4 border-accent">
                   <img src={m.img} alt={`${m.name} - ${m.role}`} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-lg font-semibold text-primary-foreground">{m.name}</h3>
