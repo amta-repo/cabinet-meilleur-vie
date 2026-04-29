@@ -19,7 +19,7 @@ const actualites = [
     title: "📣 Une bonne nouvelle pour vous",
     details: "Le Cabinet Meilleure Vie met en place une campagne exceptionnelle du 27 avril au 6 mai, avec une réduction de 50% sur les consultations psychologiques et psychiatriques.\n\n✨ Une belle opportunité de faire le premier pas, ou de reprendre un accompagnement, dans un cadre professionnel, bienveillant et confidentiel.\n\n📅 Les consultations se font uniquement sur rendez-vous.",
     img: campaign1Img,
-    whatsapp: "https://wa.me",
+    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20plus%20d'informations",
     button: "Découvrir la campagne",
   },
   {
