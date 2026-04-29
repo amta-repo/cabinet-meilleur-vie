@@ -342,7 +342,7 @@ const Index = () => {
                     Calendrier des activités
                   </p>
                   <h2 className="mt-3 text-xl sm:text-2xl font-bold text-foreground">Événements majeurs 2026</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="mt-2 text-sm text-blue-foreground/80 leading-relaxed">
                     Cliquez sur un événement pour découvrir tous les détails.
                   </p>
                 </div>
@@ -581,7 +581,7 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center mt-10">
-              <Link to="/pourquoi-nous" className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline">
+              <Link to="/pourquoi-nous" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:underline">
                 Découvrir tous nos avantages
                 <ArrowRight className="h-4 w-4" />
               </Link>
