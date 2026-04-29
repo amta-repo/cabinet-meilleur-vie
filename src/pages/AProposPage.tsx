@@ -196,7 +196,7 @@ const AProposPage = () => (
       {/* Values */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-10">Nos valeurs</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-10">Nos valeurs</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <div key={v.title} className="text-center rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>

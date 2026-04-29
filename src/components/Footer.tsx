@@ -30,10 +30,10 @@ const Footer = () => (
         <div>
           <h4 className="text-sm font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
-            <li><Link to="/services#services-psychologiques" className="hover:text-accent transition-colors">Services Psychologiques</Link></li>
-            <li><Link to="/services#services-pedopsychiatrie" className="hover:text-accent transition-colors">Services Pédopsychiatrie</Link></li>
-            <li><Link to="/services#services-psychiatrie" className="hover:text-accent transition-colors">Services Psychiatrie</Link></li>
-            <li><Link to="/services#psychometriques" className="hover:text-accent transition-colors">Services Psychométriques</Link></li>
+            <li><Link to="/services#services-psychologiques" className="hover:text-accent transition-colors">Psychologiques</Link></li>
+            <li><Link to="/services#services-pédopsychiatriques" className="hover:text-accent transition-colors">Pédopsychiatriques</Link></li>
+            <li><Link to="/services#services-psychiatriques" className="hover:text-accent transition-colors">Psychiatriques</Link></li>
+            <li><Link to="/services#evaluation" className="hover:text-accent transition-colors">Évaluation </Link></li>
             <li><Link to="/services#formations-psychologiques" className="hover:text-accent transition-colors">Formations Psychologiques</Link></li>
             <li><Link to="/services#formations-pluridisciplinaires" className="hover:text-accent transition-colors">Formations Pluridisciplinaires</Link></li>
           </ul>

@@ -80,37 +80,37 @@ const serviceCards = [
   {
     img: svcPsyPro,
     title: "Services Psychologiques",
-    desc: "Thérapie individuelle, du couple, familiale, analyse de soi, thérapie de groupe en entreprise et accompagnement scolaire.",
+    desc: "Psychothérapie analytique individuelle, du couple, familiale, analyse de soi, thérapie de groupe en entreprise et accompagnement scolaire.",
     slug: "services-psychologiques",
   },
 
   // the newly created service -1
   {
     img: svcPedoPsychiatrie,
-    title: "Services Pédopsychiatrie",
+    title: "Services Pédopsychiatriques",
     desc: "Destinée aux enfants et adolescents (généralement de 0 à 18 ans). Identification des troubles du neurodéveloppement, suivi médical et pharmacologique, guidance parentale.",
     slug: "services-pédopsychiatrie",
   },
 
   {
     img: svcPsychiatrie,
-    title: "Services Psychiatrie",
+    title: "Services Psychiatriques",
     desc: "Traitement des pathologies mentales de l'adulte via la parole et la biologie. Suivi des troubles courants et expertise en santé mentale.",
-    slug: "services-psychologiques",
+    slug: "services-psychiatriques",
   },
 
 //  the newly created service -2
   {
     img: svcPsychometrique,
-    title: "Services d'Evaluations",
-    desc: "Tests de personnalité, échelles d'évaluation, tests projectifs et actuariels. Psychothérapie individuelle, du couple, familiale et de groupe.",
-    slug: "psychometriques",
+    title: "Services d'Evaluation",
+    desc: "Tests de personnalité, échelles d'évaluation, tests projectifs et actuariels. Tests psychotechniques de mémoire, de culture générale et de motivation.",
+    slug: "serivices-evaluation",
   },
 
    {
     img: svcFormationPsy,
     title: "Formations Psychologiques",
-    desc: "Certificats en hypnose jungienne, psychométrie, psychosocial, protection de l'enfant, accompagnement VBG et handicap.",
+    desc: "Certificats en hypnose jungienne, psychosocial, protection de l'enfant, pris en charge VBG.",
     slug: "formations-psychologiques",
   },
   
@@ -222,16 +222,6 @@ const calendarEvents = [
 
 const partnerLogos = [partner1, partner2, partner3, partner4];
 
-// const CounterStat = ({ end, suffix, label, textColor = "text-accent", labelColor = "text-muted-foreground" }: { end: number; suffix: string; label: string; textColor?: string; labelColor?: string }) => {
-//   const { count, ref } = useCountUp(end, 2000);
-//   return (
-//     <div ref={ref} className="px-4 py-4 sm:py-5 text-center">
-//       <p className={`text-xl sm:text-2xl font-bold ${textColor}`}>{count}{suffix}</p>
-//       <p className={`text-xs sm:text-sm ${labelColor}`}>{label}</p>
-//     </div>
-//   );
-// };
-
 const CounterCard = ({ 
   end, 
   suffix, 
@@ -315,15 +305,15 @@ const Index = () => {
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
-                  🌿 Psychologie, Sante Mentale et Bien Être - Cotonou, Bénin
+                  🌿 Psychologie, Santé Mentale et Bien-Être - Cotonou, Bénin
                 </span>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
-                  Faites-Vous Écouter- <span className="text-[#C49A6C]">Sans Être Jugé</span>
+                  Faîtes-Vous Écouter - <span className="text-[#C49A6C]">Sans Être Jugé</span>
                 </h1>
 
                 <p className="max-w-xl text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
-                  Votre cabinet qui vous garantit la santé mentale au quotidien dans la confidentialité, dans un cadre sécurisé.
+                  Votre cabinet qui vous garantit la santé mentale au quotidien dans la confidentialité et dans un cadre sécurisé.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -388,9 +378,9 @@ const Index = () => {
   <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     <CounterCard 
       icon={Award} 
-      end={15} 
+      end={10} 
       suffix="+" 
-      label="Années d'expérience en psychologie" 
+      label="Au  service de santé mentale et du bien-être" 
       bgColor="bg-[#0056b3]" 
     />
     <CounterCard 
@@ -405,7 +395,7 @@ const Index = () => {
       end={100} 
       suffix="%" 
       label="Confidentialité garantie" 
-      bgColor="bg-purple-500" 
+      bgColor="bg-yellow-500" 
     />
     <CounterCard 
       icon={Smile} 
@@ -456,10 +446,10 @@ const Index = () => {
         )}
 
         {/* Services */}
-        <section className="section-padding bg-secondary" id="services">
+        <section className="section-padding bg-white" id="services">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent">Nos Services</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-accent">Nos Services</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Un accompagnement complet pour votre bien-être</h2>
               <p className="mt-3 text-muted-foreground">
                 De la consultation individuelle aux formations, Cabinet Meilleure Vie vous accompagne vers une vie épanouie.
@@ -500,7 +490,7 @@ const Index = () => {
         <section className="section-padding">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent">Témoignages</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-accent">Témoignages</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Ce que disent nos patients</h2>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -539,7 +529,7 @@ const Index = () => {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent">Notre équipe</span>
               <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">Une équipe engagée et disponible</h2>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-navy-blue-foreground">
                 Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
               </p>
             </div>
