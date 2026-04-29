@@ -27,8 +27,8 @@ const servicesData = [
 
   // this is the new services that the cabinet is introducing - finish it later.
     {
-  id: "services-pedopsychiatrie",
-  category: "Pédopsychiatrie",
+  id: "services-pédopsychiatrie",
+  category: "Services Pédopsychiatriques",
   icon: BrainCircuit,
   description: "La pédopsychiatrie est dédiée aux enfants et adolescents, avec une approche spécialisée centrée sur le développement, le bien-être émotionnel et les troubles précoces.",
   items: [
@@ -41,8 +41,8 @@ const servicesData = [
 },
 
 {
-  id: "services-psychiatrie-adulte",
-  category: "Psychiatrie",
+  id: "services-psychiatriques",
+  category: "Services Psychiatriques",
   icon: Brain,
   description: "La psychiatrie s’adresse à l’adulte et combine une approche clinique, psychothérapeutique et biologique pour traiter les troubles mentaux.",
   items: [
@@ -71,9 +71,9 @@ const servicesData = [
 
   {
     id: "psychometriques",
-    category: "Services d'Evaluations",
+    category: "Services d'Évaluation",
     icon: Brain,
-    description: "Nos services psychométriques offrent des évaluations rigoureuses et scientifiquement validées pour les enfants, adultes et couples.",
+    description: "Ici, nous offrons des évaluations rigoureuses et scientifiquement validées pour les enfants, adultes et couples.",
     items: [
       { title: "Test de personnalité", desc: "Évaluation approfondie de la personnalité pour une meilleure connaissance de soi et un accompagnement adapté." },
       { title: "Échelles d'évaluation psychologique", desc: "Mesures standardisées pour évaluer les troubles anxieux, dépressifs et comportementaux." },

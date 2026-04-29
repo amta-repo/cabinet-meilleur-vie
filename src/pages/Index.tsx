@@ -47,6 +47,7 @@ import partner4 from "@/assets/Partner 4.png";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
 import assistantPsyImgTon from "@/assets/assistant-tongnon.jpg";
+import commDigitaleImg from "@/assets/chargee-comm-digitale.jpg";
 import bgNotreValeurs from "@/assets/bg-notre-valeurs.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
@@ -55,13 +56,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "MedicalBusiness"],
   name: "Cabinet Meilleure Vie",
-  description: "Cabinet de Consultation, Formation et Expertise-Recherche en Psychologie, Éducation, Genre et Environnement à Cotonou, Bénin.",
+  description: "Cabinet de Consultation, Formation et Expertise-Recherche en Psychologie, Éducation, Genre et Environnement à Abomey-Calavi, Bénin.",
   url: DOMAIN,
   telephone: ["+2290167618021", "+2290194390295"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison",
-    addressLocality: "Cotonou",
+    addressLocality: "Abomey-Calavi",
     addressCountry: "BJ",
   },
   geo: { "@type": "GeoCoordinates", latitude: 6.3893166, longitude: 2.3170377 },
@@ -149,6 +150,12 @@ const teamMembers = [
     role: "Assistant Psychologue",
     img: assistantPsyImgTon,
     bio: "Responsable du Service Technique et attaché du Service Clinique et d'Expertise au Cabinet Meilleure Vie.",
+  },
+  {
+    name: "Sèdjro Florida TONAKPA",
+    role: "Chargée de communication digitale, Partenaire du Cabinet Meilleure Vie",
+    img: commDigitaleImg,
+    bio: "Chargée de communication digitale et partenaire du Cabinet Meilleure Vie, elle soutient la visibilité et la sensibilisation autour de la santé mentale.",
   },
 ];
 
@@ -266,11 +273,11 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Cabinet Meilleure Vie | Psychologue Cotonou - Santé Mentale & Éducation Bénin</title>
-        <meta name="description" content="Cabinet Meilleure Vie : votre cabinet qui vous garantit la santé mentale au quotidien. Consultation psychologique, formations et expertise à Cotonou, Bénin." />
-        <meta name="keywords" content="cabinet psychologie Cotonou, psychologue Bénin, santé mentale Cotonou, consultation psychologique Bénin, bilan psychologique, orientation scolaire Cotonou, psychothérapie Bénin, formation psychologique Afrique" />
+        <title>Cabinet Meilleure Vie | Psychologie, Psychiatrie et Psychanalyse, Abomey-Calavi - Santé Mentale Bénin</title>
+        <meta name="description" content="Cabinet Meilleure Vie : votre cabinet qui vous garantit la santé mentale au quotidien. Consultation psychologique, formations et expertise à Abomey-Calavi, Bénin." />
+        <meta name="keywords" content="cabinet psychologie Abomey-Calavi, psychologue Bénin, santé mentale Abomey-Calavi, consultation psychologique Bénin, bilan psychologique, orientation scolaire Abomey-Calavi, psychothérapie Bénin, formation psychologique Afrique" />
         <link rel="canonical" href={DOMAIN} />
-        <meta property="og:title" content="Cabinet Meilleure Vie - Psychologie & Éducation à Cotonou, Bénin" />
+        <meta property="og:title" content="Cabinet Meilleure Vie - Psychologie & Éducation à Abomey-Calavi, Bénin" />
         <meta property="og:description" content="Votre cabinet qui vous garantit la santé mentale au quotidien." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={DOMAIN} />
@@ -291,7 +298,7 @@ const Index = () => {
             >
               <img
                 src={slide}
-                alt={`Cabinet Meilleure Vie - Consultation psychologique à Cotonou ${i + 1}`}
+                alt={`Cabinet Meilleure Vie - Consultation psychologique à Abomey-Calavi ${i + 1}`}
                 width={1920}
                 height={1080}
                 className="h-full w-full object-cover"
@@ -305,7 +312,7 @@ const Index = () => {
             <div className="grid gap-10 xl:grid-cols-[1fr_420px] items-start">
               <div className="max-w-3xl space-y-6 animate-fade-in-up">
                 <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary-foreground">
-                  🌿 Psychologie, Santé Mentale et Bien-Être - Cotonou, Bénin
+                🌿 Psychologie • Psychiatrie • Psychanalyse • Santé mentale - Abomey-Calavi, Bénin
                 </span>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">

@@ -9,6 +9,7 @@ import headerBg from "@/assets/header-apropos.jpg";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
 import assistantPsyImgTon from "@/assets/assistant-tongnon.jpg";
+import commDigitaleImg from "@/assets/chargee-comm-digitale.jpg";
 import equipeImg from "@/assets/equipe.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
@@ -21,10 +22,10 @@ const values = [
 ];
 
 const timeline = [
-  { year: "Fondation", desc: "Création du Cabinet Meilleure Vie à Cotonou, avec la mission de rendre la psychologie accessible à tous." },
-  { year: "Développement", desc: "Élargissement des services : bilans psychométriques, orientation scolaire et formations professionnelles certifiantes." },
-  { year: "Expertise", desc: "Reconnaissance en tant que centre d'expertise en psychologie, éducation, genre et environnement au Bénin." },
-  { year: "Aujourd'hui", desc: "Plus de 500 patients accompagnés, des formations de pointe et un impact croissant en Afrique de l'Ouest." },
+  { year: "Fondation (2016)", desc: "Création du Cabinet Meilleure Vie à Abomey-Calavi, avec la mission de rendre la psychologie accessible à tous." },
+  { year: "Développement (2019)", desc: "Élargissement des services : bilans psychométriques, orientation scolaire et formations professionnelles certifiantes." },
+  { year: "Expertise (2024)", desc: "Reconnaissance en tant que centre d'expertise en psychologie, éducation, genre et environnement au Bénin." },
+  { year: "Aujourd'hui", desc: "Plus de 500 patients accompagnés, 2000+ personnes formées, un impact croissant en Afrique de l'Ouest et en Europe (Togo, Sénégal, Côte d'Ivoire, Mali, Burkina Faso, Niger, France, Canada et Turquie)." },
 ];
 
 const teamMembers = [
@@ -47,6 +48,12 @@ const teamMembers = [
     img: assistantPsyImgTon,
     bio: "Responsable du Service Technique et attaché du Service Clinique et d'Expertise au Cabinet Meilleure Vie",
   },
+  {
+    name: "Sèdjro Florida TONAKPA",
+    role: "Chargée de communication digitale, Partenaire du Cabinet Meilleure Vie",
+    img: commDigitaleImg,
+    bio: "Chargée de communication digitale et partenaire du Cabinet Meilleure Vie, elle soutient la visibilité et la sensibilisation autour de la santé mentale.",
+  },
 ];
 
 const aboutJsonLd = {
@@ -65,10 +72,10 @@ const aboutJsonLd = {
 const AProposPage = () => (
   <>
     <Helmet>
-      <title>À Propos de Meilleure Vie | Psychologue Cotonou, Bénin</title>
-      <meta name="description" content="Découvrez Cabinet Meilleure Vie : votre cabinet de psychologie et psychiatrie à Cotonou. Équipe expérimentée, mission de bien-être mental." />
+      <title>À Propos de Meilleure Vie | Psychologue Abomey-Calavi, Bénin</title>
+      <meta name="description" content="Découvrez Cabinet Meilleure Vie : votre cabinet de psychologie et psychiatrie à Abomey-Calavi. Équipe expérimentée, mission de bien-être mental." />
       <link rel="canonical" href={`${DOMAIN}/a-propos`} />
-      <meta property="og:title" content="À Propos de Meilleure Vie | Cabinet de Psychologie Cotonou" />
+      <meta property="og:title" content="À Propos de Meilleure Vie | Cabinet de Psychologie Abomey-Calavi" />
       <meta property="og:url" content={`${DOMAIN}/a-propos`} />
       <script type="application/ld+json">{JSON.stringify(aboutJsonLd)}</script>
     </Helmet>
@@ -78,7 +85,7 @@ const AProposPage = () => (
       <PageHeader
         badge="À propos"
         title="À propos de Meilleure Vie"
-        subtitle="Votre cabinet de psychologie et des sciences de l'éducation à Cotonou, Bénin."
+        subtitle="Votre cabinet de psychologie, sante mentale et du bien-être à Abomey-Calavi, Bénin."
         bgImage={headerBg}
       />
 
@@ -91,14 +98,14 @@ const AProposPage = () => (
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   <strong className="text-foreground">Cabinet Meilleure Vie</strong> est votre cabinet de psychologie et des 
-                  sciences de l'éducation, qui vous garantit une santé mentale équilibrée, aussi 
+                  des psychiatrie, qui vous garantit une santé mentale équilibrée, aussi 
                   bien en entreprise, en famille ou dans votre vie personnelle, par la psychothérapie, 
                   les consultations psychologiques, l'information et la recherche.
                 </p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-              <img src={headerBg} alt="Cabinet Meilleure Vie à Cotonou" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
+              <img src={headerBg} alt="Cabinet Meilleure Vie à Abomey-Calavi" loading="lazy" width={800} height={600} className="w-full object-cover aspect-[4/3]" />
             </div>
           </div>
         </div>
@@ -115,7 +122,7 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Mission</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              "Accompagner nos clients sur le chemin de la transformation personelle, en leur offrant un espace de consultation sûr et une expertise de pointe."
+              Accompagner nos clients sur le chemin de la transformation personelle, en leur offrant un espace de consultation sûr et une expertise de pointe.
             </p>
           </div>
           <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -126,7 +133,7 @@ const AProposPage = () => (
               <h2 className="text-xl font-bold text-foreground">Notre Vision</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Devenir le centre de référence en soin de sante mentale.
+              Devenir le centre de référence en soin de sante mentale au Benin et dans le monde.
             </p>
           </div>
         </div>

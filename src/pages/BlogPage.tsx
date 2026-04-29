@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-blogpage.jpg";
+import malDuTeteImage from "@/assets/Mal-du-tete-blog.jpg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
@@ -16,7 +17,7 @@ const blogPosts = [
     excerpt: "Comprendre l'addiction pour mieux la prévenir chez les jeunes : causes, symptômes et stratégies de protection.",
     date: "2026-04-27",
     readTime: "10 min",
-    author: "AGOSSOU Sagbo",
+    author: "Agossou SAGBO",
     category: "Addiction",
     content: `L’addiction est aujourd’hui un problème majeur de santé mentale qui touche de nombreuses personnes, en particulier les jeunes. Elle peut concerner aussi bien des substances que des comportements du quotidien.
 
@@ -121,12 +122,52 @@ L’addiction est une problématique complexe liée à la santé mentale et aux 
 Mieux comprendre ses causes et ses symptômes permet de mieux la prévenir et d’agir plus tôt.`,
   },
   {
+    slug: "le-mal-a-lame-parler-depression",
+    title: "Le mal à l’âme : parler de la dépression",
+    excerpt: "Au Bénin comme ailleurs, la dépression est bien plus qu’un coup de blues. Un lieu d’écoute et de reconstruction peut faire la différence.",
+    date: "2026-05-01",
+    readTime: "8 min",
+    author: "Cabinet Meilleure Vie",
+    category: "Santé mentale",
+    image: malDuTeteImage,
+    imageAlt: "Illustration du mal du tête et du mal à l'âme",
+    content: `Le mal de tête, tu le traites. Le mal au cœur, tu en parles. Mais le mal à l’âme ? Tu fais semblant que ça n’existe pas.
+
+— Cabinet Meilleure Vie
+
+Au Bénin comme ailleurs, on a appris à soigner le corps, mais pas toujours l’esprit. Pourtant, la dépression est bien plus qu’un simple “coup de blues”.
+
+D’après l’OMS, plus de 300 millions de personnes dans le monde souffrent de dépression. Et derrière chaque silence, chaque sourire forcé, il peut y avoir une douleur que personne ne voit.
+
+## Une douleur invisible mais réelle
+
+Imagine un toit qui fuit. Tu peux éponger encore et encore… Mais si tu ne répares pas la fuite, l’eau reviendra toujours.
+
+La souffrance psychique, c’est pareil. On la cache, on la nie… mais elle reste là, en silence.
+
+## Le rôle du Cabinet Meilleure Vie
+
+Le Cabinet Meilleure Vie se porte garant de votre bien-être mental.
+C’est plus qu’un espace de consultation, c’est un lieu d’écoute, de réconfort et de reconstruction. Ici, tu es accueilli avec respect, bienveillance et confidentialité.
+
+## Notre mission
+
+Notre mission est simple : rendre la santé mentale accessible, comprise et valorisée.
+
+Il n’y a aucune honte à demander de l’aide. Il y a du courage dans chaque démarche vers soi-même.
+
+## Avancer vers la guérison intérieure
+
+Fais le choix de la guérison intérieure. Meilleure Vie est là pour t’y accompagner.
+`,
+  },
+  {
     slug: "comprendre-anxiete-traitement-cotonou",
     title: "Comprendre l'anxiété : causes, symptômes et traitement à Cotonou",
     excerpt: "L'anxiété touche des millions de personnes en Afrique. Découvrez comment reconnaître les signes d'anxiété et les options de traitement disponibles au Cabinet Meilleure Vie à Cotonou.",
     date: "2026-04-10",
     readTime: "7 min",
-    author: "AGOSSOU Sagbo",
+    author: "Agossou SAGBO",
     category: "Santé mentale",
     content: `L'anxiété est l'un des troubles psychologiques les plus fréquents dans le monde, et l'Afrique de l'Ouest ne fait pas exception. Au Bénin, de nombreuses personnes souffrent en silence, souvent par méconnaissance des symptômes ou par stigmatisation liée à la santé mentale.
 
@@ -151,7 +192,8 @@ Au Cabinet Meilleure Vie, nous proposons plusieurs approches thérapeutiques pou
 2. **La thérapie cognitivo-comportementale (TCC)** : Une approche scientifiquement validée qui aide à modifier les pensées et comportements anxiogènes.
 3. **Les techniques de relaxation** : Apprentissage de la respiration, de la pleine conscience et d'autres outils de gestion du stress.
 
-N'hésitez pas à consulter. Votre santé mentale est une priorité.`,
+N'hésitez pas à consulter. Votre santé mentale est une priorité.
+`,
   },
   {
     slug: "importance-bilan-psychologique-enfant",
@@ -159,11 +201,11 @@ N'hésitez pas à consulter. Votre santé mentale est une priorité.`,
     excerpt: "Un bilan psychologique permet de mieux comprendre les difficultés de votre enfant. Découvrez quand et pourquoi faire évaluer votre enfant par un psychologue professionnel.",
     date: "2026-04-05",
     readTime: "6 min",
-    author: "AGOSSOU Sagbo",
+    author: "Agossou SAGBO",
     category: "Psychologie de l'enfant",
     content: `Le bilan psychologique est un outil essentiel pour comprendre le fonctionnement cognitif, émotionnel et comportemental d'un enfant. Il est particulièrement recommandé lorsque les parents ou les enseignants observent des difficultés persistantes.
 
-## Quand consulter ?
+Quand consulter ?
 
 - Difficultés scolaires persistantes
 - Troubles du comportement à la maison ou à l'école
@@ -172,7 +214,7 @@ N'hésitez pas à consulter. Votre santé mentale est une priorité.`,
 - Changements soudains de comportement
 - Événements traumatisants (séparation des parents, deuil, déménagement)
 
-## En quoi consiste le bilan ?
+En quoi consiste le bilan ?
 
 Le bilan psychologique au Cabinet Meilleure Vie comprend :
 - Des tests standardisés (tests de personnalité, échelles d'évaluation)
@@ -180,7 +222,7 @@ Le bilan psychologique au Cabinet Meilleure Vie comprend :
 - Une observation du comportement
 - Un rapport détaillé avec des recommandations
 
-## Les bénéfices
+Les bénéfices
 
 Un bilan précoce permet d'identifier les besoins spécifiques de l'enfant et de mettre en place un accompagnement adapté, évitant ainsi l'aggravation des difficultés.`,
   },
@@ -190,22 +232,22 @@ Un bilan précoce permet d'identifier les besoins spécifiques de l'enfant et de
     excerpt: "Le bien-être psychologique des employés impacte directement la productivité. Comment les entreprises béninoises peuvent-elles intégrer la santé mentale dans leur politique RH ?",
     date: "2026-03-28",
     readTime: "8 min",
-    author: "AGOSSOU Sagbo",
+    author: "Agossou SAGBO",
     category: "Entreprise",
     content: `La santé mentale au travail est un enjeu croissant en Afrique. Le stress professionnel, le burn-out et les conflits interpersonnels affectent la productivité et le bien-être des employés.
 
-## L'état des lieux au Bénin
+ L'état des lieux au Bénin
 
 De nombreuses entreprises béninoises commencent à prendre conscience de l'importance du bien-être psychologique de leurs collaborateurs. Cependant, les initiatives restent encore limitées.
 
-## Nos solutions pour les entreprises
+ Nos solutions pour les entreprises
 
 Le Cabinet Meilleure Vie propose aux entreprises :
 
-1. **Thérapie de groupe en entreprise** : Des séances collectives pour améliorer la cohésion d'équipe et résoudre les conflits.
-2. **Formations en gestion du stress** : Des ateliers pratiques pour apprendre à gérer la pression professionnelle.
-3. **Consultations individuelles** : Un accompagnement confidentiel pour les employés en difficulté.
-4. **Audits du bien-être** : Évaluation de la santé mentale au sein de votre organisation.
+1. Thérapie de groupe en entreprise : Des séances collectives pour améliorer la cohésion d'équipe et résoudre les conflits.
+2. Formations en gestion du stress : Des ateliers pratiques pour apprendre à gérer la pression professionnelle.
+3. Consultations individuelles : Un accompagnement confidentiel pour les employés en difficulté.
+4. Audits du bien-être : Évaluation de la santé mentale au sein de votre organisation.
 
 Investir dans la santé mentale de vos collaborateurs, c'est investir dans la performance de votre entreprise.`,
   },
@@ -215,11 +257,11 @@ Investir dans la santé mentale de vos collaborateurs, c'est investir dans la pe
     excerpt: "La thérapie de couple n'est pas un aveu d'échec mais un acte de courage. Découvrez comment elle peut transformer votre relation et renforcer vos liens affectifs.",
     date: "2026-03-20",
     readTime: "5 min",
-    author: "AGOSSOU Sagbo",
+    author: "Agossou SAGBO",
     category: "Thérapie de couple",
     content: `Consulter un psychologue de couple est souvent perçu comme un dernier recours. Pourtant, une thérapie précoce peut prévenir de nombreux conflits et renforcer considérablement la relation.
 
-## Les signes qui doivent alerter
+ Les signes qui doivent alerter
 
 - Communication difficile ou inexistante
 - Conflits récurrents sur les mêmes sujets
@@ -228,7 +270,7 @@ Investir dans la santé mentale de vos collaborateurs, c'est investir dans la pe
 - Désaccords sur l'éducation des enfants
 - Difficultés liées à la vie intime
 
-## Comment se déroule une thérapie de couple ?
+ Comment se déroule une thérapie de couple ?
 
 Au Cabinet Meilleure Vie, la thérapie de couple se déroule dans un cadre neutre et bienveillant. Le thérapeute aide le couple à :
 - Identifier les schémas de communication dysfonctionnels
@@ -260,8 +302,8 @@ const blogJsonLd = {
 const BlogPage = () => (
   <>
     <Helmet>
-      <title>Blog Santé Mentale Afrique | Cabinet Meilleure Vie - Psychologue Cotonou</title>
-      <meta name="description" content="Articles et ressources sur la santé mentale, la psychologie et l'éducation en Afrique. Conseils d'experts du Cabinet Meilleure Vie à Cotonou, Bénin." />
+      <title>Blog Santé Mentale Afrique | Cabinet Meilleure Vie - Psychologie, Psychiatrie, Psychanalyse, Abomey-Calavi </title>
+      <meta name="description" content="Articles et ressources sur la santé mentale, la psychologie et l'éducation en Afrique de l'Ouest. Conseils d'experts du Cabinet Meilleure Vie à Abomey-Calavi, Bénin." />
       <link rel="canonical" href={`${DOMAIN}/blog`} />
       <meta property="og:title" content="Blog Santé Mentale | Cabinet Meilleure Vie" />
       <meta property="og:url" content={`${DOMAIN}/blog`} />
@@ -273,7 +315,7 @@ const BlogPage = () => (
       <PageHeader
         badge="Blog"
         title="Ressources & Articles"
-        subtitle="Informez-vous sur la santé mentale, la psychologie et l'éducation avec nos experts."
+        subtitle="Informez-vous sur la santé mentale, la psychologie, psychiatrie et psychanalyse avec nos experts."
         bgImage={headerBg}
       />
 
@@ -291,6 +333,11 @@ const BlogPage = () => (
                       {post.title}
                     </Link>
                   </h2>
+                  {post.image && (
+                    <div className="mb-4 overflow-hidden rounded-3xl">
+                      <img src={post.image} alt={post.imageAlt || post.title} loading="lazy" className="h-44 w-full object-cover" />
+                    </div>
+                  )}
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>

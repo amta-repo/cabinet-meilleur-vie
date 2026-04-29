@@ -126,6 +126,12 @@ const BlogPostPage = () => {
               <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {post.readTime}</span>
             </div>
 
+            {post.image && (
+              <div className="mb-10 overflow-hidden rounded-3xl">
+                <img src={post.image} alt={post.imageAlt || post.title} loading="lazy" className="w-full h-auto object-cover" />
+              </div>
+            )}
+
             <div className="prose prose-sm max-w-none text-muted-foreground leading-relaxed">
               {renderContent(post.content)}
             </div>

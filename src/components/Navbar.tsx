@@ -51,23 +51,41 @@ const Navbar = () => {
             {/* gap-[100vw] ensures the second item only enters after the first leaves */}
            <div className="flex animate-marquee-fast whitespace-nowrap gap-6 sm:gap-16">
               {actualites.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveActualite(item)}
-                  className="cursor-pointer text-left text-accent font-medium hover:text-accent/70 transition shrink-0"
-                >
-                  <span className="text-sm">{item.title}</span>
-                </button>
+                <div key={item.id} className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => setActiveActualite(item)}
+                    type="button"
+                    className="cursor-pointer text-left font-bold text-red-600 hover:text-red-500 transition"
+                  >
+                    <span className="text-sm">{item.title}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveActualite(item)}
+                    className="rounded-full bg-yellow-400 text-blue-600 px-3 py-1 text-[0.72rem] font-semibold shake"
+                  >
+                    Cliquez ici
+                  </button>
+                </div>
               ))}
               {/* Duplicate the items to create the infinite loop effect */}
               {actualites.map((item) => (
-                <button
-                  key={`${item.id}-clone`}
-                  onClick={() => setActiveActualite(item)}
-                  className="cursor-pointer text-left text-accent font-medium hover:text-accent/70 transition shrink-0"
-                >
-                  <span className="text-sm">{item.title}</span>
-                </button>
+                <div key={`${item.id}-clone`} className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => setActiveActualite(item)}
+                    type="button"
+                    className="cursor-pointer text-left font-bold text-red-600 hover:text-red-500 transition"
+                  >
+                    <span className="text-sm">{item.title}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveActualite(item)}
+                    className="rounded-full bg-yellow-400 text-blue-600 px-3 py-1 text-[0.72rem] font-semibold shake"
+                  >
+                    Cliquez ici
+                  </button>
+                </div>
               ))}
             </div>
           </div>
@@ -126,8 +144,8 @@ const Navbar = () => {
             <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
               <div className="flex-1 overflow-y-auto p-5 sm:p-8 custom-scrollbar">
                 <div className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent mb-2">Actualité</div>
-                <h2 className="text-lg md:text-xl font-bold text-foreground mb-4">{activeActualite.title}</h2>
-                <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{activeActualite.details}</p>
+                <h2 className="text-lg md:text-xl font-bold text-red-600 mb-4">{activeActualite.title}</h2>
+                <p className="whitespace-pre-line text-sm leading-relaxed font-bold text-red-600">{activeActualite.details}</p>
               </div>
               <div className="p-4 border-t border-border bg-background">
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
