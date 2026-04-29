@@ -315,9 +315,17 @@ const Index = () => {
                 🌿 Psychologie • Psychiatrie • Psychanalyse • Santé mentale - Abomey-Calavi, Bénin
                 </span>
 
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
+                {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
                   Faîtes-Vous Écouter - <span className="text-[#C49A6C]">Sans Être Jugé</span>
-                </h1>
+                </h1> */}
+<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
+  Vous méritez d’être écouté
+  <br />
+  <span className="relative inline-block">
+    sans jugement, en toute confiance
+    <span className="absolute left-0 -bottom-2 w-full h-2 bg-accent/30 rounded"></span>
+  </span>
+</h1>
 
                 <p className="max-w-xl text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
                   Votre cabinet qui vous garantit la santé mentale au quotidien dans la confidentialité et dans un cadre sécurisé.
@@ -479,12 +487,22 @@ const Index = () => {
                 </Link>
               ))}
             </div>
-            <div className="text-center mt-10">
+            {/* <div className="text-center mt-10">
               <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline">
                 Découvrir tous nos services
                 <ArrowRight className="h-4 w-4" />
               </Link>
-            </div>
+            </div> */}
+
+            <div className="text-center mt-10 relative z-10">
+  <Link
+    to="/services"
+    className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline cursor-pointer relative z-10"
+  >
+    Découvrir tous nos services
+    <ArrowRight className="h-4 w-4" />
+  </Link>
+</div>
           </div>
         </section>
 
@@ -527,7 +545,7 @@ const Index = () => {
         </section>
 
 {/* team section */}
-        <section className="section-padding relative bg-gradient-to-b from-violet-50/40 to-white">
+     <section className="section-padding relative bg-gradient-to-b from-violet-50/40 to-white">
   <div className="container mx-auto">
     <div className="text-center max-w-2xl mx-auto mb-12">
       <span className="text-xs font-semibold tracking-widest uppercase text-accent">
@@ -536,13 +554,13 @@ const Index = () => {
       <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
         Une équipe engagée et disponible
       </h2>
-      <p className="mt-3 text-navy-blue-foreground">
+      <p className="mt-3 text-slate-600">
         Découvrez notre équipe de praticiens qui avance ensemble pour votre bien-être.
       </p>
     </div>
 
     {/* HORIZONTAL SCROLLER */}
-    <div className="flex gap-6 overflow-x-auto pb-4 no-scrollbar snap-x snap-mandatory">
+    <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 pb-4 no-scrollbar snap-x snap-mandatory scroll-px-4 sm:scroll-px-6">
       {teamSliderItems.map((member, index) => {
         const bgVariants = [
           "bg-blue-600 text-white",
@@ -556,7 +574,7 @@ const Index = () => {
         return (
           <div
             key={member.name}
-            className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden border border-border bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]"
+            className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
             {/* FRONT */}
             <div className="p-6 flex flex-col items-center text-center transition-opacity duration-300 group-hover:opacity-0">

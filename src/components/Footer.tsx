@@ -72,7 +72,7 @@ const Footer = () => (
             <li className="flex flex-col items-center sm:flex-row sm:items-start sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
               <MapPin className="h-5 w-5 shrink-0 text-accent" />
               <span className="max-w-[280px] sm:max-w-none">
-                Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin
+                Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Abomey-Calavi, Bénin
               </span>
             </li>
 

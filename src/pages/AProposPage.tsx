@@ -50,9 +50,9 @@ const teamMembers = [
   },
   {
     name: "Sèdjro Florida TONAKPA",
-    role: "Chargée de communication digitale, Partenaire du Cabinet Meilleure Vie",
+    role: "Chargée de communication digitale",
     img: commDigitaleImg,
-    bio: "Chargée de communication digitale et partenaire du Cabinet Meilleure Vie, elle soutient la visibilité et la sensibilisation autour de la santé mentale.",
+    bio: "Partenaire du Cabinet Meilleure Vie, elle soutient la visibilité et la sensibilisation autour de la santé mentale.",
   },
 ];
 
@@ -97,9 +97,9 @@ const AProposPage = () => (
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">Qui sommes-nous ?</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">Cabinet Meilleure Vie</strong> est votre cabinet de psychologie et des 
-                  des psychiatrie, qui vous garantit une santé mentale équilibrée, aussi 
-                  bien en entreprise, en famille ou dans votre vie personnelle, par la psychothérapie, 
+                  <strong className="text-foreground">Cabinet Meilleure Vie</strong> est votre cabinet de psychologie et des
+                  des psychiatrie, qui vous garantit une santé mentale équilibrée, aussi
+                  bien en entreprise, en famille ou dans votre vie personnelle, par la psychothérapie,
                   les consultations psychologiques, l'information et la recherche.
                 </p>
               </div>
@@ -112,64 +112,107 @@ const AProposPage = () => (
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-secondary section-padding">
+      <section className="bg-gradient-to-b from-secondary/60 to-white section-padding">
         <div className="container mx-auto grid gap-8 sm:grid-cols-2">
-          <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                <Target className="h-6 w-6" />
+
+          {/* Mission */}
+          <div className="group relative rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+            {/* subtle glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600">
+                  <Target className="h-6 w-6" />
+                </div>
+                <h2 className="text-xl font-bold text-foreground">
+                  Notre Mission
+                </h2>
               </div>
-              <h2 className="text-xl font-bold text-foreground">Notre Mission</h2>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Accompagner nos clients sur le chemin de la transformation personnelle, en leur offrant un espace de consultation sûr, confidentiel et une expertise psychologique de pointe.
+              </p>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Accompagner nos clients sur le chemin de la transformation personelle, en leur offrant un espace de consultation sûr et une expertise de pointe.
-            </p>
           </div>
-          <div className="rounded-xl bg-card p-8" style={{ boxShadow: "var(--card-shadow)" }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                <Eye className="h-6 w-6" />
+
+          {/* Vision */}
+          <div className="group relative rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+            {/* subtle glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
+                  <Eye className="h-6 w-6" />
+                </div>
+                <h2 className="text-xl font-bold text-foreground">
+                  Notre Vision
+                </h2>
               </div>
-              <h2 className="text-xl font-bold text-foreground">Notre Vision</h2>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Devenir le centre de référence en santé mentale au Bénin et dans le monde</p>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Devenir le centre de référence en soin de sante mentale au Benin et dans le monde.
-            </p>
           </div>
+
         </div>
       </section>
 
       {/* DG Welcome */}
       <section className="section-padding">
-        <div className="container mx-auto">
-          <div className="grid gap-10 lg:grid-cols-5 items-center">
-            <div className="lg:col-span-2">
-              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-                <img src={dgImg} alt="Agossou SAGBO - Directeur Général, Psychologue Clinicien, Psychopathologue et Psychanalyste jungien" loading="lazy" width={800} height={1024} className="w-full object-cover aspect-[3/4]" />
-              </div>
-            </div>
-            <div className="lg:col-span-3 space-y-6">
-              <Quote className="h-10 w-10 text-accent/30" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Mot du Directeur Général</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed italic">
-                <p>
-                  « Bienvenue au Cabinet Meilleure Vie. Depuis notre création, nous nous engageons chaque jour à offrir un accompagnement psychologique de qualité, dans un cadre sécurisé et confidentiel.
-                </p>
-                <p>
-                  Notre conviction profonde est que chaque individu mérite d'être écouté, compris et accompagné vers son bien-être. Que vous soyez un enfant, un adulte, un couple ou une entreprise, nous sommes là pour vous.
-                </p>
-                <p>
-                  Notre équipe de professionnels qualifiés met son expertise à votre service avec bienveillance et dévouement. Ensemble, construisons une meilleure vie. »
-                </p>
-              </div>
-              <div className="not-italic">
-                <p className="text-foreground font-semibold">Agossou SAGBO</p>
-                <p className="text-sm text-accent">Directeur Général – Psychologue Clinicien, Psychopathologue et Psychanalyste jungien</p>
-              </div>
-            </div>
-          </div>
+  <div className="container mx-auto">
+
+    <div className="grid gap-0 lg:grid-cols-5 items-stretch rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
+
+      {/* IMAGE SIDE */}
+      <div className="lg:col-span-2 relative h-full">
+        <img
+          src={dgImg}
+          alt="Agossou SAGBO - Directeur Général"
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      </div>
+
+      {/* TEXT SIDE */}
+      <div className="lg:col-span-3 p-8 sm:p-10 flex flex-col justify-center">
+        
+        <Quote className="h-10 w-10 text-accent/30 mb-4" />
+
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">
+          Mot du Directeur Général
+        </h2>
+
+        <div className="space-y-4 text-muted-foreground leading-relaxed italic">
+          <p>
+            « Bienvenue au Cabinet Meilleure Vie. Depuis notre création, nous nous engageons chaque jour à offrir un accompagnement psychologique de qualité, dans un cadre sécurisé et confidentiel.
+          </p>
+          <p>
+            Notre conviction profonde est que chaque individu mérite d'être écouté, compris et accompagné vers son bien-être. Que vous soyez un enfant, un adulte, un couple ou une entreprise, nous sommes là pour vous.
+          </p>
+          <p>
+            Notre équipe de professionnels qualifiés met son expertise à votre service avec bienveillance et dévouement. Ensemble, construisons une meilleure vie. »
+          </p>
         </div>
-      </section>
+
+        <div className="mt-6 not-italic">
+          <p className="text-foreground font-semibold">
+            Agossou SAGBO
+          </p>
+          <p className="text-sm text-accent">
+            Directeur Général – Psychologue Clinicien, Psychopathologue et Psychanalyste jungien
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* Team */}
       <section className="relative section-padding overflow-hidden">
@@ -179,41 +222,82 @@ const AProposPage = () => (
         </div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-semibold tracking-widest uppercase text-accent">Notre Équipe</span>
-            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">Nos Experts à Votre Service</h2>
-            <p className="mt-3 text-primary-foreground/70">
-              Une équipe passionnée et qualifiée, au service de votre bien-être mental.
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent/90"></span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">
+              Une équipe engagée, humaine et disponible
+            </h2>
+
+            <p className="mt-3 text-primary-foreground/70 leading-relaxed">
+              Des professionnels dédiés à votre bien-être psychologique et émotionnel.
             </p>
           </div>
-          <div className="flex gap-6 overflow-x-auto pb-4 max-w-full mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:overflow-x-auto gap-6 pb-4 max-w-full mx-auto lg:flex-nowrap">
             {teamMembers.map((m) => (
-              <div key={m.name} className="min-w-[256px] flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-6 text-center hover-lift">
+              <div key={m.name} className="min-w-[220px] flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-4 sm:p-4 text-center hover-lift">
                 <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-4 border-accent">
                   <img src={m.img} alt={`${m.name} - ${m.role}`} loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-semibold text-primary-foreground">{m.name}</h3>
-                <p className="text-sm text-accent font-medium">{m.role}</p>
-                <p className="mt-3 text-sm text-primary-foreground/70 leading-relaxed">{m.bio}</p>
+                <h3 className="text-lg font-semibold text-white tracking-wide font-[500]">{m.name}</h3>
+                <p className="text-sm font-medium text-white/90 bg-white/10 px-2 py-1 rounded-md backdrop-blur-sm inline-block">{m.role}</p>
+                <p className="mt-3 text-sm text-white/80 leading-relaxed">{m.bio}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      {/* end of team section */}
 
       {/* Values */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-10">Nos valeurs</h2>
+      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-violet-50/30">
+        <div className="container mx-auto relative z-10">
+
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+              Nos valeurs
+            </span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
+              Ce qui guide notre pratique
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Une approche humaine, éthique et profondément engagée dans votre bien-être.
+            </p>
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <div key={v.title} className="text-center rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                  <v.icon className="h-6 w-6" />
+            {values.map((v, i) => {
+              const bgVariants = [
+                "from-blue-500/10 to-blue-600/5 text-blue-700",
+                "from-emerald-500/10 to-emerald-600/5 text-emerald-700",
+                "from-amber-500/10 to-amber-600/5 text-amber-700",
+                "from-rose-500/10 to-rose-600/5 text-rose-700",
+              ];
+
+              const bg = bgVariants[i % bgVariants.length];
+
+              return (
+                <div
+                  key={v.title}
+                  className="group relative rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  {/* subtle gradient glow */}
+                  <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${bg}`} />
+
+                  <div className="relative z-10">
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      <v.icon className="h-6 w-6" />
+                    </div>
+
+                    <h3 className="text-base font-semibold text-foreground">
+                      {v.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      {v.desc}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-base font-semibold text-foreground">{v.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{v.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -232,7 +316,7 @@ const AProposPage = () => (
                   {i < timeline.length - 1 && <div className="w-px flex-1 bg-primary-foreground/20 mt-2" />}
                 </div>
                 <div className="pb-8">
-                  <h3 className="text-lg font-semibold text-primary-foreground">{t.year}</h3>
+                  <h3 className="text-lg font-semibold text-white tracking-wide">{t.year}</h3>
                   <p className="mt-1 text-sm text-primary-foreground/70 leading-relaxed">{t.desc}</p>
                 </div>
               </div>
