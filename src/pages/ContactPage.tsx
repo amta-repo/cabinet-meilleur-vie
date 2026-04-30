@@ -35,20 +35,17 @@ const ContactPage = () => {
           bgImage={headerBg}
         />
 
-        <section className="py-16 relative overflow-hidden bg-primary">
-  {/* overlay like "Nos Valeurs" */}
-  <div className="absolute inset-0 bg-primary/90" />
+        <section className="section-padding relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-violet-50/30">
+  <div className="container mx-auto relative z-10">
 
-  <div className="relative container mx-auto">
-    
     <div className="text-center max-w-2xl mx-auto mb-12">
       <span className="text-xs font-semibold tracking-widest uppercase text-accent">
         Contact
       </span>
-      <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">
+      <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-foreground">
         Nos coordonnées
       </h2>
-      <p className="mt-3 text-primary-foreground/70">
+      <p className="mt-3 text-muted-foreground">
         Plusieurs moyens simples pour nous joindre rapidement
       </p>
     </div>
@@ -83,47 +80,55 @@ const ContactPage = () => {
           href: null,
           desc: "Disponibles 7j/7",
         },
-      ].map((c) => (
-        <div
-          key={c.title}
-          className="
-            rounded-xl
-            bg-primary-foreground/10
-            backdrop-blur-sm
-            border border-primary-foreground/10
-            p-6 text-center
-            transition-all duration-300
-            hover:scale-[1.02]
-          "
-        >
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground">
-            <c.icon className="h-6 w-6" />
+      ].map((c, i) => {
+        const bgVariants = [
+          "from-blue-500/10 to-blue-600/5 text-blue-700",
+          "from-emerald-500/10 to-emerald-600/5 text-emerald-700",
+          "from-amber-500/10 to-amber-600/5 text-amber-700",
+          "from-rose-500/10 to-rose-600/5 text-rose-700",
+        ];
+
+        const bg = bgVariants[i % bgVariants.length];
+
+        return (
+          <div
+            key={c.title}
+            className="group relative rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            {/* SAME hover glow */}
+            <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${bg}`} />
+
+            <div className="relative z-10">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                <c.icon className="h-6 w-6" />
+              </div>
+
+              <h3 className="text-base font-semibold text-foreground">
+                {c.title}
+              </h3>
+
+              {c.href ? (
+                <a
+                  href={c.href}
+                  target={c.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="block mt-2 text-sm font-medium text-accent hover:underline"
+                >
+                  {c.value}
+                </a>
+              ) : (
+                <p className="mt-2 text-sm font-medium text-foreground">
+                  {c.value}
+                </p>
+              )}
+
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {c.desc}
+              </p>
+            </div>
           </div>
-
-          <h3 className="text-sm font-semibold text-primary-foreground">
-            {c.title}
-          </h3>
-
-          {c.href ? (
-            <a
-              href={c.href}
-              target={c.href.startsWith("http") ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              className="block mt-2 text-sm font-medium text-accent hover:underline"
-            >
-              {c.value}
-            </a>
-          ) : (
-            <p className="mt-2 text-sm font-medium text-primary-foreground">
-              {c.value}
-            </p>
-          )}
-
-          <p className="mt-2 text-xs text-primary-foreground/70">
-            {c.desc}
-          </p>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>
