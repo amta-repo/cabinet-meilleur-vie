@@ -319,7 +319,7 @@ const Index = () => {
                 {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
                   Faîtes-Vous Écouter - <span className="text-[#C49A6C]">Sans Être Jugé</span>
                 </h1> */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-primary-foreground">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight text-primary-foreground">
                   Vous méritez d’être écouté
                   <br />
                   <span className="relative inline-block">

@@ -23,7 +23,7 @@ const blogPosts = [
     readTime: "10 min",
     author: "Agossou SAGBO",
     category: "Addiction",
-    Image: addictionImg,
+    image: addictionImg,
     content: `L’addiction est aujourd’hui un problème majeur de santé mentale qui touche de nombreuses personnes, en particulier les jeunes. Elle peut concerner aussi bien des substances que des comportements du quotidien.
 
 ## Définition de l’addiction
@@ -174,7 +174,7 @@ Fais le choix de la guérison intérieure. Meilleure Vie est là pour t’y acco
     readTime: "7 min",
     author: "Agossou SAGBO",
     category: "Santé mentale",
-    Image: anxietyImg,
+    image: anxietyImg,
     content: `L'anxiété est l'un des troubles psychologiques les plus fréquents dans le monde, et l'Afrique de l'Ouest ne fait pas exception. Au Bénin, de nombreuses personnes souffrent en silence, souvent par méconnaissance des symptômes ou par stigmatisation liée à la santé mentale.
 
 ## Qu'est-ce que l'anxiété ?
@@ -209,7 +209,7 @@ N'hésitez pas à consulter. Votre santé mentale est une priorité.
     readTime: "6 min",
     author: "Agossou SAGBO",
     category: "Psychologie de l'enfant",
-    Image: bilanPsychoImg,
+    image: bilanPsychoImg,
     content: `Le bilan psychologique est un outil essentiel pour comprendre le fonctionnement cognitif, émotionnel et comportemental d'un enfant. Il est particulièrement recommandé lorsque les parents ou les enseignants observent des difficultés persistantes.
 
 Quand consulter ?
@@ -241,7 +241,7 @@ Un bilan précoce permet d'identifier les besoins spécifiques de l'enfant et de
     readTime: "8 min",
     author: "Agossou SAGBO",
     category: "Entreprise",
-      Image: santeMentaleEntrepriseImg,
+    image: santeMentaleEntrepriseImg,
     content: `La santé mentale au travail est un enjeu croissant en Afrique. Le stress professionnel, le burn-out et les conflits interpersonnels affectent la productivité et le bien-être des employés.
 
  L'état des lieux au Bénin
