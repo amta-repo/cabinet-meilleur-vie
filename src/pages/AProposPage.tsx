@@ -239,7 +239,7 @@ const AProposPage = () => (
                 <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-4 border-accent">
                   <img src={m.img} alt={`${m.name} - ${m.role}`} loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-semibold text-white tracking-wide font-[500]">{m.name}</h3>
+                <h3 className="text-lg text-white tracking-wide font-[500]">{m.name}</h3>
                 <p className="text-sm font-medium text-white/90 bg-white/10 px-2 py-1 rounded-md backdrop-blur-sm inline-block">{m.role}</p>
                 <p className="mt-3 text-sm text-white/80 leading-relaxed">{m.bio}</p>
               </div>
