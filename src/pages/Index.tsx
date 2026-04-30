@@ -38,7 +38,7 @@ import svcPsychometrique from "@/assets/service-psychometrique.jpg";
 import svcFormationPluri from "@/assets/service-formation-pluri.jpg";
 import svcFormationPsy from "@/assets/service-formation-psy.jpg";
 import svcPsyPro from "@/assets/service-psy-pro.jpg";
-import svcPsychiatrie from "@/assets/service-psychiatriques.jpeg";
+import svcPsychiatrie from "@/assets/services-psychiatrique.jpeg";
 import svcPedoPsychiatrie from "@/assets/service-pedopsychiatrie.jpg";
 import partner1 from "@/assets/partner 1.jpeg";
 import partner2 from "@/assets/partner 2.jpeg";
