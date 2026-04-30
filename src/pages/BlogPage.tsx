@@ -10,7 +10,7 @@ import malDuTeteImage from "@/assets/Mal-du-tete-blog.jpg";
 import addictionImg from "@/assets/blog-addiction.jpeg";
 import anxietyImg from "@/assets/blog-anxiety.jpeg";
 import bilanPsychoImg from "@/assets/blog-bilan-psychologique.jpeg";
-import santeMentaleEntrepriseImg from "@/assets/blog-Image-santé-mentale-entreprise.jpeg";
+import santeMentaleEntrepriseImg from "@/assets/blog-sante-mentalentreprise.jpeg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
@@ -136,7 +136,7 @@ Mieux comprendre ses causes et ses symptômes permet de mieux la prévenir et d�
     category: "Santé mentale",
     image: malDuTeteImage,
     imageAlt: "Illustration du mal du tête et du mal à l'âme",
-    content: `Le mal de tête, tu le traites. Le mal au cœur, tu en parles. Mais le mal à l’âme ? Tu fais semblant que ça n’existe pas.
+    content: `Le mal de tête, tu le traites. Le mal au cœur, tu en parles. Mais le mal à l’âme ? Tu fais semblant que ça nexiste pas.
 
 — Cabinet Meilleure Vie
 
