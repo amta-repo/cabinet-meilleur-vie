@@ -601,7 +601,8 @@ const Index = () => {
                 return (
                   <div
                     key={member.name}
-                    className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    // className="group relative min-w-[260px] max-w-[260px] flex-shrink-0 snap-start rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="group relative w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     {/* FRONT */}
                     <div className="p-6 flex flex-col items-center text-center transition-opacity duration-300 group-hover:opacity-0">
