@@ -586,8 +586,9 @@ const Index = () => {
             </div>
 
             {/* HORIZONTAL SCROLLER */}
-            <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 pb-4 no-scrollbar snap-x snap-mandatory scroll-px-4 sm:scroll-px-6">
-              {teamSliderItems.map((member, index) => {
+            {/* <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 pb-4 no-scrollbar snap-x snap-mandatory scroll-px-4 sm:scroll-px-6"> */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-6">
+            {teamSliderItems.map((member, index) => {
                 const bgVariants = [
                   "bg-blue-600 text-white",
                   "bg-green-600 text-white",
