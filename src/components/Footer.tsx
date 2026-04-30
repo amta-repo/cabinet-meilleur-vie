@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Facebook, Instagram, Twitter, PhoneCall, Mail, MessageCircle, } from "lucide-react";
+import { MapPin, Facebook, Instagram, Twitter, PhoneCall, Mail, MessageCircle, LinkedinIcon} from "lucide-react";
 import logoImg from "@/assets/logo-cabinet.jpg";
 
 const Footer = () => (
@@ -14,14 +14,17 @@ const Footer = () => (
             Votre cabinet qui vous garantit la santé mentale au quotidien.
           </p>
           <div className="flex gap-3">
-            <a href="https://www.facebook.com/Meilleurvie" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
+            <a href="https://www.facebook.com/cmvpege" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href="https://www.instagram.com/Meilleurvie1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
+            <a href="https://www.instagram.com/cabinet_jungien_meilleure_vie/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
               <Instagram className="h-4 w-4" />
             </a>
             <a href="https://x.com/cabinetvie" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
               <Twitter className="h-4 w-4" />
+            </a>
+            <a href="https://www.linkedin.com/company/cabinet-meilleure-vie/?originalSubdomain=bj" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent transition-colors">
+              <LinkedinIcon className="h-4 w-4" />
             </a>
           </div>
         </div>
