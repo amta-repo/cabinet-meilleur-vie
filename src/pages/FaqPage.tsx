@@ -141,7 +141,7 @@ const FaqPage = () => (
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://wa.me/2290194390295?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20services."
+              href="https://wa.me/22994390295?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"

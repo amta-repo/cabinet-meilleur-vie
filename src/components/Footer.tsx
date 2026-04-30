@@ -85,7 +85,7 @@ const Footer = () => (
             {/* Phone 2 */}
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <PhoneCall className="h-5 w-5 shrink-0 text-accent" />
-              <a href="tel:+2290194390295" className="hover:text-accent transition-colors">+229 01 94 39 02 95</a>
+              <a href="tel:+22994390295" className="hover:text-accent transition-colors">+229 94 39 02 95</a>
             </li>
 
             {/* Email */}
@@ -97,7 +97,7 @@ const Footer = () => (
             {/* WhatsApp */}
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <MessageCircle className="h-5 w-5 shrink-0 text-accent" />
-              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+              <a href="https://wa.me/22994390295" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
             </li>
           </ul>
         </div>

@@ -103,13 +103,19 @@ const Navbar = () => {
           </Link>
 
           <ul className="hidden lg:flex items-center gap-8">
-            {navLinks.map((l) => (
-              <li key={l.href}>
-                <Link to={l.href} className={`text-sm font-medium transition-colors ${location.pathname === l.href ? "text-accent" : "text-foreground/80 hover:text-accent"}`}>
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((l) => {
+              const active = isNavLinkActive(l.href);
+              return (
+                <li key={l.href}>
+                  <Link
+                    to={l.href}
+                    className={`inline-flex rounded-full px-3 py-1 text-sm font-medium transition-colors ${active ? "bg-accent/10 text-accent" : "text-foreground/80 hover:text-accent"}`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <Link to="/contact" className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-transform hover:scale-105">
@@ -125,13 +131,20 @@ const Navbar = () => {
         {open && (
           <div className="lg:hidden border-t border-border bg-white animate-fade-in p-4">
             <ul className="flex flex-col gap-1">
-              {navLinks.map((l) => (
-                <li key={l.href}>
-                  <Link to={l.href} onClick={() => setOpen(false)} className={`block rounded-lg px-4 py-3 text-sm font-medium ${location.pathname === l.href ? "bg-accent/10 text-accent" : "text-foreground hover:bg-secondary"}`}>
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((l) => {
+                const active = isNavLinkActive(l.href);
+                return (
+                  <li key={l.href}>
+                    <Link
+                      to={l.href}
+                      onClick={() => setOpen(false)}
+                      className={`block rounded-lg px-4 py-3 text-sm font-medium ${active ? "bg-accent/10 text-accent" : "text-foreground hover:bg-secondary"}`}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}

@@ -7,7 +7,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. ${form.message}`);
-    window.open(`https://wa.me/2290194390295?text=${msg}`, "_blank");
+    window.open(`https://wa.me/22994390295?text=${msg}`, "_blank");
   };
 
   return (
@@ -80,7 +80,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               {[
                 { icon: MapPin, label: "Adresse", value: "Cotonou, Bénin" },
-                { icon: Phone, label: "Téléphone / WhatsApp", value: "+229 01 94 39 02 95", href: "tel:+2290194390295" },
+                { icon: Phone, label: "Téléphone / WhatsApp", value: "+229 94 39 02 95", href: "tel:+22994390295" },
                 { icon: Mail, label: "Email", value: "contact@cabinetmeilleurevie.com", href: "mailto:contact@cabinetmeilleurevie.com" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 rounded-xl bg-card p-4" style={{ boxShadow: "var(--card-shadow)" }}>

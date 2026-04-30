@@ -56,7 +56,7 @@ const ContactPage = () => {
           icon: Phone,
           title: "Téléphone",
           value: "+229 01 94 39 02 95 / +229 01 67 61 80 21",
-          href: "tel:+2290194390295",
+          href: "tel:+22994390295",
           desc: "Appelez-nous directement",
         },
         {
@@ -194,7 +194,7 @@ const ContactPage = () => {
                     <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
                     <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Abomey-Calavi, Bénin</p>
                     <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+22967618021" className="text-accent hover:underline">+229 67 618 021</a></p>
-                    <p className="text-sm text-muted-foreground">Tél 2 : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
+                    <p className="text-sm text-muted-foreground">Tél : <a href="tel:+22994390295" className="text-accent hover:underline">+229 94 39 02 95</a></p>
                   </div>
                 </div>
               </div>
