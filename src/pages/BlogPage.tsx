@@ -10,7 +10,7 @@ import malDuTeteImage from "@/assets/Mal-du-tete-blog.jpg";
 import addictionImg from "@/assets/blog-addiction.jpeg";
 import anxietyImg from "@/assets/blog-anxiety.jpeg";
 import bilanPsychoImg from "@/assets/blog-bilan-psychologique.jpeg";
-import santeMentaleEntrepriseImg from "@/assets/blog-sante-mentale-entreprise.jpeg";
+import santeMentaleEntrepriseImg from "@/assets/blog-Image-santé-mentale-entreprise.jpeg";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
