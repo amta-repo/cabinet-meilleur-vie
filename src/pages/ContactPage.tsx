@@ -35,31 +35,98 @@ const ContactPage = () => {
           bgImage={headerBg}
         />
 
-        <section className="py-12 bg-secondary">
-          <div className="container mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: Phone, title: "Téléphone", value: "+229 01 94 39 02 95 / +229 01 67 61 80 21", href: "tel:+2290194390295", desc: "Appelez-nous directement" },
-              { icon: MessageCircle, title: "WhatsApp", value: "+229 94 39 02 95", href: "https://wa.me/22994390295", desc: "Réponse rapide garantie" },
-              { icon: Mail, title: "Email", value: "contact.cmv.benin@gmail.com", href: "mailto:contact.cmv.benin@gmail.com", desc: "Envoyez-nous un email" },
-              { icon: Clock, title: "Horaires", value: "Lun - Sam : 8h - 21h, Dim: 9h - 13h sur rendez-vous", href: null, desc: "Disponibles 7j/7" },
-            ].map((c) => (
-              <div key={c.title} className="rounded-xl bg-card p-6 text-center hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
-                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                  <c.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-sm font-semibold text-foreground">{c.title}</h3>
-                {c.href ? (
-                  <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="block mt-1 text-sm font-medium text-accent hover:underline">
-                    {c.value}
-                  </a>
-                ) : (
-                  <p className="mt-1 text-sm font-medium text-foreground">{c.value}</p>
-                )}
-                <p className="mt-1 text-xs text-muted-foreground">{c.desc}</p>
-              </div>
-            ))}
+        <section className="py-16 relative overflow-hidden bg-primary">
+  {/* overlay like "Nos Valeurs" */}
+  <div className="absolute inset-0 bg-primary/90" />
+
+  <div className="relative container mx-auto">
+    
+    <div className="text-center max-w-2xl mx-auto mb-12">
+      <span className="text-xs font-semibold tracking-widest uppercase text-accent">
+        Contact
+      </span>
+      <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-primary-foreground">
+        Nos coordonnées
+      </h2>
+      <p className="mt-3 text-primary-foreground/70">
+        Plusieurs moyens simples pour nous joindre rapidement
+      </p>
+    </div>
+
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        {
+          icon: Phone,
+          title: "Téléphone",
+          value: "+229 01 94 39 02 95 / +229 01 67 61 80 21",
+          href: "tel:+2290194390295",
+          desc: "Appelez-nous directement",
+        },
+        {
+          icon: MessageCircle,
+          title: "WhatsApp",
+          value: "+229 94 39 02 95",
+          href: "https://wa.me/22994390295",
+          desc: "Réponse rapide garantie",
+        },
+        {
+          icon: Mail,
+          title: "Email",
+          value: "contact.cmv.benin@gmail.com",
+          href: "mailto:contact.cmv.benin@gmail.com",
+          desc: "Envoyez-nous un email",
+        },
+        {
+          icon: Clock,
+          title: "Horaires",
+          value: "Lun - Sam : 8h - 21h, Dim: 9h - 13h sur rendez-vous",
+          href: null,
+          desc: "Disponibles 7j/7",
+        },
+      ].map((c) => (
+        <div
+          key={c.title}
+          className="
+            rounded-xl
+            bg-primary-foreground/10
+            backdrop-blur-sm
+            border border-primary-foreground/10
+            p-6 text-center
+            transition-all duration-300
+            hover:scale-[1.02]
+          "
+        >
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground">
+            <c.icon className="h-6 w-6" />
           </div>
-        </section>
+
+          <h3 className="text-sm font-semibold text-primary-foreground">
+            {c.title}
+          </h3>
+
+          {c.href ? (
+            <a
+              href={c.href}
+              target={c.href.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="block mt-2 text-sm font-medium text-accent hover:underline"
+            >
+              {c.value}
+            </a>
+          ) : (
+            <p className="mt-2 text-sm font-medium text-primary-foreground">
+              {c.value}
+            </p>
+          )}
+
+          <p className="mt-2 text-xs text-primary-foreground/70">
+            {c.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="section-padding">
           <div className="container mx-auto grid gap-10 lg:grid-cols-2">
