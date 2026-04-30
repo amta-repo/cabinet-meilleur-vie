@@ -33,7 +33,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useCountUp } from "@/hooks/useCountUp";
 import heroSlide1 from "@/assets/hero-slide1.jpg";
-import heroSlide2 from "@/assets/slider2.jpg";
+// import heroSlide2 from "@/assets/slider2.jpg";
 import svcPsychometrique from "@/assets/service-psychometrique.jpg";
 import svcFormationPluri from "@/assets/service-formation-pluri.jpg";
 import svcFormationPsy from "@/assets/service-formation-psy.jpg";
@@ -75,7 +75,8 @@ const jsonLd = {
   ],
 };
 
-const slides = [heroSlide1, heroSlide2];
+
+const slides = [heroSlide1];
 
 const serviceCards = [
   {
