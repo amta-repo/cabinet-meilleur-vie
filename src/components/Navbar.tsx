@@ -39,6 +39,9 @@ const Navbar = () => {
   const [activeActualite, setActiveActualite] = useState<ActualiteItem | null>(null);
   const location = useLocation();
 
+  const isNavLinkActive = (href: string) =>
+    href === "/" ? location.pathname === "/" : location.pathname.startsWith(href);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       {/* --- ACTUALITÉS BAR --- */}

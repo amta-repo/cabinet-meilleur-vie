@@ -182,7 +182,7 @@ const ContactPage = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Notre emplacement</h2>
-                <p className="text-muted-foreground mb-6">Rendez-nous visite à notre cabinet de Cotonou.</p>
+                <p className="text-muted-foreground mb-6">Rendez-nous visite à notre cabinet de Abomey-Calavi.</p>
               </div>
 
               <div className="rounded-xl bg-card p-5" style={{ boxShadow: "var(--card-shadow)" }}>
@@ -192,7 +192,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Cabinet Meilleure Vie</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Cotonou, Bénin</p>
+                    <p className="text-sm text-muted-foreground mt-1">Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison, Abomey-Calavi, Bénin</p>
                     <p className="text-sm text-muted-foreground mt-1">Tél : <a href="tel:+22967618021" className="text-accent hover:underline">+229 67 618 021</a></p>
                     <p className="text-sm text-muted-foreground">Tél 2 : <a href="tel:+2290194390295" className="text-accent hover:underline">+229 01 94 39 02 95</a></p>
                   </div>
@@ -201,7 +201,7 @@ const ContactPage = () => {
 
               <div className="overflow-hidden rounded-xl" style={{ boxShadow: "var(--card-shadow)" }}>
                 <iframe
-                  title="Localisation Cabinet Meilleure Vie Cotonou Bénin"
+                  title="Localisation Cabinet Meilleure Vie Abomey-Calavi Bénin"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5!2d2.3170377!3d6.3893166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a900069c7c45%3A0x4a8ee7e8d7c75af3!2sCABINET%20MEILLEURE%20VIE!5e0!3m2!1sfr!2sbj!4v1700000000000"
                   width="100%"
                   height="350"
@@ -213,7 +213,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://wa.me/22967618021?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                href="https://wa.me/22994390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"
