@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
+// change the headerBg1 below to back plain blue background.
+import headerBg1 from "@/assets/header-about-us.jpg";
 import headerBg from "@/assets/header-apropos.jpg";
 import dgImg from "@/assets/dg-agossou.jpg";
 import assistantImg from "@/assets/assistant-psy.jpg";
@@ -86,7 +88,7 @@ const AProposPage = () => (
         badge="À propos"
         title="À propos de Meilleure Vie"
         subtitle="Votre cabinet de psychologie, sante mentale et du bien-être à Abomey-Calavi, Bénin."
-        bgImage={headerBg}
+        bgImage={headerBg1}
       />
 
       {/* Intro */}
