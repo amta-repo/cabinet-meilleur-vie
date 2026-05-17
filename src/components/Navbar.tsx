@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/logo-cabinet.jpg";
-import campaign1Img from "@/assets/Campaign 1.jpeg";
-import campaign2Img from "@/assets/Campaign 2.jpeg";
+import campaign1Img from "@/assets/actualite-jung.jpeg";
+import campaign2Img from "@/assets/actualite-addiction.jpeg";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -15,20 +15,20 @@ const navLinks = [
 
 const actualites = [
   {
-    id: "campagne1",
-    title: "📣 Une bonne nouvelle pour vous",
-    details: "Le Cabinet Meilleure Vie met en place une campagne exceptionnelle du 27 avril au 6 mai, avec une réduction de 50% sur les consultations psychologiques et psychiatriques.\n\n✨ Une belle opportunité de faire le premier pas, ou de reprendre un accompagnement, dans un cadre professionnel, bienveillant et confidentiel.\n\n📅 Les consultations se font uniquement sur rendez-vous.",
+    id: "jung",
+    title: "🌊 6 JUIN — COMMÉMORATION SYMBOLIQUE AUTOUR DE CARL GUSTAV JUNG 🌊",
+    details: "Et si vos blessures, vos peurs ou vos blocages devenaient enfin des portes vers le succès, le bien-être, et autres ?\n\nLe 6 juin, nous vous invitons à vivre une expérience collective unique en plein air autour du thème :\n\n✨ « Transformer nos obstacles en opportunités » ✨\n\nÀ travers des activités symboliques et profondément humaines :\n\n🌊 Le rituel de la vague\n🔥 Le rituel de déblocage / purge\n🗣️ Le cercle de la parole\n\nUne occasion de découvrir la psychologie analytique autrement, non pas seulement comme une théorie, mais comme une expérience concrète, vivante et transformatrice.\n\n📍 Plage Érevan — Cotonou\n🕙 10h00\n🎟️ Activité gratuite et ouverte (21 places disponibles)\n📲 Pour participer : 0194390295\n\n⚠️ NB : Chaque participant est responsable de sa restauration (Pique-nique).\n\nVenez ressentir, partager, libérer… et peut-être rencontrer une nouvelle partie de vous-même. 🌊",
     img: campaign1Img,
-    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20campagne%20de%2050%25",
-    button: "Découvrir la campagne",
+    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20participer%20%C3%A0%20la%20comm%C3%A9moration%20Jung%20du%206%20juin",
+    button: "Je veux participer",
   },
   {
-    id: "campagne2",
-    title: "✨ Devenez un professionnel certifié en test HEXACO",
-    details: "DEVENEZ UN PROFESSIONNEL CERTIFIÉ EN TEST DE PERSONNALITÉ HEXACO\n\n💰 75 000 FCFA (tarif préférentiel Afrique) - 150 000 FCFA (hors Afrique)\n⏳ 5 séances en ligne de 09h-12h GMT\n📌 Nombre de places limité",
+    id: "addiction",
+    title: "📢 CONFÉRENCES PUBLIQUES EN SANTÉ MENTALE — 1ère ÉDITION",
+    details: "🎯 Thème : ADDICTION\n\nLe Cabinet Meilleure Vie organise, les 7 et 8 août 2026, une grande conférence publique dédiée à la compréhension des addictions et à leurs impacts sur les individus, les familles et la société.\n\nDurant ces deux journées, plusieurs professionnels et intervenants échangeront autour des addictions liées à l'alcool, aux drogues, aux écrans, aux réseaux sociaux, aux jeux, aux médicaments et à bien d'autres problématiques actuelles de santé mentale.\n\n✅ Participation gratuite et ouverte à tous\nNous invitons massivement les étudiants, professionnels, parents, éducateurs, associations et toute personne intéressée par la santé mentale à s'inscrire et à participer à cet événement de sensibilisation et de prévention.\n\n🤝 Appel à partenaires et sponsors\nLes entreprises, structures, ONG, institutions et marques souhaitant soutenir cette initiative ou bénéficier d'un espace de visibilité pendant l'événement (stands, communication, partenariat, exposition d'activités, etc.) peuvent nous contacter afin d'échanger sur les modalités de collaboration.\n\n📩 Pour informations, inscriptions ou partenariats :\nVeuillez nous contacter en message privé ou via les coordonnées officielles du Cabinet Meilleure Vie.\n\n📲 0194390295 / 0167618021\n📩 contact.cmv.benin@gmail.com",
     img: campaign2Img,
-    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20m'inscrire%20%C3%A0%20la%20formation%20HEXACO",
-    button: "Je veux m'inscrire",
+    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20conf%C3%A9rence%20Addiction",
+    button: "Je m'inscris / J'en parle",
   },
 ];
 
