@@ -18,7 +18,7 @@ const reviewJsonLd = {
   url: DOMAIN,
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: String(averageRating),
     reviewCount: String(testimonials.length),
     bestRating: "5",
   },
