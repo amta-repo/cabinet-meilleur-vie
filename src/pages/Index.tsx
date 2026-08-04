@@ -124,14 +124,8 @@ const serviceCards = [
   },
 ];
 
-const testimonials = [
-  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens", name: "Anonyme" },
-  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil", name: "Anonyme" },
-  { text: "Très Professionnel.", motivation: "Prince Zékoulékou Prof Backras", name: "Prince Zékoulékou Prof Backras" },
-  { text: "Bien.", motivation: "Marios Tohon", name: "Marios Tohon" },
-  { text: "Un accompagnement de qualité, je recommande.", motivation: "Faysale Ilboudo", name: "Faysale Ilboudo" },
-  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens", name: "Anonyme" },
-];
+const testimonials = featuredTestimonials.slice(0, 6);
+
 
 const teamMembers = [
   {
