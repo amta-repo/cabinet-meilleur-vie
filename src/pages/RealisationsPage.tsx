@@ -82,13 +82,17 @@ const RealisationsPage = () => (
             {testimonials.map((t, i) => (
               <article key={i} className="rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
                 <Quote className="h-8 w-8 text-accent/20 mb-4" />
-                <div className="flex gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-star text-star" />
+                <div className="flex gap-1 mb-4" aria-label={`Note : ${t.rating} sur 5`}>
+                  {[...Array(5)].map((_, j) => (
+                    <Star
+                      key={j}
+                      className={j < t.rating ? "h-4 w-4 fill-star text-star" : "h-4 w-4 text-muted-foreground/30"}
+                    />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed italic">"{t.text}"</p>
-                <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>
+                {t.motivation && <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>}
+
                 <div className="mt-6 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-semibold text-sm">
                     {t.name?.charAt(0).toUpperCase() || "A"}
