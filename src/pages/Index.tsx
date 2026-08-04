@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { featuredTestimonials } from "@/data/testimonials";
+
 import {
   MessageCircle,
   CalendarCheck,
