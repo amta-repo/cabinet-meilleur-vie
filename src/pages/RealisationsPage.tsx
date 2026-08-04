@@ -61,7 +61,9 @@ const RealisationsPage = () => (
                 <Star key={j} className="h-4 w-4 fill-star text-star" />
               ))}
             </div>
-            <span className="text-sm font-semibold text-foreground">5.0</span>
+            <span className="text-sm font-semibold text-foreground">{averageRating.toFixed(1)}</span>
+            <span className="text-sm text-muted-foreground">({testimonials.length} avis)</span>
+
             <a
               href="https://www.google.com/maps/place/CABINET+MEILLEURE+VIE/@6.3892618,2.3144574,17z/data=!3m1!4b1!4m6!3m5!1s0x102357003f5ebd47:0xafbf9f3002f4d23!8m2!3d6.3892565!4d2.3170323!16s%2Fg%2F11lctvjgdb?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
