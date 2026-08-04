@@ -6,21 +6,10 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
 import headerBg from "@/assets/header-temoignages.jpg";
+import { testimonials, averageRating } from "@/data/testimonials";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
-const testimonials = [
-  { text: "Je stresse moins qu'avant, les douleurs qui m'ont poussée à venir dans ce cabinet ont diminué à 80% déjà.", motivation: "L'écoute et la bienveillance des praticiens, la qualité de l'accompagnement et des séances, l'ambiance et le cadre du cabinet, l'organisation et l'accueil", rating: 5, name: "Anonyme" },
-  { text: "J'ai plus confiance en moi.", motivation: "L'organisation et l'accueil", rating: 5, name: "Anonyme" },
-  { text: "Très Professionnel.", motivation: "Prince Zékoulékou Prof Backras", rating: 5, name: "Prince Zékoulékou Prof Backras" },
-  { text: "Bien.", motivation: "Marios Tohon", rating: 5, name: "Marios Tohon" },
-  { text: "Un accompagnement de qualité, je recommande.", motivation: "Faysale Ilboudo", rating: 5, name: "Faysale Ilboudo" },
-  { text: "Je me suis sentie bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
-  { text: "Je me sens très bien à chaque consultation.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
-  { text: "Une stabilité dans ma vie sentimentale.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5, name: "Anonyme" },
-  { text: "Je me sens mieux et je m'accepte mieux. J'ai mieux repris confiance en moi.", motivation: "L'écoute et la bienveillance des praticiens", rating: 5, name: "Anonyme" },
-  { text: "Au début, avant de commencer les consultations au cabinet, j'avais beaucoup de mal avec les enfants de 0 à 3 ans. Je n'étais pas du tout à l'aise avec eux. Puis j'ai commencé la thérapie avec le Dr ANTONIO qui avec des discussions et des exercices ainsi que des apports de solutions m'a aidé à trouver la source de ce mal. Nous avions beaucoup travaillé dessus et aujourd'hui je suis plus qu'à l'aise avec les enfants. Et j'ai beaucoup de plaisir à les côtoyer.", motivation: "La qualité de l'accompagnement et des séances", rating: 5, name: "Anonyme" },
-];
 
 const reviewJsonLd = {
   "@context": "https://schema.org",
@@ -29,7 +18,7 @@ const reviewJsonLd = {
   url: DOMAIN,
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: String(averageRating),
     reviewCount: String(testimonials.length),
     bestRating: "5",
   },
@@ -72,7 +61,9 @@ const RealisationsPage = () => (
                 <Star key={j} className="h-4 w-4 fill-star text-star" />
               ))}
             </div>
-            <span className="text-sm font-semibold text-foreground">5.0</span>
+            <span className="text-sm font-semibold text-foreground">{averageRating.toFixed(1)}</span>
+            <span className="text-sm text-muted-foreground">({testimonials.length} avis)</span>
+
             <a
               href="https://www.google.com/maps/place/CABINET+MEILLEURE+VIE/@6.3892618,2.3144574,17z/data=!3m1!4b1!4m6!3m5!1s0x102357003f5ebd47:0xafbf9f3002f4d23!8m2!3d6.3892565!4d2.3170323!16s%2Fg%2F11lctvjgdb?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
@@ -91,13 +82,17 @@ const RealisationsPage = () => (
             {testimonials.map((t, i) => (
               <article key={i} className="rounded-xl bg-card p-6 hover-lift" style={{ boxShadow: "var(--card-shadow)" }}>
                 <Quote className="h-8 w-8 text-accent/20 mb-4" />
-                <div className="flex gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-star text-star" />
+                <div className="flex gap-1 mb-4" aria-label={`Note : ${t.rating} sur 5`}>
+                  {[...Array(5)].map((_, j) => (
+                    <Star
+                      key={j}
+                      className={j < t.rating ? "h-4 w-4 fill-star text-star" : "h-4 w-4 text-muted-foreground/30"}
+                    />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed italic">"{t.text}"</p>
-                <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>
+                {t.motivation && <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>}
+
                 <div className="mt-6 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-semibold text-sm">
                     {t.name?.charAt(0).toUpperCase() || "A"}
