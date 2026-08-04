@@ -544,7 +544,7 @@ const Index = () => {
                     ))}
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed italic">"{t.text}"</p>
-                  <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>
+                  {t.motivation && <p className="mt-3 text-xs text-accent font-medium">{t.motivation}</p>}
                   <div className="mt-4 flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-semibold text-sm">
                       {t.name?.charAt(0).toUpperCase() || "A"}
