@@ -100,7 +100,7 @@ const Footer = () => (
             {/* WhatsApp */}
             <li className="flex items-center justify-center sm:justify-start gap-3">
               <MessageCircle className="h-5 w-5 shrink-0 text-accent" />
-              <a href="https://wa.me/22994390295" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+              <a href="https://wa.me/2290147771967" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
             </li>
           </ul>
         </div>

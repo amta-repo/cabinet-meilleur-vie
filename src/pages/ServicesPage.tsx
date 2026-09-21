@@ -241,7 +241,7 @@ const ServicesPage = () => (
               Prendre rendez-vous
             </Link>
             <a
-              href="https://wa.me/22994390295"
+              href="https://wa.me/2290147771967"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-white border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-transform hover:scale-105"
