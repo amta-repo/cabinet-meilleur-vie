@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import logoImg from "@/assets/logo-cabinet.jpg";
-import campaign1Img from "@/assets/actualite-jung.jpeg";
-import campaign2Img from "@/assets/actualite-addiction.jpeg";
+import concentrationCampaign from "@/assets/attention-et-concentration-scolaires.jpeg.asset.json";
+import dreamCampaign from "@/assets/campagne-interpretation-reves.jpeg.asset.json";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -15,20 +15,20 @@ const navLinks = [
 
 const actualites = [
   {
-    id: "jung",
-    title: "🌊 6 JUIN — COMMÉMORATION SYMBOLIQUE AUTOUR DE CARL GUSTAV JUNG 🌊",
-    details: "Et si vos blessures, vos peurs ou vos blocages devenaient enfin des portes vers le succès, le bien-être, et autres ?\n\nLe 6 juin, nous vous invitons à vivre une expérience collective unique en plein air autour du thème :\n\n✨ « Transformer nos obstacles en opportunités » ✨\n\nÀ travers des activités symboliques et profondément humaines :\n\n🌊 Le rituel de la vague\n🔥 Le rituel de déblocage / purge\n🗣️ Le cercle de la parole\n\nUne occasion de découvrir la psychologie analytique autrement, non pas seulement comme une théorie, mais comme une expérience concrète, vivante et transformatrice.\n\n📍 Plage Érevan — Cotonou\n🕙 10h00\n🎟️ Activité gratuite et ouverte (21 places disponibles)\n📲 Pour participer : 0194390295\n\n⚠️ NB : Chaque participant est responsable de sa restauration (Pique-nique).\n\nVenez ressentir, partager, libérer… et peut-être rencontrer une nouvelle partie de vous-même. 🌊",
-    img: campaign1Img,
-    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20participer%20%C3%A0%20la%20comm%C3%A9moration%20Jung%20du%206%20juin",
-    button: "Je veux participer",
+    id: "concentration-scolaire",
+    title: "Se concentrer permet d'accroître le résultat scolaire de vos enfants",
+    details: "Nous vous proposons des jeux-tests de Berloquin, jeux-tests de séries, jeux-tests de suites numériques et thérapies de concentration, pour aider vos enfants en difficulté d'attention et de concentration à devenir les meilleurs de leurs classes.\n\n📅 Séances : Mercredi & samedi | 15h–17h\n📍 Lieu : Cabinet Meilleure Vie — Atrokpocodji\n📞 +229 01 47 77 19 67\n📧 contact.cmv.benin@gmail.com\n🌐 cabinetmeilleurvie.com",
+    img: concentrationCampaign.url,
+    whatsapp: "https://wa.me/2290147771967?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20les%20s%C3%A9ances%20d%27attention%20et%20de%20concentration%20scolaires.",
+    button: "Je réserve une séance",
   },
   {
-    id: "addiction",
-    title: "📢 CONFÉRENCES PUBLIQUES EN SANTÉ MENTALE — 1ère ÉDITION",
-    details: "🎯 Thème : ADDICTION\n\nLe Cabinet Meilleure Vie organise, les 7 et 8 août 2026, une grande conférence publique dédiée à la compréhension des addictions et à leurs impacts sur les individus, les familles et la société.\n\nDurant ces deux journées, plusieurs professionnels et intervenants échangeront autour des addictions liées à l'alcool, aux drogues, aux écrans, aux réseaux sociaux, aux jeux, aux médicaments et à bien d'autres problématiques actuelles de santé mentale.\n\n✅ Participation gratuite et ouverte à tous\nNous invitons massivement les étudiants, professionnels, parents, éducateurs, associations et toute personne intéressée par la santé mentale à s'inscrire et à participer à cet événement de sensibilisation et de prévention.\n\n🤝 Appel à partenaires et sponsors\nLes entreprises, structures, ONG, institutions et marques souhaitant soutenir cette initiative ou bénéficier d'un espace de visibilité pendant l'événement (stands, communication, partenariat, exposition d'activités, etc.) peuvent nous contacter afin d'échanger sur les modalités de collaboration.\n\n📩 Pour informations, inscriptions ou partenariats :\nVeuillez nous contacter en message privé ou via les coordonnées officielles du Cabinet Meilleure Vie.\n\n📲 0194390295 / 0167618021\n📩 contact.cmv.benin@gmail.com",
-    img: campaign2Img,
-    whatsapp: "https://wa.me/22994390295?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20conf%C3%A9rence%20Addiction",
-    button: "Je m'inscris / J'en parle",
+    id: "interpretation-reves",
+    title: "Le rêve peut ouvrir une voie vers l’inconscient",
+    details: "Apprenez à écouter, analyser et interpréter le rêve comme outil d’analyse du fonctionnement psychique dans la relation thérapeutique.\n\nFORMATION QUALIFIANTE\n\nSanté mentale & psychothérapie\n\nL’interprétation des rêves comme outil thérapeutique\n\n📅 24 sept. au 15 oct. 2026\n💻 En ligne ou présentiel\n📚 50 % théorie • 50 % pratique\n🎓 Certification\n💰 75 000 FCFA\n📞 01 47 77 19 67",
+    img: dreamCampaign.url,
+    whatsapp: "https://wa.me/2290147771967?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20sur%20l%27interpr%C3%A9tation%20des%20r%C3%AAves.",
+    button: "Je m'inscris",
   },
 ];
 

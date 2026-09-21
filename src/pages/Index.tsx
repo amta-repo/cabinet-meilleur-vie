@@ -337,7 +337,7 @@ const Index = () => {
                     Prendre rendez-vous
                   </Link>
                   <a
-                    href="https://wa.me/22994390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                    href="https://wa.me/2290147771967?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -460,7 +460,7 @@ const Index = () => {
               </div>
               <div className="mt-4 sm:mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <a
-                  href={`https://wa.me/22994390295?text=${encodeURIComponent(
+                  href={`https://wa.me/2290147771967?text=${encodeURIComponent(
                     `Bonjour, je souhaite en savoir plus sur l'événement : ${selectedEvent.title}`
                   )}`}
                   target="_blank"

@@ -15,7 +15,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(`Bonjour, je m'appelle ${form.name}. Service souhaité: ${form.service}. ${form.message}`);
-    window.open(`https://wa.me/22994390295?text=${msg}`, "_blank");
+    window.open(`https://wa.me/2290147771967?text=${msg}`, "_blank");
   };
 
   return (
@@ -62,8 +62,8 @@ const ContactPage = () => {
         {
           icon: MessageCircle,
           title: "WhatsApp",
-          value: "+229 94 39 02 95",
-          href: "https://wa.me/22994390295",
+          value: "+229 01 47 77 19 67",
+          href: "https://wa.me/2290147771967",
           desc: "Réponse rapide garantie",
         },
         {
@@ -213,7 +213,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://wa.me/22994390295?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
+                href="https://wa.me/2290147771967?text=Bonjour%2C%20je%20viens%20de%20visiter%20votre%20site%20et%20je%20souhaite%20prendre%20rendez-vous."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-xl p-5 transition-colors hover:opacity-90"
