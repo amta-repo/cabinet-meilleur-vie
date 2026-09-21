@@ -60,7 +60,7 @@ const jsonLd = {
   name: "Cabinet Meilleure Vie",
   description: "Cabinet de Consultation, Formation et Expertise-Recherche en Psychologie, Éducation, Genre et Environnement à Abomey-Calavi, Bénin.",
   url: DOMAIN,
-  telephone: ["+22994390295"],
+  telephone: ["+2290147771967", "+2290167618021"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Atrokpocodji, 4ème rue après le séminaire Jean-Eude, première rue à droite et deuxième maison",
