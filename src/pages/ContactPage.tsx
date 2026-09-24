@@ -64,6 +64,8 @@ const ContactPage = () => {
           title: "WhatsApp",
           value: "+229 01 47 77 19 67",
           href: "https://wa.me/2290147771967",
+          href2: "https://wa.me/2290167618021",
+          value2: "+229 01 67 61 80 21",
           desc: "Réponse rapide garantie",
         },
         {
