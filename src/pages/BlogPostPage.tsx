@@ -83,6 +83,15 @@ const BlogPostPage = () => {
         );
       }
       if (line.trim() === "") return <br key={i} />;
+      const boldLead = line.match(/^\*\*(.+?)\*\*\s*(.*)$/);
+      if (boldLead) {
+        return (
+          <p key={i} className="mb-4">
+            <strong className="text-foreground">{boldLead[1]}</strong>
+            {boldLead[2] ? ` ${boldLead[2]}` : ""}
+          </p>
+        );
+      }
       return <p key={i} className="mb-4">{line}</p>;
     });
   };
