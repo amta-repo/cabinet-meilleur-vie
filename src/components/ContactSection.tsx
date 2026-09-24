@@ -80,7 +80,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               {[
                 { icon: MapPin, label: "Adresse", value: "Cotonou, Bénin" },
-                { icon: Phone, label: "Téléphone / WhatsApp", value: "+229 01 47 77 19 67", href: "tel:+2290147771967" },
+                { icon: Phone, label: "Téléphone / WhatsApp", value: "+229 01 47 77 19 67 / +229 01 67 61 80 21", href: "tel:+2290147771967" },
                 { icon: Mail, label: "Email", value: "contact@cabinetmeilleurevie.com", href: "mailto:contact@cabinetmeilleurevie.com" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 rounded-xl bg-card p-4" style={{ boxShadow: "var(--card-shadow)" }}>
