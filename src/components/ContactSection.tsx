@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -80,10 +80,11 @@ const ContactSection = () => {
             <div className="space-y-4">
               {[
                 { icon: MapPin, label: "Adresse", value: "Cotonou, Bénin" },
-                { icon: Phone, label: "Téléphone / WhatsApp", value: "+229 01 47 77 19 67 / +229 01 67 61 80 21", href: "tel:+2290147771967" },
+                { icon: MessageCircle, label: "WhatsApp", value: "+229 01 47 77 19 67", href: "https://wa.me/2290147771967" },
+                { icon: MessageCircle, label: "WhatsApp", value: "+229 01 67 61 80 21", href: "https://wa.me/2290167618021" },
                 { icon: Mail, label: "Email", value: "contact@cabinetmeilleurevie.com", href: "mailto:contact@cabinetmeilleurevie.com" },
               ].map((c) => (
-                <div key={c.label} className="flex items-start gap-4 rounded-xl bg-card p-4" style={{ boxShadow: "var(--card-shadow)" }}>
+                <div key={c.value} className="flex items-start gap-4 rounded-xl bg-card p-4" style={{ boxShadow: "var(--card-shadow)" }}>
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                     <c.icon className="h-5 w-5" />
                   </div>
