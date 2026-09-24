@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Comment prendre rendez-vous ?",
-    a: "Vous pouvez prendre rendez-vous par téléphone ou via WhatsApp au +229 01 47 77 19 67, ou en remplissant le formulaire de contact sur notre site.",
+    a: "Vous pouvez prendre rendez-vous par téléphone ou via WhatsApp au +229 01 47 77 19 67 ou au +229 01 67 61 80 21, ou en remplissant le formulaire de contact sur notre site.",
   },
   {
     q: "En quoi consiste un bilan psychologique ?",
