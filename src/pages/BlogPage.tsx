@@ -11,10 +11,88 @@ import addictionImg from "@/assets/blog-addiction.jpeg";
 import anxietyImg from "@/assets/blog-anxiety.jpeg";
 import bilanPsychoImg from "@/assets/blog-bilan-psychologique.jpeg";
 import santeMentaleEntrepriseImg from "@/assets/blog-sante-mentalentreprise.jpeg";
+import addictionEndogeneImg from "@/assets/blog-addiction-endogene.jpg.asset.json";
+import addictionFacteursImg from "@/assets/blog-addiction-facteurs.jpg.asset.json";
 
 const DOMAIN = "https://cabinetmeilleurvie.com";
 
 const blogPosts = [
+  {
+    slug: "causes-perceptions-endogenes-addiction-benin",
+    title: "Causes et perceptions endogènes de l'addiction au Bénin",
+    excerpt: "Au-delà de la médecine, les cultures béninoises perçoivent l'addiction comme une souffrance de l'âme. Décryptage des causes endogènes, spirituelles et modernes de la dépendance au Bénin.",
+    date: "2026-09-24",
+    readTime: "7 min",
+    author: "M. CHOKPON Casimir",
+    category: "Addiction",
+    image: addictionEndogeneImg.url,
+    imageAlt: "Conférence sur les causes et perceptions endogènes de l'addiction au Bénin",
+    content: `L'addiction au Bénin ne se résume pas à une question médicale. Si les sciences modernes la définissent comme une dépendance incontrôlable à une substance ou à un comportement (alcool, drogues, jeux d'argent, écrans), les cultures endogènes béninoises y voient aussi un indice d'échec de l'être qui n'a pas su se réaliser.
+
+## Un état des lieux diversifié au Bénin
+
+Les formes de dépendance se sont diversifiées dans les villes béninoises. Aux substances traditionnelles (alcool, tabac, drogues, médicaments détournés) s'ajoutent de nouvelles addictions comportementales : réseaux sociaux, jeux vidéo, paris sportifs, pornographie, achats compulsifs. Ces comportements perturbent le sommeil et la santé mentale des jeunes comme des adultes.
+
+## La perception endogène : une maladie de l'âme
+
+Dans la vision endogène, l'addiction est une maladie pluridimensionnelle qui touche le corps et l'âme. Elle traduit un vide intérieur, une difficulté profonde qui se manifeste ensuite sur le plan matériel et comportemental. Là où la médecine situe les causes dans des mécanismes psychologiques et biologiques, les traditions évoquent des rites de passage non accomplis, l'ignorance de son identité spirituelle ou la négligence des voies de consécration.
+
+## Les conséquences de l'addiction
+
+Les effets sont graves : dégradation de la santé physique, morale et mentale, isolement, perte d'emploi, échec scolaire, endettement — en particulier pour les addictions aux jeux d'argent. Autant de signaux qui appellent une prise en charge globale.
+
+## Prévenir et guérir : une approche de synergie
+
+Les solutions ne reposent pas uniquement sur l'accompagnement médical et psychologique. Elles demandent du temps et peuvent s'enrichir d'approches complémentaires : psychothérapie, sophrologie, méditation, travail intérieur par la prière et la foi. L'essentiel est d'agir sur les causes profondes qui entretiennent le mal.
+
+## Conclusion
+
+L'homme étant pluridimensionnel, analyser l'addiction uniquement sous l'angle de la médecine serait une vision étriquée du problème. Il est urgent de concilier science moderne et connaissances endogènes pour vaincre les addictions dans une synergie des approches. Au Cabinet Meilleure Vie à Abomey-Calavi, nous accompagnons les personnes dépendantes avec une prise en charge globale et bienveillante.
+
+*M. CHOKPON Casimir — Professeur de Littérature, Guide en Parapsychologie et Assistant en Développement personnel.*`,
+  },
+  {
+    slug: "causes-facteurs-risque-addiction-benin",
+    title: "Causes et facteurs de risque de l'addiction en contexte béninois",
+    excerpt: "Pourquoi devient-on dépendant ? Dépression, stress, conflits familiaux, pression des pairs, paris en ligne : tour d'horizon des facteurs de risque de l'addiction chez les jeunes au Bénin.",
+    date: "2026-09-24",
+    readTime: "8 min",
+    author: "Dr. H. Moïse DOSSA",
+    category: "Addiction",
+    image: addictionFacteursImg.url,
+    imageAlt: "Dr. H. Moïse DOSSA, psychiatre, lors d'une conférence sur l'addiction au Bénin",
+    content: `L'addiction est aujourd'hui un problème majeur de santé publique au Bénin. Qu'elle concerne des substances psychoactives (alcool, tabac, cannabis, médicaments détournés) ou des comportements (jeux d'argent, jeux vidéo, Internet), elle s'installe progressivement et se caractérise par une difficulté à contrôler la consommation malgré les conséquences négatives.
+
+## Chez les jeunes béninois
+
+Une étude menée auprès d'adolescents béninois montre que l'alcool est la substance la plus consommée, suivie du tabac, du cannabis et d'autres produits. L'étude met en évidence l'influence de facteurs psychologiques, familiaux et sociaux : dépression, conflits familiaux, influence des pairs et faible investissement parental. Il n'existe donc pas une cause unique : l'addiction résulte de l'interaction de plusieurs facteurs.
+
+## Les facteurs individuels et psychologiques
+
+**La recherche de plaisir et la curiosité.** Chez certains jeunes, la consommation commence par envie d'expérimenter. Une consommation occasionnelle en fête peut devenir fréquente lorsque la substance est associée au plaisir et à la détente.
+
+**La dépression, le stress et l'anxiété.** Certaines personnes consomment pour soulager temporairement un mal-être. Mais la substance ne soigne pas la cause : elle masque les symptômes et fait risquer une dépendance supplémentaire. C'est mieux de soigner les personnes que d'aller vers les produits.
+
+**L'impulsivité.** La difficulté à résister à une envie immédiate favorise la répétition des comportements à risque.
+
+## Les facteurs familiaux
+
+Les conflits familiaux répétés, le manque de suivi et d'encadrement parental, ainsi que le modèle parental (une consommation banalisée à la maison) exposent davantage les jeunes. Le dialogue, l'écoute et l'accompagnement sont des facteurs de protection essentiels.
+
+## L'influence des pairs et de l'environnement
+
+À l'adolescence, le besoin d'être accepté par le groupe peut pousser à expérimenter. La banalisation de l'alcool lors des fêtes et cérémonies fait sous-estimer les risques.
+
+## Les facteurs économiques et les nouvelles technologies
+
+Chômage, précarité, échec scolaire et sentiment d'exclusion génèrent du stress et favorisent les comportements à risque. Par ailleurs, le téléphone portable rend les jeux d'argent et paris en ligne accessibles à tout moment, avec des conséquences sur le sommeil, les études et les finances.
+
+## Conclusion
+
+En contexte béninois, les facteurs de risque de l'addiction sont multiples : psychologiques, familiaux, sociaux, économiques et numériques. L'addiction est un trouble chronique qui nécessite une prise en charge : il vaut mieux se tourner vers un spécialiste. Le Cabinet Meilleure Vie à Abomey-Calavi vous accompagne avec des consultations en psychologie et psychiatrie.
+
+*Dr. H. Moïse DOSSA — Psychiatre, Psychothérapeute de couple et de famille, Pasteur, Auteur, Conférencier, Staff Counsellor.*`,
+  },
   {
     slug: "addiction-definition-causes-symptomes-prevention",
     title: "L’addiction : définition, causes, symptômes et prévention",
